@@ -70,6 +70,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "HastaReceteGecmisi";
             this.Text = "HastaReceteGecmisi";
+            this.Load += new System.EventHandler(this.HastaReceteGecmisi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
