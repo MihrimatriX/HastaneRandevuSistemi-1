@@ -16,7 +16,7 @@ namespace HastaKayitSistemi
         {
             InitializeComponent();
         }
-
+           
         private void HastaReceteGecmisi_Load(object sender, EventArgs e)
         {
 
