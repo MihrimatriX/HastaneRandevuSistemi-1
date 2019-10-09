@@ -16,5 +16,10 @@ namespace HastaKayitSistemi
         {
             InitializeComponent();
         }
+
+        private void Eczacı_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

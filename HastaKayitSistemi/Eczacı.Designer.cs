@@ -93,6 +93,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Eczacı";
             this.Text = "Eczacı";
+            this.Load += new System.EventHandler(this.Eczacı_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
