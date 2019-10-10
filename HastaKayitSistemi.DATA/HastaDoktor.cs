@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DATA
 {
-public   class HastaDoktor
+    public class HastaDoktor : BaseClass
     {
         public int HastaID { get; set; }
         public int DoktorID { get; set; }
 
-        public virtual Hasta  HastaninDoktorlari { get; set; }
+        public virtual Hasta HastaninDoktorlari { get; set; }
         public virtual Doktor DoktorunHastalari { get; set; }
 
-        public string Seanslar { get; set; } 
-
+        public string Seanslar { get; set; }
+        public string Tahlil { get; set; }
         public DateTime RandevuTarihi { get; set; }
 
-    }   
+    }
 }

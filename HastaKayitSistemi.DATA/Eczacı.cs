@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DATA
 {
-    public class Recete
+    public class Eczacı : BaseClass
     {
+        public int HastaID { get; set; }
         public int ReceteNumarası { get; set; }
-        public int İlaclar { get; set; }
+        public int Recete { get; set; }
     }
 }
