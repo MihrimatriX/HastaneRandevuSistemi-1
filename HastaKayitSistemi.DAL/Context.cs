@@ -17,5 +17,17 @@ namespace HastaKayitSistemi.DAL
         public DbSet<Hasta> Hastalar { get; set; }
         public DbSet<Doktor> Doktorlar { get; set; }
         public DbSet<Eczaci> Eczacilar { get; set; }
+        public DbSet<Hastane> Hastaneler { get; set; }
+        public DbSet<Poliklinik> Poliklinik { get; set; }
+        public DbSet<Randevu> Randevular { get; set; }
+        public DbSet<Recete> Receteler { get; set; }
+        public DbSet<Departman> Departmanlar { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Configurations.Add(new ReceteMapping());
+            modelBuilder.Configurations.Add(new PoliklinikMapping());
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

@@ -11,12 +11,10 @@ namespace HastaKayitSistemi.DATA
         public int HastaID { get; set; }
         public int DoktorID { get; set; }
 
-        public virtual Hasta HastaninDoktorlari { get; set; }
-        public virtual Doktor DoktorunHastalari { get; set; }
+        public virtual Hasta DoktorunHastalari { get; set; }
+        public virtual Doktor HastaninDoktorlari { get; set; }
 
-        public string Seanslar { get; set; }
         public string Tahlil { get; set; }
-        public DateTime RandevuTarihi { get; set; }
 
     }
 }
