@@ -12,7 +12,8 @@ namespace HastaKayitSistemi.DATA
         public string DoktorAdiSoyadi { get; set; }
         public string DepartmanID { get; set;  }
 
+        public virtual Departman Departman { get; set; }
+        public virtual Hastane Hastane { get; set; }
 
-         
     }
 }

@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.852
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HastaKayitSistemi", "HastaKayitSistemi\HastaKayitSistemi.csproj", "{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HastaKayitSistemi.DATA", "HastaKayitSistemi.DATA\HastaKayitSistemi.DATA.csproj", "{4520AB03-1D79-4162-9D04-6C70D2CD8BC3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HastaKayitSistemi.DAL", "HastaKayitSistemi.DAL\HastaKayitSistemi.DAL.csproj", "{B4CB93C5-3888-4A7C-92DF-758D781EFBBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HastaKayitSistemi.UI", "HastaKayitSistemi.UI\HastaKayitSistemi.UI.csproj", "{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4520AB03-1D79-4162-9D04-6C70D2CD8BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4520AB03-1D79-4162-9D04-6C70D2CD8BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4520AB03-1D79-4162-9D04-6C70D2CD8BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{B4CB93C5-3888-4A7C-92DF-758D781EFBBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4CB93C5-3888-4A7C-92DF-758D781EFBBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4CB93C5-3888-4A7C-92DF-758D781EFBBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73AEF4AF-7245-4837-BF67-1F71BEA9DC4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

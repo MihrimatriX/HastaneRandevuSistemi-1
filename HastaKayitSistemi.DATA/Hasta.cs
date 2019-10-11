@@ -17,5 +17,8 @@ namespace HastaKayitSistemi.DATA
         public string  Telefon { get; set; }
         public string  Email { get; set; }
 
+        public virtual List<Recete> Receteler { get; set; }
+
+
     }
 }
