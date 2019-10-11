@@ -8,11 +8,11 @@ namespace HastaKayitSistemi.DATA
 {
     public class Doktor:BaseClass
     {
-        public int DoktorAdıSoyadı { get; set; }
-        public string BranşAdı { get; set; }
-        public int BranşID { get; set; }//branşı ile bağlarız   
+        public int DoktorID { get; set; }
+        public string DoktorAdiSoyadi { get; set; }
+        public int DepartmanID { get; set; }
         public DateTime CalismaGunu { get; set; }
-        public virtual List<HastaDoktor> DoktorHastalari { get; set; }
+
 
     }
 }

@@ -8,6 +8,7 @@ namespace HastaKayitSistemi.DATA
 {
     public class Hasta:BaseClass
     {
+        public int HastaID { get; set; }
         public string Ad { get; set; }
         public string Soyad { get; set; }
         public string TcNo { get; set; }
@@ -16,7 +17,7 @@ namespace HastaKayitSistemi.DATA
         public string  Telefon { get; set; }
         public string  Email { get; set; }
         public virtual List<HastaDoktor> HastaninDoktorlari { get; set; }
-        public virtual List<Eczacı> HastaninEczacılari { get; set; }
+        public virtual List<Eczaci> HastaninEczacılari { get; set; }
 
     }
 }

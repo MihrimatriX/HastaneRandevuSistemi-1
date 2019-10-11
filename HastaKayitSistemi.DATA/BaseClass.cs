@@ -8,9 +8,8 @@ namespace HastaKayitSistemi.DATA
 {
     public class BaseClass
     {
-        public int ID { get; set; }
         public bool IsActive { get; set; }
-        public string KullanıcıAdı { get; set; }
+        public string KullaniciAdi { get; set; }
         public string Sifre { get; set; }
     }
 }
