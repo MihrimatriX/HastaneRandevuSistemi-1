@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DATA
 {
-  public  class Poliklinik
+    public class Eczaci : BaseClass
     {
-        public int PoliklinikID { get; set; }
-        public string PoliklinikAdı { get; set; }
+        public int EczaciID { get; set; }
 
     }
 }
