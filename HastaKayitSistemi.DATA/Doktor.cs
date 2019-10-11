@@ -10,7 +10,7 @@ namespace HastaKayitSistemi.DATA
     {
         public int DoktorAdıSoyadı { get; set; }
         public string BranşAdı { get; set; }
-        public int BranşID { get; set; }//branşı ile bağlarız
+        public int BranşID { get; set; }//branşı ile bağlarız   
         public DateTime CalismaGunu { get; set; }
         public virtual List<HastaDoktor> DoktorHastalari { get; set; }
 
