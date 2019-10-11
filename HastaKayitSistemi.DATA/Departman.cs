@@ -12,5 +12,7 @@ namespace HastaKayitSistemi.DATA
         public string DepartmanAdi { get; set; }
 
         public virtual List<Doktor> Doktorlar { get; set; }
+        public virtual List<HastaneDepartman> DepartmanlarinHastaneleri { get; set; }
+
     }
 }
