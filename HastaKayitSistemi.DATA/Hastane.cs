@@ -9,9 +9,7 @@ namespace HastaKayitSistemi.DATA
   public  class Hastane
     {
         public int HastaneID { get; set; }
-        public int PoliklinikID { get; set; }
         public string HastaneAdi { get; set; }
-        public int DepartmanID { get; set; }
 
     }
 }
