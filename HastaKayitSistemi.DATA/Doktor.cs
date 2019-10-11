@@ -10,8 +10,8 @@ namespace HastaKayitSistemi.DATA
     {
         public int DoktorID { get; set; }
         public string DoktorAdiSoyadi { get; set; }
-        public int DepartmanID { get; set; }
-        public DateTime CalismaGunu { get; set; }
+        public string DepartmanID { get; set; }
+
 
 
     }

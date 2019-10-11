@@ -16,8 +16,6 @@ namespace HastaKayitSistemi.DATA
         public DateTime DogumTarihi { get; set; }
         public string  Telefon { get; set; }
         public string  Email { get; set; }
-        public virtual List<HastaDoktor> HastaninDoktorlari { get; set; }
-        public virtual List<Eczaci> HastaninEczacılari { get; set; }
 
     }
 }

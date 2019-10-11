@@ -6,14 +6,12 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DATA
 {
-  public  class Hastane:BaseClass
+  public  class Hastane
     {
         public int HastaneID { get; set; }
-
-        public int HastanePoliklinikID { get; set; }
-        public string HastaneAdı { get; set; }
-        public string Departmanlar { get; set; }
-        public virtual List<Poliklinik> HastaneninPoliklinikleri { get; set; }
+        public int PoliklinikID { get; set; }
+        public string HastaneAdi { get; set; }
+        public int DepartmanID { get; set; }
 
     }
 }

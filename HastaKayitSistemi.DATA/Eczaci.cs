@@ -8,6 +8,7 @@ namespace HastaKayitSistemi.DATA
 {
     public class Eczaci : BaseClass
     {
+        public int EczaciID { get; set; }
         public int ReceteID { get; set; }
 
     }
