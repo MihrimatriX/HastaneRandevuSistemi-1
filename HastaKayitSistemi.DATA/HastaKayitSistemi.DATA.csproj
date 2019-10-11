@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseClass.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Doktor.cs" />
     <Compile Include="Eczacı.cs" />
     <Compile Include="Hasta.cs" />
