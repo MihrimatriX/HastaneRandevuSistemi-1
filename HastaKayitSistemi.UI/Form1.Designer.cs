@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtHastaAdi = new System.Windows.Forms.TextBox();
-            this.txtHastaSifre = new System.Windows.Forms.TextBox();
-            this.btnHastaGirisi = new System.Windows.Forms.Button();
-            this.btnUye = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSifre = new System.Windows.Forms.TextBox();
+            this.btnGiris = new System.Windows.Forms.Button();
+            this.btnUyeOl = new System.Windows.Forms.Button();
             this.btnHasta = new System.Windows.Forms.Button();
             this.btnDoktor = new System.Windows.Forms.Button();
             this.btnEczacı = new System.Windows.Forms.Button();
@@ -43,11 +43,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(29, 68);
+            this.label1.Location = new System.Drawing.Point(73, 68);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.Size = new System.Drawing.Size(57, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Kullanıcı Adı :";
+            this.label1.Text = "E-mail:";
             // 
             // label2
             // 
@@ -59,39 +59,40 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Şifre :";
             // 
-            // txtHastaAdi
+            // txtEmail
             // 
-            this.txtHastaAdi.Location = new System.Drawing.Point(139, 70);
-            this.txtHastaAdi.Name = "txtHastaAdi";
-            this.txtHastaAdi.Size = new System.Drawing.Size(144, 20);
-            this.txtHastaAdi.TabIndex = 1;
+            this.txtEmail.Location = new System.Drawing.Point(139, 70);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(144, 20);
+            this.txtEmail.TabIndex = 1;
             // 
-            // txtHastaSifre
+            // txtSifre
             // 
-            this.txtHastaSifre.Location = new System.Drawing.Point(139, 111);
-            this.txtHastaSifre.Name = "txtHastaSifre";
-            this.txtHastaSifre.Size = new System.Drawing.Size(144, 20);
-            this.txtHastaSifre.TabIndex = 2;
+            this.txtSifre.Location = new System.Drawing.Point(139, 111);
+            this.txtSifre.Name = "txtSifre";
+            this.txtSifre.Size = new System.Drawing.Size(144, 20);
+            this.txtSifre.TabIndex = 2;
             // 
-            // btnHastaGirisi
+            // btnGiris
             // 
-            this.btnHastaGirisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnHastaGirisi.Location = new System.Drawing.Point(139, 147);
-            this.btnHastaGirisi.Name = "btnHastaGirisi";
-            this.btnHastaGirisi.Size = new System.Drawing.Size(144, 29);
-            this.btnHastaGirisi.TabIndex = 3;
-            this.btnHastaGirisi.Text = "GİRİŞ YAP";
-            this.btnHastaGirisi.UseVisualStyleBackColor = true;
+            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.Location = new System.Drawing.Point(139, 147);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(144, 29);
+            this.btnGiris.TabIndex = 3;
+            this.btnGiris.Text = "GİRİŞ YAP";
+            this.btnGiris.UseVisualStyleBackColor = true;
             // 
-            // btnUye
+            // btnUyeOl
             // 
-            this.btnUye.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUye.Location = new System.Drawing.Point(157, 182);
-            this.btnUye.Name = "btnUye";
-            this.btnUye.Size = new System.Drawing.Size(115, 29);
-            this.btnUye.TabIndex = 4;
-            this.btnUye.Text = "ÜYE OL";
-            this.btnUye.UseVisualStyleBackColor = true;
+            this.btnUyeOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUyeOl.Location = new System.Drawing.Point(157, 182);
+            this.btnUyeOl.Name = "btnUyeOl";
+            this.btnUyeOl.Size = new System.Drawing.Size(115, 29);
+            this.btnUyeOl.TabIndex = 4;
+            this.btnUyeOl.Text = "ÜYE OL";
+            this.btnUyeOl.UseVisualStyleBackColor = true;
+            this.btnUyeOl.Click += new System.EventHandler(this.btnUyeOl_Click);
             // 
             // btnHasta
             // 
@@ -128,10 +129,10 @@
             this.Controls.Add(this.btnEczacı);
             this.Controls.Add(this.btnDoktor);
             this.Controls.Add(this.btnHasta);
-            this.Controls.Add(this.btnUye);
-            this.Controls.Add(this.btnHastaGirisi);
-            this.Controls.Add(this.txtHastaSifre);
-            this.Controls.Add(this.txtHastaAdi);
+            this.Controls.Add(this.btnUyeOl);
+            this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.txtSifre);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -146,10 +147,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtHastaAdi;
-        private System.Windows.Forms.TextBox txtHastaSifre;
-        private System.Windows.Forms.Button btnHastaGirisi;
-        private System.Windows.Forms.Button btnUye;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSifre;
+        private System.Windows.Forms.Button btnGiris;
+        private System.Windows.Forms.Button btnUyeOl;
         private System.Windows.Forms.Button btnHasta;
         private System.Windows.Forms.Button btnDoktor;
         private System.Windows.Forms.Button btnEczacı;

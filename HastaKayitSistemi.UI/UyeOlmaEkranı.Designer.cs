@@ -240,6 +240,8 @@
             this.Controls.Add(this.label1);
             this.Name = "UyeOlmaEkranı";
             this.Text = "UyeOlmaEkranı";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UyeOlmaEkranı_FormClosed);
+            this.Load += new System.EventHandler(this.UyeOlmaEkranı_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

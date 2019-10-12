@@ -17,9 +17,18 @@ namespace HastaKayitSistemi
             InitializeComponent();
         }
 
+        UyeOlmaEkranı uyeOlmaEkranı;
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+       
+        private void btnUyeOl_Click(object sender, EventArgs e)
+        {
+            uyeOlmaEkranı = new UyeOlmaEkranı(this);
+            Hide();
+            uyeOlmaEkranı.Show();
         }
     }
 }

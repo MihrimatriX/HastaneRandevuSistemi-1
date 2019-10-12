@@ -12,9 +12,22 @@ namespace HastaKayitSistemi
 {
     public partial class UyeOlmaEkranı : Form
     {
-        public UyeOlmaEkranı()
+        Form1 mainForm;
+
+        public UyeOlmaEkranı(Form1 form1)
         {
+            mainForm = form1;
             InitializeComponent();
+        }
+        
+        private void UyeOlmaEkranı_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UyeOlmaEkranı_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainForm.Show();
         }
     }
 }
