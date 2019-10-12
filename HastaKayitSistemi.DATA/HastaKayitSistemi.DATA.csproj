@@ -48,6 +48,7 @@
     <Compile Include="Hasta.cs" />
     <Compile Include="HastaDoktor.cs" />
     <Compile Include="Hastane.cs" />
+    <Compile Include="HastaneDepartman.cs" />
     <Compile Include="HastanePoliklinikDepartmanDoktor.cs" />
     <Compile Include="Poliklinik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
