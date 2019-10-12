@@ -15,6 +15,7 @@ namespace HastaKayitSistemi.DATA
         public virtual List<Randevu> Randevular { get; set; }
         public virtual Departman Departman { get; set; }
         public virtual Hastane Hastane { get; set; }
+        public virtual List<Recete> Receteler { get; set; }
 
     }
 }

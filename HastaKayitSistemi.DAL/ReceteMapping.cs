@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DAL
 {
-    public class ReceteMapping: EntityTypeConfiguration<Recete>
+    public class ReceteMapping : EntityTypeConfiguration<Recete>
     {
         public ReceteMapping()
         {
-            HasKey(x => x.HastaID);
-            HasRequired(x => x.Hasta).WithMany(x=>x.Receteler).HasForeignKey(x=>x.ReceteID);
+            HasKey(x => x.ReceteID);
+            HasRequired(x => x.Hasta).WithMany(x => x.Receteler).HasForeignKey(x => x.HastaID);
+            HasRequired(x => x.Doktor).WithMany(x => x.Receteler).HasForeignKey(x => x.DoktorID);
         }
     }
 }
