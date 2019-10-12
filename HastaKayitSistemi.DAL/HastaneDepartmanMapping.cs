@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DAL
 {
+<<<<<<< HEAD
     public class HastaneDepartmanMapping : EntityTypeConfiguration<HastaneDepartman>
     {
 
@@ -16,5 +17,15 @@ namespace HastaKayitSistemi.DAL
             HasRequired(x => x.DepartmanHastaneleri).WithMany(x => x.HastaneDepartmanlari).HasForeignKey(x => x.DepartmanID); ;
             HasRequired(x => x.HastaneDepartmanlari).WithMany(x => x.DepartmanlarinHastaneleri).HasForeignKey(x => x.HastaneID); ;
         }
+=======
+    
+    public class HastaneDepartmanMapping : EntityTypeConfiguration<HastaneDepartman>
+    {
+        
+        public HastaneDepartmanMapping()
+        {
+            
+        }    
+>>>>>>> c82eddbf63715436bac5d5c3723b59059af2ba2f
     }
 }
