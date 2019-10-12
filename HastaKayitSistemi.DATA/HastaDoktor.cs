@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DATA
 {
-    public class HastaDoktor : BaseClass
+    public class HastaDoktor
     {
         public int HastaID { get; set; }
         public int DoktorID { get; set; }

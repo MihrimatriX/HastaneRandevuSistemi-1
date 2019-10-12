@@ -13,7 +13,7 @@ namespace HastaKayitSistemi.DAL
         public PoliklinikMapping()
         {
             HasKey(x => x.PoliklinikID);
-            HasRequired(x => x.Hastane).WithMany(x => x.Poliklinikler).HasForeignKey(x => x.PoliklinikID);
+            HasRequired(x => x.Hastane).WithMany(x => x.Poliklinikler).HasForeignKey(x => x.HastaneID);
         }
     }
 }

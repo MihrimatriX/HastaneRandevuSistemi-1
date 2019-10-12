@@ -9,6 +9,7 @@ namespace HastaKayitSistemi.DATA
     public class Doktor:BaseClass
     {
         public int DoktorID { get; set; }
+        public int HastaneID { get; set; }
         public string DoktorAdiSoyadi { get; set; }
         public string DepartmanID { get; set;  }
         public virtual List<HastaDoktor> DoktorunHastalari { get; set; }

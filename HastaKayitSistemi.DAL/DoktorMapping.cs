@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DAL
 {
- public class HastaneDoktorMapping:EntityTypeConfiguration<Doktor>
+ public class DoktorMapping:EntityTypeConfiguration<Doktor>
     {
-        public HastaneDoktorMapping()
+        public DoktorMapping()
         {
             HasKey(x => x.DoktorID);
-            HasRequired(x => x.Hastane).WithMany(x => x.Doktorlar).HasForeignKey(x => x.DoktorID);
+            HasRequired(x => x.Hastane).WithMany(x => x.Doktorlar).HasForeignKey(x => x.HastaneID);
         }
     }
 }

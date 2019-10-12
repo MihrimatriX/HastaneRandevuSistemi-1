@@ -14,7 +14,7 @@ namespace HastaKayitSistemi.DAL
         public ReceteMapping()
         {
             HasKey(x => x.ReceteID);
-            HasRequired(x => x.Hasta).WithMany(x=>x.Receteler).HasForeignKey(x=>x.ReceteID);
+            HasRequired(x => x.Hasta).WithMany(x=>x.Receteler).HasForeignKey(x=>x.HastaID);
         }
     }
 }

@@ -13,8 +13,8 @@ namespace HastaKayitSistemi.DAL
         public HastaDoktorMapping()
         {
 
-            HasRequired(x => x.HastaninDoktorlari).WithMany(x =>x.DoktorunHastalari).HasForeignKey(x => x.HastaID);
-            HasRequired(x => x.DoktorunHastalari).WithMany(x => x.HastaninDoktorlari).HasForeignKey(x => x.DoktorID);
+            HasRequired(x => x.HastaninDoktorlari).WithMany(x =>x.DoktorunHastalari).HasForeignKey(x => x.DoktorID);
+            HasRequired(x => x.DoktorunHastalari).WithMany(x => x.HastaninDoktorlari).HasForeignKey(x => x.HastaID);
         }
     }
 }
