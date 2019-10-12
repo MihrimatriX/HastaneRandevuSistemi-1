@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 
 namespace HastaKayitSistemi.DAL
 {
-    class DepartmanMapping:EntityTypeConfiguration<Departman>
+    class DepartmanMapping:EntityTypeConfiguration<HastaneDepartman>
     {
         public DepartmanMapping()
         {
+         
             
         }
     }
