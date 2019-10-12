@@ -18,6 +18,7 @@ namespace HastaKayitSistemi.DATA
 
         public DateTime RandevuTarihi { get; set; }
         public virtual Doktor Doktor { get; set; }
+        public virtual Hasta Hasta{ get; set; }
 
 
         //RandevuSaati??

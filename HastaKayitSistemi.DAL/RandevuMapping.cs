@@ -14,7 +14,8 @@ namespace HastaKayitSistemi.DAL
 
         { 
             HasKey(x => x.RandevuID);
-            HasRequired(x => x.Doktor).WithMany(x => x.Randevular).HasForeignKey(x => x.RandevuID);
+            HasRequired(x => x.Doktor).WithMany(x => x.Randevular).HasForeignKey(x => x.DoktorID);
+            HasRequired(x => x.Hasta).WithMany(x => x.Randevular).HasForeignKey(x => x.HastaID);
         }
     }
 }
