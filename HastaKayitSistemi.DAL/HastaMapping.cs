@@ -12,7 +12,7 @@ namespace HastaKayitSistemi.DAL
     {
         public HastaMapping()
         {
-
+            HasKey(x => x.HastaID);
             Property(x => x.DogumTarihi).HasColumnType("datetime2");
         }
     }

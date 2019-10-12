@@ -33,6 +33,10 @@ namespace HastaKayitSistemi.DAL
             modelBuilder.Configurations.Add(new ReceteMapping());
             modelBuilder.Configurations.Add(new HastaDoktorMapping());
             modelBuilder.Configurations.Add(new PoliklinikMapping());
+            modelBuilder.Configurations.Add(new RandevuMapping());
+            modelBuilder.Configurations.Add(new ReceteMapping());
+            modelBuilder.Configurations.Add(new HastaMapping());
+            modelBuilder.Configurations.Add(new DoktorMapping());
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             base.OnModelCreating(modelBuilder);
