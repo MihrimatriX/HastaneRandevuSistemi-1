@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HastaKayıtSistemi.DAL
+namespace HastaKayitSistemi.DAL
 {
     public class Class1
     {
