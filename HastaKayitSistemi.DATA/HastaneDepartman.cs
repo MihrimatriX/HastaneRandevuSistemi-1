@@ -10,7 +10,7 @@ namespace HastaKayitSistemi.DATA
     {
         public int HastaneID { get; set; }
         public int DepartmanID { get; set; }
-        public virtual Hastane HastaneninDepartmanlari { get; set; }
-        public virtual Departman DepartmanlarinHastaneleri { get; set; }
+        public virtual Hastane HastaneDepartmanlari { get; set; }
+        public virtual Departman DepartmanHastaneleri { get; set; }
     }
 }

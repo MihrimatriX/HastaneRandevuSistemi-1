@@ -55,6 +55,13 @@
     <Compile Include="HastaDoktorMapping.cs" />
     <Compile Include="Context.cs" />
     <Compile Include="HastaneDepartmanMapping.cs" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <Compile Include="HastaneDoktorMapping.cs" />
+=======
+>>>>>>> c82eddbf63715436bac5d5c3723b59059af2ba2f
+=======
+>>>>>>> c82eddbf63715436bac5d5c3723b59059af2ba2f
     <Compile Include="PoliklinikMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReceteMapping.cs" />
