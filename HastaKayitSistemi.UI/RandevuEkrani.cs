@@ -39,7 +39,7 @@ namespace HastaKayitSistemi.UI
             cmbDoktor.DisplayMember = "DoktorAdiSoyadi";
             cmbDoktor.ValueMember = "DoktorID";
 
-
+            cmbHastane.SelectedIndex = -1;
 
 
         }
@@ -67,13 +67,10 @@ namespace HastaKayitSistemi.UI
 
         private void CmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             if (cmbHastane.SelectedIndex == -1 && cmbPoliklinik.SelectedIndex == -1)
             {
-                cmbDoktor.DataSource = db.Doktorlar.Where(x => (Convert.ToInt32(x.DepartmanID)) == (int)cmbDepartman.SelectedValue);
-            }
-            else if (true)
-            {
-
+                cmbDoktor.DataSource = db.Doktorlar.Where(x => x.DepartmanID == (int)cmbDepartman.SelectedValue).ToList();
             }
         }
     }
