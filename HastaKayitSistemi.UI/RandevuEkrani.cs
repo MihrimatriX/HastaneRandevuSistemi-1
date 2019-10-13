@@ -55,5 +55,14 @@ namespace HastaKayitSistemi.UI
         {
 
         }
+
+        private void dtRandevuTarihi_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            if (e.Start.DayOfWeek == DayOfWeek.Saturday || e.Start.DayOfWeek == DayOfWeek.Sunday)
+            {
+                MessageBox.Show("Hafta Sonunu Seçemezsiniz!");
+                dtRandevuTarihi.SelectionStart = DateTime.Today.AddDays(1);
+            }
+        }
     }
 }

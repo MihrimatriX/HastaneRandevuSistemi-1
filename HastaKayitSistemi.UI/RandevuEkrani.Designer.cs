@@ -153,6 +153,7 @@
             this.dtRandevuTarihi.Location = new System.Drawing.Point(144, 245);
             this.dtRandevuTarihi.Name = "dtRandevuTarihi";
             this.dtRandevuTarihi.TabIndex = 10;
+            this.dtRandevuTarihi.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.dtRandevuTarihi_DateChanged);
             // 
             // label6
             // 

@@ -339,3 +339,4 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 HastaKayitSistemi.DAL/Context.cs
+HastaKayitSistemi.DAL/Context.cs
