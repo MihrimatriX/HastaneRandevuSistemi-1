@@ -1,6 +1,6 @@
 ﻿namespace HastaKayitSistemi.UI
 {
-    partial class UyeOlmaEkranı
+    partial class UyeOlmaEkrani
     {
         /// <summary>
         /// Required designer variable.
@@ -47,8 +47,8 @@
             this.mskTxtTelefon = new System.Windows.Forms.MaskedTextBox();
             this.dtDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtAdres = new System.Windows.Forms.TextBox();
-            this.grpUye = new System.Windows.Forms.GroupBox();
-            this.grpUye.SuspendLayout();
+            this.grpUyeOlmaEkrani = new System.Windows.Forms.GroupBox();
+            this.grpUyeOlmaEkrani.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -217,44 +217,44 @@
             this.txtAdres.Size = new System.Drawing.Size(200, 20);
             this.txtAdres.TabIndex = 6;
             // 
-            // grpUye
+            // grpUyeOlmaEkrani
             // 
-            this.grpUye.Controls.Add(this.label5);
-            this.grpUye.Controls.Add(this.dtDogumTarihi);
-            this.grpUye.Controls.Add(this.label1);
-            this.grpUye.Controls.Add(this.mskTxtTelefon);
-            this.grpUye.Controls.Add(this.label6);
-            this.grpUye.Controls.Add(this.txtAdres);
-            this.grpUye.Controls.Add(this.label8);
-            this.grpUye.Controls.Add(this.txtTcNo);
-            this.grpUye.Controls.Add(this.label9);
-            this.grpUye.Controls.Add(this.txtSoyad);
-            this.grpUye.Controls.Add(this.label10);
-            this.grpUye.Controls.Add(this.txtAd);
-            this.grpUye.Controls.Add(this.label7);
-            this.grpUye.Controls.Add(this.label4);
-            this.grpUye.Controls.Add(this.txtEmail);
-            this.grpUye.Controls.Add(this.btnOnayla);
-            this.grpUye.Controls.Add(this.label2);
-            this.grpUye.Controls.Add(this.txtSifre);
-            this.grpUye.Controls.Add(this.label3);
-            this.grpUye.Location = new System.Drawing.Point(47, 12);
-            this.grpUye.Name = "grpUye";
-            this.grpUye.Size = new System.Drawing.Size(432, 427);
-            this.grpUye.TabIndex = 10;
-            this.grpUye.TabStop = false;
+            this.grpUyeOlmaEkrani.Controls.Add(this.label5);
+            this.grpUyeOlmaEkrani.Controls.Add(this.dtDogumTarihi);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label1);
+            this.grpUyeOlmaEkrani.Controls.Add(this.mskTxtTelefon);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label6);
+            this.grpUyeOlmaEkrani.Controls.Add(this.txtAdres);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label8);
+            this.grpUyeOlmaEkrani.Controls.Add(this.txtTcNo);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label9);
+            this.grpUyeOlmaEkrani.Controls.Add(this.txtSoyad);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label10);
+            this.grpUyeOlmaEkrani.Controls.Add(this.txtAd);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label7);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label4);
+            this.grpUyeOlmaEkrani.Controls.Add(this.txtEmail);
+            this.grpUyeOlmaEkrani.Controls.Add(this.btnOnayla);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label2);
+            this.grpUyeOlmaEkrani.Controls.Add(this.txtSifre);
+            this.grpUyeOlmaEkrani.Controls.Add(this.label3);
+            this.grpUyeOlmaEkrani.Location = new System.Drawing.Point(47, 12);
+            this.grpUyeOlmaEkrani.Name = "grpUyeOlmaEkrani";
+            this.grpUyeOlmaEkrani.Size = new System.Drawing.Size(432, 427);
+            this.grpUyeOlmaEkrani.TabIndex = 10;
+            this.grpUyeOlmaEkrani.TabStop = false;
             // 
-            // UyeOlmaEkranı
+            // UyeOlmaEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 478);
-            this.Controls.Add(this.grpUye);
-            this.Name = "UyeOlmaEkranı";
+            this.Controls.Add(this.grpUyeOlmaEkrani);
+            this.Name = "UyeOlmaEkrani";
             this.Text = "UyeOlmaEkranı";
-            this.Load += new System.EventHandler(this.UyeOlmaEkranı_Load);
-            this.grpUye.ResumeLayout(false);
-            this.grpUye.PerformLayout();
+            this.Load += new System.EventHandler(this.UyeOlmaEkrani_Load);
+            this.grpUyeOlmaEkrani.ResumeLayout(false);
+            this.grpUyeOlmaEkrani.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -280,6 +280,6 @@
         private System.Windows.Forms.MaskedTextBox mskTxtTelefon;
         private System.Windows.Forms.DateTimePicker dtDogumTarihi;
         private System.Windows.Forms.TextBox txtAdres;
-        private System.Windows.Forms.GroupBox grpUye;
+        private System.Windows.Forms.GroupBox grpUyeOlmaEkrani;
     }
 }

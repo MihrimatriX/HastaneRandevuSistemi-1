@@ -43,7 +43,7 @@ namespace HastaKayitSistemi.UI
 
         private void BtnUyeOl_Click(object sender, EventArgs e)
         {
-            UyeOlmaEkranı uyeOlmaEkranı = new UyeOlmaEkranı();
+            UyeOlmaEkrani uyeOlmaEkranı = new UyeOlmaEkrani();
             this.Hide();
             uyeOlmaEkranı.Show();
 
