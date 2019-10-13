@@ -22,17 +22,23 @@ namespace HastaKayitSistemi.UI
 
         private void RandevuEkrani_Load(object sender, EventArgs e)
         {
-            db=new Context();
+            dtRandevuTarihi.MinDate = DateTime.Today.AddDays(1);
+            db = new Context();
             btnDoktorOnayRandevu.Enabled = !btnDoktorOnayRandevu.Enabled;
             cmbHastane.DataSource = db.Hastaneler.ToList();
             cmbHastane.DisplayMember = "HastaneAdi";
             cmbHastane.ValueMember = "HastaneID";
 
-            cmbDepartman.DataSource = db.Hastaneler.ToList();
+            cmbDepartman.DataSource = db.Departmanlar.ToList();
             cmbDepartman.DisplayMember = "DepartmanAdi";
             cmbDepartman.ValueMember = "DepartmanID";
 
-            
+            cmbDoktor.DataSource = db.Doktorlar.ToList();
+            cmbDoktor.DisplayMember = "DoktorAdiSoyadi";
+            cmbDoktor.ValueMember = "DoktorID";
+
+
+
 
         }
 

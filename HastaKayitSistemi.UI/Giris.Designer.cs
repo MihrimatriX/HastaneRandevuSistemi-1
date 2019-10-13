@@ -45,7 +45,7 @@
             // 
             // btnDoktor
             // 
-            this.btnDoktor.Location = new System.Drawing.Point(126, 97);
+            this.btnDoktor.Location = new System.Drawing.Point(126, 92);
             this.btnDoktor.Name = "btnDoktor";
             this.btnDoktor.Size = new System.Drawing.Size(126, 44);
             this.btnDoktor.TabIndex = 6;
@@ -55,7 +55,7 @@
             // 
             // btnEczacı
             // 
-            this.btnEczacı.Location = new System.Drawing.Point(126, 147);
+            this.btnEczacı.Location = new System.Drawing.Point(126, 146);
             this.btnEczacı.Name = "btnEczacı";
             this.btnEczacı.Size = new System.Drawing.Size(126, 44);
             this.btnEczacı.TabIndex = 7;

@@ -38,18 +38,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.cmbDoktor = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.dtRandevuTarihi = new System.Windows.Forms.MonthCalendar();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnRandevu = new System.Windows.Forms.Button();
             this.btnDoktorOnayRandevu = new System.Windows.Forms.Button();
+            this.lblHastaAdiSoyadi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRandevular
             // 
             this.btnRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnRandevular.Location = new System.Drawing.Point(66, 12);
+            this.btnRandevular.Location = new System.Drawing.Point(65, 37);
             this.btnRandevular.Name = "btnRandevular";
             this.btnRandevular.Size = new System.Drawing.Size(274, 28);
             this.btnRandevular.TabIndex = 0;
@@ -61,7 +62,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(33, 55);
+            this.label1.Location = new System.Drawing.Point(32, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 20);
             this.label1.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(62, 93);
+            this.label2.Location = new System.Drawing.Point(61, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 2;
@@ -81,7 +82,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(41, 135);
+            this.label3.Location = new System.Drawing.Point(40, 160);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 20);
             this.label3.TabIndex = 3;
@@ -89,27 +90,30 @@
             // 
             // cmbHastane
             // 
+            this.cmbHastane.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbHastane.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbHastane.FormattingEnabled = true;
-            this.cmbHastane.Location = new System.Drawing.Point(144, 52);
+            this.cmbHastane.Location = new System.Drawing.Point(143, 77);
             this.cmbHastane.Name = "cmbHastane";
             this.cmbHastane.Size = new System.Drawing.Size(235, 28);
             this.cmbHastane.TabIndex = 4;
             // 
             // cmbPoliklinik
             // 
+            this.cmbPoliklinik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPoliklinik.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbPoliklinik.FormattingEnabled = true;
-            this.cmbPoliklinik.Location = new System.Drawing.Point(144, 90);
+            this.cmbPoliklinik.Location = new System.Drawing.Point(143, 115);
             this.cmbPoliklinik.Name = "cmbPoliklinik";
             this.cmbPoliklinik.Size = new System.Drawing.Size(235, 28);
             this.cmbPoliklinik.TabIndex = 5;
             // 
             // cmbDepartman
             // 
+            this.cmbDepartman.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDepartman.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbDepartman.FormattingEnabled = true;
-            this.cmbDepartman.Location = new System.Drawing.Point(144, 132);
+            this.cmbDepartman.Location = new System.Drawing.Point(143, 157);
             this.cmbDepartman.Name = "cmbDepartman";
             this.cmbDepartman.Size = new System.Drawing.Size(235, 28);
             this.cmbDepartman.TabIndex = 6;
@@ -118,7 +122,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(56, 178);
+            this.label4.Location = new System.Drawing.Point(55, 203);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(82, 20);
             this.label4.TabIndex = 7;
@@ -126,9 +130,10 @@
             // 
             // cmbDoktor
             // 
+            this.cmbDoktor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDoktor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cmbDoktor.FormattingEnabled = true;
-            this.cmbDoktor.Location = new System.Drawing.Point(144, 175);
+            this.cmbDoktor.Location = new System.Drawing.Point(143, 200);
             this.cmbDoktor.Name = "cmbDoktor";
             this.cmbDoktor.Size = new System.Drawing.Size(235, 28);
             this.cmbDoktor.TabIndex = 8;
@@ -137,23 +142,23 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(15, 220);
+            this.label5.Location = new System.Drawing.Point(14, 245);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Randevu Tarihi :";
             // 
-            // monthCalendar1
+            // dtRandevuTarihi
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(145, 220);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 10;
+            this.dtRandevuTarihi.Location = new System.Drawing.Point(144, 245);
+            this.dtRandevuTarihi.Name = "dtRandevuTarihi";
+            this.dtRandevuTarihi.TabIndex = 10;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(16, 389);
+            this.label6.Location = new System.Drawing.Point(15, 414);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 20);
             this.label6.TabIndex = 11;
@@ -162,7 +167,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown1.Location = new System.Drawing.Point(144, 387);
+            this.numericUpDown1.Location = new System.Drawing.Point(143, 412);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(234, 26);
             this.numericUpDown1.TabIndex = 12;
@@ -170,7 +175,7 @@
             // btnRandevu
             // 
             this.btnRandevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnRandevu.Location = new System.Drawing.Point(20, 419);
+            this.btnRandevu.Location = new System.Drawing.Point(19, 444);
             this.btnRandevu.Name = "btnRandevu";
             this.btnRandevu.Size = new System.Drawing.Size(157, 54);
             this.btnRandevu.TabIndex = 13;
@@ -181,23 +186,33 @@
             // btnDoktorOnayRandevu
             // 
             this.btnDoktorOnayRandevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDoktorOnayRandevu.Location = new System.Drawing.Point(183, 419);
+            this.btnDoktorOnayRandevu.Location = new System.Drawing.Point(182, 444);
             this.btnDoktorOnayRandevu.Name = "btnDoktorOnayRandevu";
             this.btnDoktorOnayRandevu.Size = new System.Drawing.Size(189, 54);
             this.btnDoktorOnayRandevu.TabIndex = 14;
             this.btnDoktorOnayRandevu.Text = "DOKTOR ONAYLI RANDEVU";
             this.btnDoktorOnayRandevu.UseVisualStyleBackColor = true;
             // 
+            // lblHastaAdiSoyadi
+            // 
+            this.lblHastaAdiSoyadi.AutoSize = true;
+            this.lblHastaAdiSoyadi.Location = new System.Drawing.Point(13, 13);
+            this.lblHastaAdiSoyadi.Name = "lblHastaAdiSoyadi";
+            this.lblHastaAdiSoyadi.Size = new System.Drawing.Size(88, 13);
+            this.lblHastaAdiSoyadi.TabIndex = 15;
+            this.lblHastaAdiSoyadi.Text = "Hasta Adi Soyadi";
+            // 
             // RandevuEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(404, 486);
+            this.ClientSize = new System.Drawing.Size(402, 510);
+            this.Controls.Add(this.lblHastaAdiSoyadi);
             this.Controls.Add(this.btnDoktorOnayRandevu);
             this.Controls.Add(this.btnRandevu);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.dtRandevuTarihi);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbDoktor);
             this.Controls.Add(this.label4);
@@ -229,10 +244,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbDoktor;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar dtRandevuTarihi;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         public System.Windows.Forms.Button btnDoktorOnayRandevu;
         public System.Windows.Forms.Button btnRandevu;
+        public System.Windows.Forms.Label lblHastaAdiSoyadi;
     }
 }
