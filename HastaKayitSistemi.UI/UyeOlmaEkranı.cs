@@ -24,7 +24,7 @@ namespace HastaKayitSistemi.UI
 
         private void UyeOlmaEkranı_Load(object sender, EventArgs e)
         {
-
+            //
         }
 
 
@@ -34,7 +34,7 @@ namespace HastaKayitSistemi.UI
 
             if (Metotlar.BosAlanVarMi(grpUye))
                 MessageBox.Show("Lütfen tüm alanları doldurunuz!");
-            else
+            else   
             {
                 DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email==txtEmail.Text);
 

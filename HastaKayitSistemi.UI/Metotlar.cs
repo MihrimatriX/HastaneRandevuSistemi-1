@@ -26,7 +26,7 @@ namespace HastaKayitSistemi.UI
                     if (((DateTimePicker)item).Value.Date == DateTime.Now.Date)
                         return true;
                 }
-             
+             //masked eklenecekkdkkd
             }
             return false;
         }
