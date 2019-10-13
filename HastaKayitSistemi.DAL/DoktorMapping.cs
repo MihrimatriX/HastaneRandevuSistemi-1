@@ -14,6 +14,7 @@ namespace HastaKayitSistemi.DAL
         {
             HasKey(x => x.DoktorID);
             HasRequired(x => x.Hastane).WithMany(x => x.Doktorlar).HasForeignKey(x => x.DoktorID);
+         
         }
     }
 }

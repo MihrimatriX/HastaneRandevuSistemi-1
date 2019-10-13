@@ -1,4 +1,4 @@
-﻿namespace HastaKayitSistemi
+﻿namespace HastaKayitSistemi.UI
 {
     partial class RandevuEkrani
     {
@@ -176,6 +176,7 @@
             this.btnRandevu.TabIndex = 13;
             this.btnRandevu.Text = "RANDEVU AL";
             this.btnRandevu.UseVisualStyleBackColor = true;
+            this.btnRandevu.Click += new System.EventHandler(this.btnRandevu_Click);
             // 
             // btnDoktorOnayRandevu
             // 

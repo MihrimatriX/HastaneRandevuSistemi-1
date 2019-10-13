@@ -188,6 +188,10 @@
       <Project>{08F8375F-FEB4-4B94-A18B-FC0A31DD7FFF}</Project>
       <Name>HastaKayitSistemi.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HastaKayitSistemi.DATA\HastaKayitSistemi.DATA.csproj">
+      <Project>{4520AB03-1D79-4162-9D04-6C70D2CD8BC3}</Project>
+      <Name>HastaKayitSistemi.DATA</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

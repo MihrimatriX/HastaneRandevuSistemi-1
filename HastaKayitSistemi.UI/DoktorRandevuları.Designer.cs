@@ -1,4 +1,4 @@
-﻿namespace HastaKayitSistemi
+﻿namespace HastaKayitSistemi.UI
 {
     partial class DoktorRandevuları
     {

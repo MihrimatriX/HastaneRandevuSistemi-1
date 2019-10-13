@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HastaKayitSistemi.Properties {
+namespace HastaKayitSistemi.UI.Properties {
     using System;
     
     

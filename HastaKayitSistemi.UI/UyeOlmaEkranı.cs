@@ -1,4 +1,5 @@
 ﻿using HastaKayitSistemi.DAL;
+using HastaKayitSistemi.DATA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HastaKayitSistemi
+namespace HastaKayitSistemi.UI
 {
     public partial class UyeOlmaEkranı : Form
     {
@@ -24,6 +25,7 @@ namespace HastaKayitSistemi
         private void UyeOlmaEkranı_Load(object sender, EventArgs e)
         {
             db = new Context();
+            DATA.Hasta hasta = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text);
 
         }
 

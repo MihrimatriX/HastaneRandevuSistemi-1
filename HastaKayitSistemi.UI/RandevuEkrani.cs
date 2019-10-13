@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HastaKayitSistemi
+namespace HastaKayitSistemi.UI
 {
     public partial class RandevuEkrani : Form
     {
@@ -22,8 +22,17 @@ namespace HastaKayitSistemi
 
         private void RandevuEkrani_Load(object sender, EventArgs e)
         {
-            new Context();
+            db=new Context();
             btnDoktorOnayRandevu.Enabled = !btnDoktorOnayRandevu.Enabled;
+            cmbHastane.DataSource = db.Hastaneler.ToList();
+            cmbHastane.DisplayMember = "HastaneAdi";
+            cmbHastane.ValueMember = "HastaneID";
+
+            cmbDepartman.DataSource = db.Hastaneler.ToList();
+            cmbDepartman.DisplayMember = "DepartmanAdi";
+            cmbDepartman.ValueMember = "DepartmanID";
+
+            
 
         }
 
@@ -32,6 +41,11 @@ namespace HastaKayitSistemi
             Randevular randevular = new Randevular();
             this.Close();
             randevular.Show();
+        }
+
+        private void btnRandevu_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
