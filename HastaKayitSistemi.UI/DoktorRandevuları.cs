@@ -16,5 +16,12 @@ namespace HastaKayitSistemi
         {
             InitializeComponent();
         }
+
+        private void BtnMuayene_Click(object sender, EventArgs e)
+        {
+            MuayeneEkrani muayeneEkrani = new MuayeneEkrani();
+            this.Hide();
+            muayeneEkrani.Show();
+        }
     }
 }

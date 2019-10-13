@@ -109,6 +109,7 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Teşhis Konulamadı Tahlil İsteniyor";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
             // button1
             // 
@@ -163,6 +164,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MuayeneEkrani";
             this.Text = "MuayeneEkrani";
+            this.Load += new System.EventHandler(this.MuayeneEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

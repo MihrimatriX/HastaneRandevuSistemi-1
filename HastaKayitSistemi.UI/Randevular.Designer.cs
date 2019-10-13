@@ -45,7 +45,7 @@
             // 
             this.grpRandevular.Controls.Add(this.dataGridView1);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpRandevular.Location = new System.Drawing.Point(12, 12);
+            this.grpRandevular.Location = new System.Drawing.Point(49, 27);
             this.grpRandevular.Name = "grpRandevular";
             this.grpRandevular.Size = new System.Drawing.Size(478, 331);
             this.grpRandevular.TabIndex = 1;
@@ -54,6 +54,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -70,19 +71,16 @@
             // 
             this.Column1.HeaderText = "Doktor";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 143;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Randevu Tarihi";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 143;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Randevu Seansı";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 143;
             // 
             // ContextMenuStrip1
             // 
@@ -94,17 +92,20 @@
             // cmsSil
             // 
             this.cmsSil.Name = "cmsSil";
-            this.cmsSil.Size = new System.Drawing.Size(89, 22);
+            this.cmsSil.Size = new System.Drawing.Size(180, 22);
             this.cmsSil.Text = "SİL";
+            this.cmsSil.Click += new System.EventHandler(this.CmsSil_Click);
             // 
             // Randevular
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(502, 363);
+            this.ClientSize = new System.Drawing.Size(612, 433);
             this.Controls.Add(this.grpRandevular);
             this.Name = "Randevular";
             this.Text = "Randevular";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Randevular_FormClosed);
+            this.Load += new System.EventHandler(this.Randevular_Load);
             this.grpRandevular.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ContextMenuStrip1.ResumeLayout(false);

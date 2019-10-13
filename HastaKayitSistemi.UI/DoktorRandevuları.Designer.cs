@@ -99,6 +99,7 @@
             this.btnMuayene.TabIndex = 3;
             this.btnMuayene.Text = "MUAYENE OLUŞTUR";
             this.btnMuayene.UseVisualStyleBackColor = true;
+            this.btnMuayene.Click += new System.EventHandler(this.BtnMuayene_Click);
             // 
             // DoktorRandevuları
             // 

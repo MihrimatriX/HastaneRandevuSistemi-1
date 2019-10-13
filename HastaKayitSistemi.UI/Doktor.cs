@@ -16,5 +16,17 @@ namespace HastaKayitSistemi
         {
             InitializeComponent();
         }
+
+        private void Doktor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDoktorGirisi_Click(object sender, EventArgs e)
+        {
+            DoktorRandevuları doktorRandevuları = new DoktorRandevuları();
+            this.Hide();
+            doktorRandevuları.Show();
+        }
     }
 }

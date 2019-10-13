@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HastaKayitSistemi.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,9 +17,18 @@ namespace HastaKayitSistemi
         {
             InitializeComponent();
         }
+        Context db = new Context();
 
         private void Eczacı_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnEczacıGiris_Click(object sender, EventArgs e)
+        {
+            EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
+            this.Close();
+            eczaciReceteBilgileri.Show();
 
         }
     }

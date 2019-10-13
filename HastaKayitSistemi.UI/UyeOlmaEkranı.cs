@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HastaKayitSistemi.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,27 +13,29 @@ namespace HastaKayitSistemi
 {
     public partial class UyeOlmaEkranı : Form
     {
-        Form1 mainForm;
 
-        public UyeOlmaEkranı(Form1 form1)
+        public UyeOlmaEkranı()
         {
-            mainForm = form1;
             InitializeComponent();
         }
-        
+        Context db;
+
+
         private void UyeOlmaEkranı_Load(object sender, EventArgs e)
         {
+            db = new Context();
 
         }
 
         private void UyeOlmaEkranı_FormClosed(object sender, FormClosedEventArgs e)
         {
-            mainForm.Show();
         }
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Hasta hasta = new Hasta();
+            hasta.Show();
         }
     }
 }

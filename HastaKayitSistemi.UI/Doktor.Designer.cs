@@ -44,6 +44,7 @@
             this.btnDoktorGirisi.TabIndex = 8;
             this.btnDoktorGirisi.Text = "GİRİŞ YAP";
             this.btnDoktorGirisi.UseVisualStyleBackColor = true;
+            this.btnDoktorGirisi.Click += new System.EventHandler(this.BtnDoktorGirisi_Click);
             // 
             // txtDoktorSifre
             // 
@@ -91,6 +92,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Doktor";
             this.Text = "Doktor";
+            this.Load += new System.EventHandler(this.Doktor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

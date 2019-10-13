@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HastaKayitSistemi.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,26 @@ namespace HastaKayitSistemi
         public MuayeneEkrani()
         {
             InitializeComponent();
+        }
+        Context db;
+
+        private void MuayeneEkrani_Load(object sender, EventArgs e)
+        {
+            db = new Context();
+
+
+        }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked==true)
+            {
+                RandevuEkrani randevuEkrani = new RandevuEkrani();
+                randevuEkrani.btnDoktorOnayRandevu.Enabled = false;
+                randevuEkrani.btnRandevu.Enabled = false;
+                this.Hide();
+                randevuEkrani.Show();
+            }
         }
     }
 }

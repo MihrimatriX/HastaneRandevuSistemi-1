@@ -11,31 +11,34 @@ using System.Windows.Forms;
 
 namespace HastaKayitSistemi
 {
-    public partial class Randevular : Form
+    public partial class Hasta : Form
     {
-        public Randevular()
+        public Hasta()
         {
             InitializeComponent();
         }
         Context db;
-
-        private void CmsSil_Click(object sender, EventArgs e)
+        private void Hasta_Load(object sender, EventArgs e)
         {
-           db= new Context();
+            db = new Context();
+            
 
-            //silmek istediğinizden emin misiniz ?
-        }
-
-        private void Randevular_Load(object sender, EventArgs e)
-        {
 
         }
 
-        private void Randevular_FormClosed(object sender, FormClosedEventArgs e)
+        private void BtnGiris_Click(object sender, EventArgs e)
         {
             RandevuEkrani randevuEkrani = new RandevuEkrani();
-            
+            this.Hide();
             randevuEkrani.Show();
+        }
+
+        private void BtnUyeOl_Click(object sender, EventArgs e)
+        {
+            UyeOlmaEkranı uyeOlmaEkranı = new UyeOlmaEkranı();
+            this.Hide();
+            uyeOlmaEkranı.Show();
+
         }
     }
 }

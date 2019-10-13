@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(42, 19);
+            this.label1.Location = new System.Drawing.Point(22, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 0;
@@ -48,7 +48,7 @@
             // txtEczacıAdi
             // 
             this.txtEczacıAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEczacıAdi.Location = new System.Drawing.Point(149, 16);
+            this.txtEczacıAdi.Location = new System.Drawing.Point(129, 16);
             this.txtEczacıAdi.Name = "txtEczacıAdi";
             this.txtEczacıAdi.Size = new System.Drawing.Size(186, 26);
             this.txtEczacıAdi.TabIndex = 1;
@@ -57,7 +57,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(93, 58);
+            this.label2.Location = new System.Drawing.Point(73, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 2;
@@ -66,7 +66,7 @@
             // txtEczacıSifre
             // 
             this.txtEczacıSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEczacıSifre.Location = new System.Drawing.Point(149, 55);
+            this.txtEczacıSifre.Location = new System.Drawing.Point(129, 55);
             this.txtEczacıSifre.Name = "txtEczacıSifre";
             this.txtEczacıSifre.Size = new System.Drawing.Size(186, 26);
             this.txtEczacıSifre.TabIndex = 3;
@@ -74,24 +74,25 @@
             // btnEczacıGiris
             // 
             this.btnEczacıGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEczacıGiris.Location = new System.Drawing.Point(149, 99);
+            this.btnEczacıGiris.Location = new System.Drawing.Point(129, 99);
             this.btnEczacıGiris.Name = "btnEczacıGiris";
             this.btnEczacıGiris.Size = new System.Drawing.Size(186, 29);
             this.btnEczacıGiris.TabIndex = 4;
             this.btnEczacıGiris.Text = "GİRİŞ YAP";
             this.btnEczacıGiris.UseVisualStyleBackColor = true;
+            this.btnEczacıGiris.Click += new System.EventHandler(this.BtnEczacıGiris_Click);
             // 
-            // Eczacı
+            // Eczaci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(364, 140);
+            this.ClientSize = new System.Drawing.Size(359, 149);
             this.Controls.Add(this.btnEczacıGiris);
             this.Controls.Add(this.txtEczacıSifre);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtEczacıAdi);
             this.Controls.Add(this.label1);
-            this.Name = "Eczacı";
+            this.Name = "Eczaci";
             this.Text = "Eczacı";
             this.Load += new System.EventHandler(this.Eczacı_Load);
             this.ResumeLayout(false);

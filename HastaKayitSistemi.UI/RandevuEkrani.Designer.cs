@@ -42,7 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.btnRandevu = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnDoktorOnayRandevu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             this.btnRandevular.TabIndex = 0;
             this.btnRandevular.Text = "MEVCUT RANDEVULARIM";
             this.btnRandevular.UseVisualStyleBackColor = true;
+            this.btnRandevular.Click += new System.EventHandler(this.BtnRandevular_Click);
             // 
             // label1
             // 
@@ -176,22 +177,22 @@
             this.btnRandevu.Text = "RANDEVU AL";
             this.btnRandevu.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnDoktorOnayRandevu
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(183, 419);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 54);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "DOKTOR ONAYLI RANDEVU";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDoktorOnayRandevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDoktorOnayRandevu.Location = new System.Drawing.Point(183, 419);
+            this.btnDoktorOnayRandevu.Name = "btnDoktorOnayRandevu";
+            this.btnDoktorOnayRandevu.Size = new System.Drawing.Size(189, 54);
+            this.btnDoktorOnayRandevu.TabIndex = 14;
+            this.btnDoktorOnayRandevu.Text = "DOKTOR ONAYLI RANDEVU";
+            this.btnDoktorOnayRandevu.UseVisualStyleBackColor = true;
             // 
             // RandevuEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 486);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnDoktorOnayRandevu);
             this.Controls.Add(this.btnRandevu);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label6);
@@ -208,6 +209,7 @@
             this.Controls.Add(this.btnRandevular);
             this.Name = "RandevuEkrani";
             this.Text = "RandevuEkrani";
+            this.Load += new System.EventHandler(this.RandevuEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -229,7 +231,7 @@
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button btnRandevu;
-        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnDoktorOnayRandevu;
+        public System.Windows.Forms.Button btnRandevu;
     }
 }

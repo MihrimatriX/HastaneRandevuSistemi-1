@@ -59,6 +59,7 @@
             this.btnIlacKontrol.TabIndex = 2;
             this.btnIlacKontrol.Text = "İLAÇLAR KONTROL EDİLDİ";
             this.btnIlacKontrol.UseVisualStyleBackColor = true;
+            this.btnIlacKontrol.Click += new System.EventHandler(this.BtnIlacKontrol_Click);
             // 
             // HastaReceteGecmisi
             // 

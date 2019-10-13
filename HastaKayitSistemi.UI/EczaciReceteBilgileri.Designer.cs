@@ -44,6 +44,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "HASTA REÇETE GEÇMİŞİ";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button1
             // 
@@ -91,7 +92,7 @@
             this.btnIlaclarıGoruntule.Text = "İLAÇLARI LİSTELE";
             this.btnIlaclarıGoruntule.UseVisualStyleBackColor = true;
             // 
-            // EczacıReceteBilgileri
+            // EczaciReceteBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,8 +103,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtReceteNumarasi);
             this.Controls.Add(this.label3);
-            this.Name = "EczacıReceteBilgileri";
+            this.Name = "EczaciReceteBilgileri";
             this.Text = "EczacıReceteBilgileri";
+            this.Load += new System.EventHandler(this.EczaciReceteBilgileri_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
