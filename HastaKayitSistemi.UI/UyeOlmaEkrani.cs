@@ -12,17 +12,17 @@ using System.Windows.Forms;
 
 namespace HastaKayitSistemi.UI
 {
-    public partial class UyeOlmaEkranı : Form
+    public partial class UyeOlmaEkrani : Form
     {
 
-        public UyeOlmaEkranı()
+        public UyeOlmaEkrani()
         {
             InitializeComponent();
         }
         Context db;
 
 
-        private void UyeOlmaEkranı_Load(object sender, EventArgs e)
+        private void UyeOlmaEkrani_Load(object sender, EventArgs e)
         {
             //
         }
@@ -32,7 +32,7 @@ namespace HastaKayitSistemi.UI
         {
             db = new Context();
 
-            if (Metotlar.BosAlanVarMi(grpUye))
+            if (Metotlar.BosAlanVarMi(grpUyeOlmaEkrani))
                 MessageBox.Show("Lütfen tüm alanları doldurunuz!");
             else   
             {
