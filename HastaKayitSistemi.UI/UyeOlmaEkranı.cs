@@ -29,5 +29,10 @@ namespace HastaKayitSistemi
         {
             mainForm.Show();
         }
+
+        private void btnOnayla_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace HastaKayitSistemi
 {
-    public partial class EczacıReceteBilgileri : Form
+    public partial class Eczaci : Form
     {
-        public EczacıReceteBilgileri()
+        public Eczaci()
         {
             InitializeComponent();
+        }
+
+        private void Eczacı_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

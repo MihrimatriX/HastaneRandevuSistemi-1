@@ -1,6 +1,6 @@
 ﻿namespace HastaKayitSistemi
 {
-    partial class Eczacı
+    partial class Eczaci
     {
         /// <summary>
         /// Required designer variable.

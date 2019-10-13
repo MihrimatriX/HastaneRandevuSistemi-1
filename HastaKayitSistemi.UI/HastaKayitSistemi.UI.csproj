@@ -69,17 +69,17 @@
     <Compile Include="DoktorRandevuları.Designer.cs">
       <DependentUpon>DoktorRandevuları.cs</DependentUpon>
     </Compile>
-    <Compile Include="Eczacı.cs">
+    <Compile Include="Eczaci.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Eczacı.Designer.cs">
-      <DependentUpon>Eczacı.cs</DependentUpon>
+    <Compile Include="Eczaci.Designer.cs">
+      <DependentUpon>Eczaci.cs</DependentUpon>
     </Compile>
-    <Compile Include="EczacıReceteBilgileri.cs">
+    <Compile Include="EczaciReceteBilgileri.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EczacıReceteBilgileri.Designer.cs">
-      <DependentUpon>EczacıReceteBilgileri.cs</DependentUpon>
+    <Compile Include="EczaciReceteBilgileri.Designer.cs">
+      <DependentUpon>EczaciReceteBilgileri.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -125,11 +125,11 @@
     <EmbeddedResource Include="DoktorRandevuları.resx">
       <DependentUpon>DoktorRandevuları.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Eczacı.resx">
-      <DependentUpon>Eczacı.cs</DependentUpon>
+    <EmbeddedResource Include="Eczaci.resx">
+      <DependentUpon>Eczaci.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EczacıReceteBilgileri.resx">
-      <DependentUpon>EczacıReceteBilgileri.cs</DependentUpon>
+    <EmbeddedResource Include="EczaciReceteBilgileri.resx">
+      <DependentUpon>EczaciReceteBilgileri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

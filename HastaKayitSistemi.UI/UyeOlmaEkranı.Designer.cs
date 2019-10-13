@@ -64,7 +64,7 @@
             this.txtEmail.Location = new System.Drawing.Point(136, 268);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(200, 20);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 7;
             // 
             // label2
             // 
@@ -90,7 +90,7 @@
             this.txtSifre.Location = new System.Drawing.Point(136, 323);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(200, 20);
-            this.txtSifre.TabIndex = 4;
+            this.txtSifre.TabIndex = 8;
             // 
             // btnOnayla
             // 
@@ -98,9 +98,10 @@
             this.btnOnayla.Location = new System.Drawing.Point(133, 366);
             this.btnOnayla.Name = "btnOnayla";
             this.btnOnayla.Size = new System.Drawing.Size(203, 29);
-            this.btnOnayla.TabIndex = 5;
+            this.btnOnayla.TabIndex = 9;
             this.btnOnayla.Text = "ONAYLA";
             this.btnOnayla.UseVisualStyleBackColor = true;
+            this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
             // 
             // label4
             // 
@@ -176,21 +177,21 @@
             this.txtAd.Location = new System.Drawing.Point(136, 33);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(200, 20);
-            this.txtAd.TabIndex = 7;
+            this.txtAd.TabIndex = 1;
             // 
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(136, 65);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(200, 20);
-            this.txtSoyad.TabIndex = 7;
+            this.txtSoyad.TabIndex = 2;
             // 
             // txtTcNo
             // 
             this.txtTcNo.Location = new System.Drawing.Point(136, 101);
             this.txtTcNo.Name = "txtTcNo";
             this.txtTcNo.Size = new System.Drawing.Size(200, 20);
-            this.txtTcNo.TabIndex = 7;
+            this.txtTcNo.TabIndex = 3;
             // 
             // mskTxtTelefon
             // 
@@ -198,21 +199,21 @@
             this.mskTxtTelefon.Mask = "(999) 000-0000";
             this.mskTxtTelefon.Name = "mskTxtTelefon";
             this.mskTxtTelefon.Size = new System.Drawing.Size(200, 20);
-            this.mskTxtTelefon.TabIndex = 8;
+            this.mskTxtTelefon.TabIndex = 5;
             // 
             // dtDogumTarihi
             // 
             this.dtDogumTarihi.Location = new System.Drawing.Point(136, 131);
             this.dtDogumTarihi.Name = "dtDogumTarihi";
             this.dtDogumTarihi.Size = new System.Drawing.Size(200, 20);
-            this.dtDogumTarihi.TabIndex = 9;
+            this.dtDogumTarihi.TabIndex = 4;
             // 
             // txtAdres
             // 
             this.txtAdres.Location = new System.Drawing.Point(136, 204);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(200, 20);
-            this.txtAdres.TabIndex = 7;
+            this.txtAdres.TabIndex = 6;
             // 
             // UyeOlmaEkranı
             // 
