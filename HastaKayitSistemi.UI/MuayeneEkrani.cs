@@ -1,4 +1,5 @@
 ﻿using HastaKayitSistemi.DAL;
+using HastaKayitSistemi.DATA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,12 +18,16 @@ namespace HastaKayitSistemi.UI
         {
             InitializeComponent();
         }
-        Context db;
 
+        Context db;
+        List<string> teshisler = new List<string>();
+        List<string> ilaclar = new List<string>();
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
             db = new Context();
 
+            teshisler.Add(txtTeshis.Text);
+            ilaclar.Add(txtIlac.Text);
 
         }
 
@@ -36,6 +41,10 @@ namespace HastaKayitSistemi.UI
                 this.Hide();
                 randevuEkrani.Show();
             }
+        }
+
+        private void txtReceteNumarası_TextChanged(object sender, EventArgs e)
+        {
         }
     }
 }
