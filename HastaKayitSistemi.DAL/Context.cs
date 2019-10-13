@@ -35,6 +35,7 @@ namespace HastaKayitSistemi.DAL
             modelBuilder.Configurations.Add(new PoliklinikMapping());
             modelBuilder.Configurations.Add(new RandevuMapping());
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             base.OnModelCreating(modelBuilder);
         }
