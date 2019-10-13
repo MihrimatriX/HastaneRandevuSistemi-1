@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpRandevular = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRandevuListesi = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsSil = new System.Windows.Forms.ToolStripMenuItem();
             this.grpRandevular.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRandevuListesi)).BeginInit();
             this.ContextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpRandevular
             // 
-            this.grpRandevular.Controls.Add(this.dataGridView1);
+            this.grpRandevular.Controls.Add(this.dgvRandevuListesi);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpRandevular.Location = new System.Drawing.Point(49, 27);
             this.grpRandevular.Name = "grpRandevular";
@@ -52,20 +52,20 @@
             this.grpRandevular.TabStop = false;
             this.grpRandevular.Text = "Alınan Randevuların Listesi :";
             // 
-            // dataGridView1
+            // dgvRandevuListesi
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRandevuListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRandevuListesi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvRandevuListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRandevuListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(472, 306);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvRandevuListesi.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRandevuListesi.Location = new System.Drawing.Point(3, 22);
+            this.dgvRandevuListesi.Name = "dgvRandevuListesi";
+            this.dgvRandevuListesi.Size = new System.Drawing.Size(472, 306);
+            this.dgvRandevuListesi.TabIndex = 0;
             // 
             // Column1
             // 
@@ -92,7 +92,7 @@
             // cmsSil
             // 
             this.cmsSil.Name = "cmsSil";
-            this.cmsSil.Size = new System.Drawing.Size(180, 22);
+            this.cmsSil.Size = new System.Drawing.Size(89, 22);
             this.cmsSil.Text = "SİL";
             this.cmsSil.Click += new System.EventHandler(this.CmsSil_Click);
             // 
@@ -107,7 +107,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Randevular_FormClosed);
             this.Load += new System.EventHandler(this.Randevular_Load);
             this.grpRandevular.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRandevuListesi)).EndInit();
             this.ContextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -116,7 +116,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpRandevular;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRandevuListesi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

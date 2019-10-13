@@ -28,42 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHastaReceteGecmisi = new System.Windows.Forms.Button();
+            this.btnIlacTeslimEdildi = new System.Windows.Forms.Button();
+            this.grpIlac = new System.Windows.Forms.GroupBox();
             this.txtReceteNumarasi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnIlaclarıGoruntule = new System.Windows.Forms.Button();
+            this.btnIlaclariGoruntule = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button2
+            // btnHastaReceteGecmisi
             // 
-            this.button2.Location = new System.Drawing.Point(55, 210);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(242, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "HASTA REÇETE GEÇMİŞİ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.btnHastaReceteGecmisi.Location = new System.Drawing.Point(55, 210);
+            this.btnHastaReceteGecmisi.Name = "btnHastaReceteGecmisi";
+            this.btnHastaReceteGecmisi.Size = new System.Drawing.Size(242, 23);
+            this.btnHastaReceteGecmisi.TabIndex = 13;
+            this.btnHastaReceteGecmisi.Text = "HASTA REÇETE GEÇMİŞİ";
+            this.btnHastaReceteGecmisi.UseVisualStyleBackColor = true;
+            this.btnHastaReceteGecmisi.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // button1
+            // btnIlacTeslimEdildi
             // 
-            this.button1.Location = new System.Drawing.Point(55, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(242, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "HASTAYA İLAÇLAR TESLİM EDİLDİ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnIlacTeslimEdildi.Location = new System.Drawing.Point(55, 239);
+            this.btnIlacTeslimEdildi.Name = "btnIlacTeslimEdildi";
+            this.btnIlacTeslimEdildi.Size = new System.Drawing.Size(242, 23);
+            this.btnIlacTeslimEdildi.TabIndex = 12;
+            this.btnIlacTeslimEdildi.Text = "HASTAYA İLAÇLAR TESLİM EDİLDİ";
+            this.btnIlacTeslimEdildi.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // grpIlac
             // 
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 68);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(332, 136);
-            this.groupBox1.TabIndex = 11;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "İlaçlar";
+            this.grpIlac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.grpIlac.Location = new System.Drawing.Point(12, 68);
+            this.grpIlac.Name = "grpIlac";
+            this.grpIlac.Size = new System.Drawing.Size(332, 136);
+            this.grpIlac.TabIndex = 11;
+            this.grpIlac.TabStop = false;
+            this.grpIlac.Text = "İlaçlar";
             // 
             // txtReceteNumarasi
             // 
@@ -83,24 +83,25 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "Reçete Numarası :";
             // 
-            // btnIlaclarıGoruntule
+            // btnIlaclariGoruntule
             // 
-            this.btnIlaclarıGoruntule.Location = new System.Drawing.Point(158, 39);
-            this.btnIlaclarıGoruntule.Name = "btnIlaclarıGoruntule";
-            this.btnIlaclarıGoruntule.Size = new System.Drawing.Size(186, 23);
-            this.btnIlaclarıGoruntule.TabIndex = 14;
-            this.btnIlaclarıGoruntule.Text = "İLAÇLARI LİSTELE";
-            this.btnIlaclarıGoruntule.UseVisualStyleBackColor = true;
+            this.btnIlaclariGoruntule.Location = new System.Drawing.Point(158, 39);
+            this.btnIlaclariGoruntule.Name = "btnIlaclariGoruntule";
+            this.btnIlaclariGoruntule.Size = new System.Drawing.Size(186, 23);
+            this.btnIlaclariGoruntule.TabIndex = 14;
+            this.btnIlaclariGoruntule.Text = "İLAÇLARI LİSTELE";
+            this.btnIlaclariGoruntule.UseVisualStyleBackColor = true;
+            this.btnIlaclariGoruntule.Click += new System.EventHandler(this.BtnIlaclariGoruntule_Click);
             // 
             // EczaciReceteBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 275);
-            this.Controls.Add(this.btnIlaclarıGoruntule);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnIlaclariGoruntule);
+            this.Controls.Add(this.btnHastaReceteGecmisi);
+            this.Controls.Add(this.btnIlacTeslimEdildi);
+            this.Controls.Add(this.grpIlac);
             this.Controls.Add(this.txtReceteNumarasi);
             this.Controls.Add(this.label3);
             this.Name = "EczaciReceteBilgileri";
@@ -113,11 +114,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnHastaReceteGecmisi;
+        private System.Windows.Forms.Button btnIlacTeslimEdildi;
+        private System.Windows.Forms.GroupBox grpIlac;
         private System.Windows.Forms.TextBox txtReceteNumarasi;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnIlaclarıGoruntule;
+        private System.Windows.Forms.Button btnIlaclariGoruntule;
     }
 }

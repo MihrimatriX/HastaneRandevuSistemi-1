@@ -31,15 +31,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rdoHastaGelmedi = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTeshis = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.nmrReceteNo = new System.Windows.Forms.NumericUpDown();
+            this.rdoTeshisKonulamadi = new System.Windows.Forms.RadioButton();
+            this.btnMuayeneTamamlandi = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbIlaclar = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.lbxIlaclar = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrReceteNo)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,14 +72,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Teşhis :";
             // 
-            // comboBox1
+            // cmbTeshis
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(82, 49);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 28);
-            this.comboBox1.TabIndex = 3;
+            this.cmbTeshis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cmbTeshis.FormattingEnabled = true;
+            this.cmbTeshis.Location = new System.Drawing.Point(82, 49);
+            this.cmbTeshis.Name = "cmbTeshis";
+            this.cmbTeshis.Size = new System.Drawing.Size(215, 28);
+            this.cmbTeshis.TabIndex = 3;
             // 
             // label3
             // 
@@ -91,34 +91,34 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Reçete Numarası :";
             // 
-            // numericUpDown1
+            // nmrReceteNo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(163, 96);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(134, 20);
-            this.numericUpDown1.TabIndex = 5;
+            this.nmrReceteNo.Location = new System.Drawing.Point(163, 96);
+            this.nmrReceteNo.Name = "nmrReceteNo";
+            this.nmrReceteNo.Size = new System.Drawing.Size(134, 20);
+            this.nmrReceteNo.TabIndex = 5;
             // 
-            // radioButton1
+            // rdoTeshisKonulamadi
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.Location = new System.Drawing.Point(12, 122);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(264, 24);
-            this.radioButton1.TabIndex = 6;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Teşhis Konulamadı Tahlil İsteniyor";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.rdoTeshisKonulamadi.AutoSize = true;
+            this.rdoTeshisKonulamadi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.rdoTeshisKonulamadi.Location = new System.Drawing.Point(12, 122);
+            this.rdoTeshisKonulamadi.Name = "rdoTeshisKonulamadi";
+            this.rdoTeshisKonulamadi.Size = new System.Drawing.Size(264, 24);
+            this.rdoTeshisKonulamadi.TabIndex = 6;
+            this.rdoTeshisKonulamadi.TabStop = true;
+            this.rdoTeshisKonulamadi.Text = "Teşhis Konulamadı Tahlil İsteniyor";
+            this.rdoTeshisKonulamadi.UseVisualStyleBackColor = true;
+            this.rdoTeshisKonulamadi.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
-            // button1
+            // btnMuayeneTamamlandi
             // 
-            this.button1.Location = new System.Drawing.Point(82, 267);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 35);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "MUAYENE TAMAMLANDI";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMuayeneTamamlandi.Location = new System.Drawing.Point(82, 267);
+            this.btnMuayeneTamamlandi.Name = "btnMuayeneTamamlandi";
+            this.btnMuayeneTamamlandi.Size = new System.Drawing.Size(215, 35);
+            this.btnMuayeneTamamlandi.TabIndex = 7;
+            this.btnMuayeneTamamlandi.Text = "MUAYENE TAMAMLANDI";
+            this.btnMuayeneTamamlandi.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -138,34 +138,34 @@
             this.cmbIlaclar.Size = new System.Drawing.Size(223, 21);
             this.cmbIlaclar.TabIndex = 9;
             // 
-            // listBox1
+            // lbxIlaclar
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 192);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(285, 69);
-            this.listBox1.TabIndex = 10;
+            this.lbxIlaclar.FormattingEnabled = true;
+            this.lbxIlaclar.Location = new System.Drawing.Point(12, 192);
+            this.lbxIlaclar.Name = "lbxIlaclar";
+            this.lbxIlaclar.Size = new System.Drawing.Size(285, 69);
+            this.lbxIlaclar.TabIndex = 10;
             // 
             // MuayeneEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 350);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbxIlaclar);
             this.Controls.Add(this.cmbIlaclar);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.btnMuayeneTamamlandi);
+            this.Controls.Add(this.rdoTeshisKonulamadi);
+            this.Controls.Add(this.nmrReceteNo);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTeshis);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.rdoHastaGelmedi);
             this.Controls.Add(this.label1);
             this.Name = "MuayeneEkrani";
             this.Text = "MuayeneEkrani";
             this.Load += new System.EventHandler(this.MuayeneEkrani_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrReceteNo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,13 +176,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rdoHastaGelmedi;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTeshis;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown nmrReceteNo;
+        private System.Windows.Forms.RadioButton rdoTeshisKonulamadi;
+        private System.Windows.Forms.Button btnMuayeneTamamlandi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbIlaclar;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbxIlaclar;
     }
 }

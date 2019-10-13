@@ -19,12 +19,12 @@ namespace HastaKayitSistemi.UI
         }
         Context db = new Context();
 
-        private void Eczacı_Load(object sender, EventArgs e)
+        private void Eczaci_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void BtnEczacıGiris_Click(object sender, EventArgs e)
+        private void BtnEczaciGiris_Click(object sender, EventArgs e)
         {
             EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
             this.Close();

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btnUyeOl = new System.Windows.Forms.Button();
-            this.btnGiris = new System.Windows.Forms.Button();
+            this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,16 +47,16 @@
             this.btnUyeOl.UseVisualStyleBackColor = true;
             this.btnUyeOl.Click += new System.EventHandler(this.BtnUyeOl_Click);
             // 
-            // btnGiris
+            // btnGirisYap
             // 
-            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGiris.Location = new System.Drawing.Point(111, 111);
-            this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(144, 29);
-            this.btnGiris.TabIndex = 9;
-            this.btnGiris.Text = "GİRİŞ YAP";
-            this.btnGiris.UseVisualStyleBackColor = true;
-            this.btnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
+            this.btnGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGirisYap.Location = new System.Drawing.Point(111, 111);
+            this.btnGirisYap.Name = "btnGirisYap";
+            this.btnGirisYap.Size = new System.Drawing.Size(144, 29);
+            this.btnGirisYap.TabIndex = 9;
+            this.btnGirisYap.Text = "GİRİŞ YAP";
+            this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.BtnGiris_Click);
             // 
             // txtSifre
             // 
@@ -98,7 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 236);
             this.Controls.Add(this.btnUyeOl);
-            this.Controls.Add(this.btnGiris);
+            this.Controls.Add(this.btnGirisYap);
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
@@ -114,7 +114,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnUyeOl;
-        private System.Windows.Forms.Button btnGiris;
+        private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label2;

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.clndrCalismaGunu = new System.Windows.Forms.MonthCalendar();
             this.grpRandevular = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRandevular = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMuayene = new System.Windows.Forms.Button();
             this.grpRandevular.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -49,34 +49,34 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Çalışma Günü :";
             // 
-            // monthCalendar1
+            // clndrCalismaGunu
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(142, 13);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
+            this.clndrCalismaGunu.Location = new System.Drawing.Point(142, 13);
+            this.clndrCalismaGunu.Name = "clndrCalismaGunu";
+            this.clndrCalismaGunu.TabIndex = 1;
             // 
             // grpRandevular
             // 
-            this.grpRandevular.Controls.Add(this.dataGridView1);
+            this.grpRandevular.Controls.Add(this.dgvRandevular);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpRandevular.Location = new System.Drawing.Point(17, 187);
             this.grpRandevular.Name = "grpRandevular";
             this.grpRandevular.Size = new System.Drawing.Size(359, 171);
             this.grpRandevular.TabIndex = 2;
             this.grpRandevular.TabStop = false;
-            this.grpRandevular.Text = "Rabdevular";
+            this.grpRandevular.Text = "Randevular";
             // 
-            // dataGridView1
+            // dgvRandevular
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvRandevular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRandevular.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(353, 146);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvRandevular.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRandevular.Location = new System.Drawing.Point(3, 22);
+            this.dgvRandevular.Name = "dgvRandevular";
+            this.dgvRandevular.Size = new System.Drawing.Size(353, 146);
+            this.dgvRandevular.TabIndex = 0;
             // 
             // Column1
             // 
@@ -108,12 +108,12 @@
             this.ClientSize = new System.Drawing.Size(394, 421);
             this.Controls.Add(this.btnMuayene);
             this.Controls.Add(this.grpRandevular);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.clndrCalismaGunu);
             this.Controls.Add(this.label1);
             this.Name = "DoktorRandevuları";
             this.Text = "DoktorRandevuları";
             this.grpRandevular.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,9 +122,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar clndrCalismaGunu;
         private System.Windows.Forms.GroupBox grpRandevular;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRandevular;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button btnMuayene;

@@ -63,11 +63,11 @@
     <Compile Include="Doktor.Designer.cs">
       <DependentUpon>Doktor.cs</DependentUpon>
     </Compile>
-    <Compile Include="DoktorRandevuları.cs">
+    <Compile Include="DoktorRandevulari.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DoktorRandevuları.Designer.cs">
-      <DependentUpon>DoktorRandevuları.cs</DependentUpon>
+    <Compile Include="DoktorRandevulari.Designer.cs">
+      <DependentUpon>DoktorRandevulari.cs</DependentUpon>
     </Compile>
     <Compile Include="Eczaci.cs">
       <SubType>Form</SubType>
@@ -120,17 +120,17 @@
     <Compile Include="Randevular.Designer.cs">
       <DependentUpon>Randevular.cs</DependentUpon>
     </Compile>
-    <Compile Include="UyeOlmaEkranı.cs">
+    <Compile Include="UyeOlmaEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UyeOlmaEkranı.Designer.cs">
-      <DependentUpon>UyeOlmaEkranı.cs</DependentUpon>
+    <Compile Include="UyeOlmaEkrani.Designer.cs">
+      <DependentUpon>UyeOlmaEkrani.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Doktor.resx">
       <DependentUpon>Doktor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DoktorRandevuları.resx">
-      <DependentUpon>DoktorRandevuları.cs</DependentUpon>
+    <EmbeddedResource Include="DoktorRandevulari.resx">
+      <DependentUpon>DoktorRandevulari.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Eczaci.resx">
       <DependentUpon>Eczaci.cs</DependentUpon>
@@ -166,8 +166,8 @@
     <EmbeddedResource Include="Randevular.resx">
       <DependentUpon>Randevular.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UyeOlmaEkranı.resx">
-      <DependentUpon>UyeOlmaEkranı.cs</DependentUpon>
+    <EmbeddedResource Include="UyeOlmaEkrani.resx">
+      <DependentUpon>UyeOlmaEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

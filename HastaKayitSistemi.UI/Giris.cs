@@ -42,7 +42,7 @@ namespace HastaKayitSistemi.UI
             doktor.Show();
         }
 
-        private void BtnEczacı_Click(object sender, EventArgs e)
+        private void BtnEczaci_Click(object sender, EventArgs e)
         {
             Eczaci eczaci = new Eczaci();
             this.Hide();

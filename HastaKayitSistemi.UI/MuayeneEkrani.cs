@@ -28,10 +28,10 @@ namespace HastaKayitSistemi.UI
 
         private void RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButton1.Checked==true)
+            if (rdoTeshisKonulamadi.Checked==true)
             {
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
-                randevuEkrani.btnDoktorOnayRandevu.Enabled = false;
+                randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
                 randevuEkrani.btnRandevu.Enabled = false;
                 this.Hide();
                 randevuEkrani.Show();

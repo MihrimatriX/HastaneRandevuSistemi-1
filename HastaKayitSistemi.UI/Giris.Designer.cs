@@ -30,7 +30,7 @@
         {
             this.btnHasta = new System.Windows.Forms.Button();
             this.btnDoktor = new System.Windows.Forms.Button();
-            this.btnEczacı = new System.Windows.Forms.Button();
+            this.btnEczaci = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHasta
@@ -53,22 +53,22 @@
             this.btnDoktor.UseVisualStyleBackColor = true;
             this.btnDoktor.Click += new System.EventHandler(this.BtnDoktor_Click);
             // 
-            // btnEczacı
+            // btnEczaci
             // 
-            this.btnEczacı.Location = new System.Drawing.Point(126, 146);
-            this.btnEczacı.Name = "btnEczacı";
-            this.btnEczacı.Size = new System.Drawing.Size(126, 44);
-            this.btnEczacı.TabIndex = 7;
-            this.btnEczacı.Text = "ECZACI GİRİŞİ";
-            this.btnEczacı.UseVisualStyleBackColor = true;
-            this.btnEczacı.Click += new System.EventHandler(this.BtnEczacı_Click);
+            this.btnEczaci.Location = new System.Drawing.Point(126, 146);
+            this.btnEczaci.Name = "btnEczaci";
+            this.btnEczaci.Size = new System.Drawing.Size(126, 44);
+            this.btnEczaci.TabIndex = 7;
+            this.btnEczaci.Text = "ECZACI GİRİŞİ";
+            this.btnEczaci.UseVisualStyleBackColor = true;
+            this.btnEczaci.Click += new System.EventHandler(this.BtnEczaci_Click);
             // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(372, 235);
-            this.Controls.Add(this.btnEczacı);
+            this.Controls.Add(this.btnEczaci);
             this.Controls.Add(this.btnDoktor);
             this.Controls.Add(this.btnHasta);
             this.Name = "Giris";
@@ -81,7 +81,7 @@
         #endregion
         private System.Windows.Forms.Button btnHasta;
         private System.Windows.Forms.Button btnDoktor;
-        private System.Windows.Forms.Button btnEczacı;
+        private System.Windows.Forms.Button btnEczaci;
     }
 }
 

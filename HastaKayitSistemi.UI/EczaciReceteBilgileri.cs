@@ -32,5 +32,10 @@ namespace HastaKayitSistemi.UI
         {
 
         }
+
+        private void BtnIlaclariGoruntule_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

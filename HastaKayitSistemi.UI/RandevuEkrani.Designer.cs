@@ -40,11 +40,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dtRandevuTarihi = new System.Windows.Forms.MonthCalendar();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nmrRandevuSaati = new System.Windows.Forms.NumericUpDown();
             this.btnRandevu = new System.Windows.Forms.Button();
-            this.btnDoktorOnayRandevu = new System.Windows.Forms.Button();
+            this.btnDoktorOnayliRandevu = new System.Windows.Forms.Button();
             this.lblHastaAdiSoyadi = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrRandevuSaati)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRandevular
@@ -164,13 +164,13 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Randevu Saati :";
             // 
-            // numericUpDown1
+            // nmrRandevuSaati
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.numericUpDown1.Location = new System.Drawing.Point(143, 412);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(234, 26);
-            this.numericUpDown1.TabIndex = 12;
+            this.nmrRandevuSaati.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.nmrRandevuSaati.Location = new System.Drawing.Point(143, 412);
+            this.nmrRandevuSaati.Name = "nmrRandevuSaati";
+            this.nmrRandevuSaati.Size = new System.Drawing.Size(234, 26);
+            this.nmrRandevuSaati.TabIndex = 12;
             // 
             // btnRandevu
             // 
@@ -183,15 +183,15 @@
             this.btnRandevu.UseVisualStyleBackColor = true;
             this.btnRandevu.Click += new System.EventHandler(this.btnRandevu_Click);
             // 
-            // btnDoktorOnayRandevu
+            // btnDoktorOnayliRandevu
             // 
-            this.btnDoktorOnayRandevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDoktorOnayRandevu.Location = new System.Drawing.Point(182, 444);
-            this.btnDoktorOnayRandevu.Name = "btnDoktorOnayRandevu";
-            this.btnDoktorOnayRandevu.Size = new System.Drawing.Size(189, 54);
-            this.btnDoktorOnayRandevu.TabIndex = 14;
-            this.btnDoktorOnayRandevu.Text = "DOKTOR ONAYLI RANDEVU";
-            this.btnDoktorOnayRandevu.UseVisualStyleBackColor = true;
+            this.btnDoktorOnayliRandevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDoktorOnayliRandevu.Location = new System.Drawing.Point(182, 444);
+            this.btnDoktorOnayliRandevu.Name = "btnDoktorOnayliRandevu";
+            this.btnDoktorOnayliRandevu.Size = new System.Drawing.Size(189, 54);
+            this.btnDoktorOnayliRandevu.TabIndex = 14;
+            this.btnDoktorOnayliRandevu.Text = "DOKTOR ONAYLI RANDEVU";
+            this.btnDoktorOnayliRandevu.UseVisualStyleBackColor = true;
             // 
             // lblHastaAdiSoyadi
             // 
@@ -200,7 +200,7 @@
             this.lblHastaAdiSoyadi.Name = "lblHastaAdiSoyadi";
             this.lblHastaAdiSoyadi.Size = new System.Drawing.Size(88, 13);
             this.lblHastaAdiSoyadi.TabIndex = 15;
-            this.lblHastaAdiSoyadi.Text = "Hasta Adi Soyadi";
+            this.lblHastaAdiSoyadi.Text = "Hasta Adı Soyadı";
             // 
             // RandevuEkrani
             // 
@@ -208,9 +208,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(402, 510);
             this.Controls.Add(this.lblHastaAdiSoyadi);
-            this.Controls.Add(this.btnDoktorOnayRandevu);
+            this.Controls.Add(this.btnDoktorOnayliRandevu);
             this.Controls.Add(this.btnRandevu);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nmrRandevuSaati);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dtRandevuTarihi);
             this.Controls.Add(this.label5);
@@ -226,7 +226,7 @@
             this.Name = "RandevuEkrani";
             this.Text = "RandevuEkrani";
             this.Load += new System.EventHandler(this.RandevuEkrani_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmrRandevuSaati)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,8 +246,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.MonthCalendar dtRandevuTarihi;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        public System.Windows.Forms.Button btnDoktorOnayRandevu;
+        private System.Windows.Forms.NumericUpDown nmrRandevuSaati;
+        public System.Windows.Forms.Button btnDoktorOnayliRandevu;
         public System.Windows.Forms.Button btnRandevu;
         public System.Windows.Forms.Label lblHastaAdiSoyadi;
     }
