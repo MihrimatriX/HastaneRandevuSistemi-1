@@ -33,36 +33,44 @@ namespace HastaKayitSistemi.UI
 
             if (Metotlar.BosAlanVarMi(grpUyeOlmaEkrani))
                 MessageBox.Show("Lütfen tüm alanları doldurunuz!");
-            else   
+            else
             {
-                DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email==txtEmail.Text);
+                DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email == txtEmail.Text);
+                MessageBox.Show("Lütfen TcNo veya Emaili tekrar giriniz ...");
 
                 if (hastalar == null)
                 {
-                    hastalar = new DATA.Hasta
+
+                    if (txtSifre.Text.Length < 9)
                     {
+                        hastalar = new DATA.Hasta
+                        {
 
-                        Ad = txtAd.Text,
-                        Soyad = txtSoyad.Text,
-                        TcNo = txtTcNo.Text,
-                        Adres = txtAdres.Text,
-                        Telefon = mskTxtTelefon.Text,
-                        Email = txtEmail.Text,
-                        Sifre = txtSifre.Text,
-                        DogumTarihi = dtDogumTarihi.Value
+                            Ad = txtAd.Text,
+                            Soyad = txtSoyad.Text,
+                            TcNo = txtTcNo.Text,
+                            Adres = txtAdres.Text,
+                            Telefon = mskTxtTelefon.Text,
+                            Email = txtEmail.Text,
+                            Sifre = txtSifre.Text,
+                            DogumTarihi = dtDogumTarihi.Value
 
-                    };
+                        };
+                        db.Hastalar.Add(hastalar);
+                        db.SaveChanges();
 
-                    db.Hastalar.Add(hastalar);
-                    db.SaveChanges();
+                        MessageBox.Show("Kaydınız gerçekleşmiştir...");
+                        this.Hide();
+                        Hasta hasta = new Hasta();
+                        hasta.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("şifreniz 8 karakterden fazla girilmiştir");
+                    }
 
-                    MessageBox.Show("Kaydınız gerçekleşmiştir...");
-                    this.Hide();
-                    Hasta hasta = new Hasta();
-                    hasta.Show();
                 }
 
-                MessageBox.Show("Lütfen TcNo veya Emaili tekrar giriniz ...");
 
             }
 

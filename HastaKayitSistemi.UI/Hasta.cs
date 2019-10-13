@@ -34,11 +34,15 @@ namespace HastaKayitSistemi.UI
                 this.Hide();
                 randevuEkrani.Show();
             }
+            else if (Metotlar.BosAlanVarMi(grpHasta))
+            {
+                MessageBox.Show("boş alanları doldurunuz...");
+            }
             else
             {
                 MessageBox.Show("Girdiğiniz Kullanıcı Adı veya Şifre Hatalı! Lütfen Üye Değilseniz Üye Olunuz.");
             }
-            
+
         }
 
         private void BtnUyeOl_Click(object sender, EventArgs e)

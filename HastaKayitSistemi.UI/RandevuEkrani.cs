@@ -69,7 +69,7 @@ namespace HastaKayitSistemi.UI
         {
             if (cmbHastane.SelectedIndex == -1 && cmbPoliklinik.SelectedIndex == -1)
             {
-                cmbDoktor.DataSource = db.Doktorlar.Where(x => x.DepartmanID == cmbDepartman.SelectedValue);
+               // cmbDoktor.DataSource = db.Doktorlar.Where(x => x.DepartmanID == cmbDepartman.SelectedValue);
             }
         }
     }

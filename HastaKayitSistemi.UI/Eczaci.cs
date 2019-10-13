@@ -26,10 +26,26 @@ namespace HastaKayitSistemi.UI
 
         private void BtnEczaciGiris_Click(object sender, EventArgs e)
         {
-            EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
-            this.Close();
-            eczaciReceteBilgileri.Show();
+            if (db.Eczacilar.FirstOrDefault(x => x.KullaniciAdi == txtEczaciAdi.Text && x.Sifre == txtEczaciSifre.Text) != null)
+            {
+                txtEczaciAdi.Text = txtEczaciSifre.Text = "";
+                EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
+                this.Close();
+                eczaciReceteBilgileri.Show();
+
+            }
+            else if (Metotlar.BosAlanVarMi(grpEczaci))
+            {
+                MessageBox.Show("Boş alanları doldurunuz");
+            }
+            else
+            {
+                MessageBox.Show("Girdiğiniz Kullanıcı Adı veya Şifre Hatalı! Doğru Bilgileri Girdiğinizden Emin Olunuz.");
+            }
+
 
         }
+
     }
+
 }

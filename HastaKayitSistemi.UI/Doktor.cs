@@ -34,6 +34,11 @@ namespace HastaKayitSistemi.UI
                 this.Hide();
                 doktorRandevuları.Show();
             }
+
+            else if (Metotlar.BosAlanVarMi(grpDoktor))
+            {
+                MessageBox.Show("boş alanları doldurunuz...");
+            }
             else
             {
                 MessageBox.Show("Girdiğiniz Kullanıcı Adı veya Şifre Hatalı! Doğru Bilgileri Girdiğinizden Emin Olunuz.");
