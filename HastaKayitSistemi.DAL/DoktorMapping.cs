@@ -16,8 +16,7 @@ namespace HastaKayitSistemi.DAL
             HasRequired(x => x.Hastane).WithMany(x => x.Doktorlar).HasForeignKey(x => x.HastaneID);
             HasRequired(x => x.Poliklinik).WithMany(x => x.Doktorlar).HasForeignKey(x => x.PoliklinikID);
             HasRequired(x => x.Departman).WithMany(x => x.Doktorlar).HasForeignKey(x => x.DepartmanID);
-
-            Property(x => x.PoliklinikID).IsOptional();
+            
         }
     }
 }
