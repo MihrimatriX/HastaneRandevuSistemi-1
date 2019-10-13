@@ -10,7 +10,7 @@ namespace HastaKayitSistemi.DATA
     {
         public int DoktorID { get; set; }
         public string DoktorAdiSoyadi { get; set; }
-        public string DepartmanID { get; set;  }
+        public int DepartmanID { get; set;  }
         public virtual List<HastaDoktor> DoktorunHastalari { get; set; }
         public virtual List<Randevu> Randevular { get; set; }
         public virtual Departman Departman { get; set; }

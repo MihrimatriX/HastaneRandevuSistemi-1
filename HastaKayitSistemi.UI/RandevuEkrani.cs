@@ -44,14 +44,14 @@ namespace HastaKayitSistemi.UI
 
         }
 
-        private void BtnRandevular_Click(object sender, EventArgs e)
+        private void BtnMevcutRandevularim_Click(object sender, EventArgs e)
         {
             Randevular randevular = new Randevular();
             this.Close();
             randevular.Show();
         }
 
-        private void btnRandevu_Click(object sender, EventArgs e)
+        private void btnRandevuAl_Click(object sender, EventArgs e)
         {
 
         }
@@ -62,6 +62,14 @@ namespace HastaKayitSistemi.UI
             {
                 MessageBox.Show("Hafta Sonunu Seçemezsiniz!");
                 dtRandevuTarihi.SelectionStart = DateTime.Today.AddDays(1);
+            }
+        }
+
+        private void CmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbHastane.SelectedIndex == -1 && cmbPoliklinik.SelectedIndex == -1)
+            {
+                cmbDoktor.DataSource = db.Doktorlar.Where(x => x.DepartmanID == cmbDepartman.SelectedValue);
             }
         }
     }

@@ -32,7 +32,7 @@ namespace HastaKayitSistemi.UI
             {
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
                 randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
-                randevuEkrani.btnRandevu.Enabled = false;
+                randevuEkrani.btnRandevuAl.Enabled = false;
                 this.Hide();
                 randevuEkrani.Show();
             }
