@@ -13,6 +13,7 @@ namespace HastaKayitSistemi.DATA
 
         public int HastaneID { get; set; }
         public virtual Hastane Hastane { get; set; }
+        public virtual List<Doktor> Doktorlar { get; set; }
 
     }
 }

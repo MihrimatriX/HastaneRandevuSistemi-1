@@ -13,7 +13,7 @@ namespace HastaKayitSistemi.DAL
     {
         public Context()
         {
-            Database.Connection.ConnectionString = "server = .; database = REFFDb;uid=sa;pwd=123";
+            Database.Connection.ConnectionString = "server = .; database = REFFDb; trusted_connection=yes";
         }
         public DbSet<Hasta> Hastalar { get; set; }
         public DbSet<Doktor> Doktorlar { get; set; }
