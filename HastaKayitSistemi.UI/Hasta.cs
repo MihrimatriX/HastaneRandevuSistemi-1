@@ -23,14 +23,22 @@ namespace HastaKayitSistemi.UI
             db = new Context();
             
 
-
         }
 
         private void BtnGiris_Click(object sender, EventArgs e)
         {
-            RandevuEkrani randevuEkrani = new RandevuEkrani();
-            this.Hide();
-            randevuEkrani.Show();
+            if (db.Hastalar.FirstOrDefault(x => x.Email == txtEmail.Text && x.Sifre == txtSifre.Text) != null)
+            {
+                txtEmail.Text = txtSifre.Text = "";
+                RandevuEkrani randevuEkrani = new RandevuEkrani();
+                this.Hide();
+                randevuEkrani.Show();
+            }
+            else
+            {
+                MessageBox.Show("Girdiğiniz Kullanıcı Adı veya Şifre Hatalı! Lütfen Üye Değilseniz Üye Olunuz.");
+            }
+            
         }
 
         private void BtnUyeOl_Click(object sender, EventArgs e)
