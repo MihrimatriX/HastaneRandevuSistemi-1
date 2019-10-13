@@ -24,20 +24,49 @@ namespace HastaKayitSistemi.UI
 
         private void UyeOlmaEkranı_Load(object sender, EventArgs e)
         {
-            db = new Context();
-            DATA.Hasta hasta = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text);
 
         }
 
-        private void UyeOlmaEkranı_FormClosed(object sender, FormClosedEventArgs e)
-        {
-        }
 
         private void btnOnayla_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Hasta hasta = new Hasta();
-            hasta.Show();
+            db = new Context();
+
+            if (Metotlar.BosAlanVarMi(grpUye))
+                MessageBox.Show("Lütfen tüm alanları doldurunuz!");
+            else
+            {
+                DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email==txtEmail.Text);
+
+                if (hastalar == null)
+                {
+                    hastalar = new DATA.Hasta
+                    {
+
+                        Ad = txtAd.Text,
+                        Soyad = txtSoyad.Text,
+                        TcNo = txtTcNo.Text,
+                        Adres = txtAdres.Text,
+                        Telefon = mskTxtTelefon.Text,
+                        Email = txtEmail.Text,
+                        Sifre = txtSifre.Text,
+                        DogumTarihi = dtDogumTarihi.Value
+
+                    };
+
+                    db.Hastalar.Add(hastalar);
+                    db.SaveChanges();
+
+                    MessageBox.Show("Kaydınız gerçekleşmiştir...");
+                    this.Hide();
+                    Hasta hasta = new Hasta();
+                    hasta.Show();
+                }
+
+                MessageBox.Show("Lütfen TcNo veya Emaili tekrar giriniz ...");
+
+            }
+
         }
     }
 }
