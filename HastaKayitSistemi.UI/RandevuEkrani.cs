@@ -24,6 +24,7 @@ namespace HastaKayitSistemi.UI
         {
             dtRandevuTarihi.MinDate = DateTime.Today.AddDays(1);
             dtRandevuTarihi.MaxDate = DateTime.Today.AddDays(30);
+            dtRandevuTarihi.MaxSelectionCount = 1;
             db = new Context();
             btnDoktorOnayRandevu.Enabled = !btnDoktorOnayRandevu.Enabled;
             cmbHastane.DataSource = db.Hastaneler.ToList();
