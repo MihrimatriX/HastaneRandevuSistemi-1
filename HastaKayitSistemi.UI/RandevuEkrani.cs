@@ -149,7 +149,7 @@ namespace HastaKayitSistemi.UI
             {
                 MessageBox.Show("Boş Alanları Doldurunuz!");
             }
-            else
+            else if (cmbDepartman.SelectedIndex >= 0 && cmbDoktor.SelectedIndex >= 0 && cmbHastane.SelectedIndex >= 0)
             {
                 DateTime tarih = (DateTime)dtRandevuTarihi.SelectionStart;
                 string randevuTarihi = tarih.ToString("yyyy-MM-dd") + " " + HangiSaatSecili(panelRandevu).ToString();
@@ -167,6 +167,10 @@ namespace HastaKayitSistemi.UI
                 db.Randevular.Add(randevu);
                 db.SaveChanges();
                 MessageBox.Show("Randevu Kaydınız Alındı!");
+            }
+            else
+            {
+                MessageBox.Show("Lütfen Gerekli Yerleri Seçiniz!");
             }
         }
 
