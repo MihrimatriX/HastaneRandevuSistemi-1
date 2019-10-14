@@ -95,6 +95,7 @@
             this.btnMevcutRandevularim.TabIndex = 0;
             this.btnMevcutRandevularim.Text = "MEVCUT RANDEVULARIM";
             this.btnMevcutRandevularim.UseVisualStyleBackColor = true;
+            this.btnMevcutRandevularim.Click += new System.EventHandler(this.BtnMevcutRandevularim_Click);
             // 
             // label1
             // 
