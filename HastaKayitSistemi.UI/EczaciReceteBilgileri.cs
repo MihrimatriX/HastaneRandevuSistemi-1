@@ -30,15 +30,21 @@ namespace HastaKayitSistemi.UI
         private void EczaciReceteBilgileri_Load(object sender, EventArgs e)
         {
 
-
+            db = new Context();
         }
 
         private void BtnIlaclariGoruntule_Click(object sender, EventArgs e)
         {
-            db = new Context();
+
             int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
             var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
-            lsvIlaclar.Items.Add(ReceteNumarası);
+            lstIlaclar.Items.Add(ReceteNumarası);
+        }
+
+        private void btnTemizle_Click(object sender, EventArgs e)
+        {
+            
+            lstIlaclar.Items.Clear();
 
         }
     }

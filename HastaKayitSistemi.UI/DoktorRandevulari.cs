@@ -24,14 +24,15 @@ namespace HastaKayitSistemi.UI
             MuayeneEkrani muayeneEkrani = new MuayeneEkrani();
             this.Hide();
             muayeneEkrani.Show();
+
         }
 
         private void DoktorRandevuları_Load(object sender, EventArgs e)
         {
             db = new Context();
             DateTime dtSecilenTarih = dtCalismaGunu.Value;
-          
-          // String tarih= String.Format("{0:D}", dtSecilenTarih);
+
+            // String tarih= String.Format("{0:D}", dtSecilenTarih);
 
             Randevu randevu = new Randevu();
             randevu.RandevuTarihi = dtSecilenTarih;
@@ -47,10 +48,6 @@ namespace HastaKayitSistemi.UI
             }
         }
 
-        private void clndrCalismaGunu_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            
-        }
 
         private void dtCalısmaGunu_ValueChanged(object sender, EventArgs e)
         {

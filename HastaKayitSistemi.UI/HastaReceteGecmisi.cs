@@ -22,9 +22,11 @@ namespace HastaKayitSistemi.UI
         private void HastaReceteGecmisi_Load(object sender, EventArgs e)
         {
             db = new Context();
+
+            //var kullanilanIlaclar = (from k in db.Receteler where k.Ilaclar != null select k.Ilaclar).FirstOrDefault();
+            //lviKullandigiIlaclar.Items.Add(kullanilanIlaclar);
             
-            var kullanilanIlaclar = (from k in db.Receteler where k.Ilaclar != null select k.Ilaclar).FirstOrDefault();
-            lviKullandigiIlaclar.Items.Add(kullanilanIlaclar);
+            
 
         }
 
@@ -33,6 +35,13 @@ namespace HastaKayitSistemi.UI
             EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
             this.Close();
             eczaciReceteBilgileri.Show();
+        }
+
+        private void txtHastaNumarasi_TextChanged(object sender, EventArgs e)
+        {
+            int girilenNumara = Convert.ToInt32(txtHastaNumarasi.Text);
+            var ReceteNumarası = (from k in db.Receteler where k.HastaID == girilenNumara select k.Ilaclar).FirstOrDefault();
+            lviKullandigiIlaclar.Items.Add(ReceteNumarası);
         }
     }
 }

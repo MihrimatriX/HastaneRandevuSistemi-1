@@ -24,17 +24,52 @@ namespace HastaKayitSistemi.UI
         List<string> ilaclar = new List<string>();
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
-            db = new Context();
+            db = new Context();;
+            //teshisler.Add(txtTeshis.Text);
+            //ilaclar.Add(txtIlac.Text);
 
-            teshisler.Add(txtTeshis.Text);
-            ilaclar.Add(txtIlac.Text);
             
+        }
+
+    
+
+        private void txtReceteNumarası_TextChanged(object sender, EventArgs e)
+        {
+            int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
+
+            var ÖncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+
+            if (ÖncedenVarMi != null)
+            {
+                MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
+            }
+            else
+            {
+
+            }
+
+
+            //var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
 
         }
 
-        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+       
+
+        private void btnMuayeneTamamlandi_Click(object sender, EventArgs e)
         {
-            if (rdoTeshisKonulamadi.Checked==true)
+
+
+        }
+
+        private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
+
+        private void chkTeshisKonulamadı_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTeshisKonulamadı.Checked == true)
             {
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
                 randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
@@ -42,10 +77,6 @@ namespace HastaKayitSistemi.UI
                 this.Hide();
                 randevuEkrani.Show();
             }
-        }
-
-        private void txtReceteNumarası_TextChanged(object sender, EventArgs e)
-        {
         }
     }
 }

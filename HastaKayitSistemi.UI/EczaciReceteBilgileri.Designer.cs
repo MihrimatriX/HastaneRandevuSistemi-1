@@ -33,8 +33,10 @@
             this.txtReceteNumarasi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnIlaclariGoruntule = new System.Windows.Forms.Button();
-            this.lsvIlaclar = new System.Windows.Forms.ListView();
-            this.columnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnTemizle = new System.Windows.Forms.Button();
+            this.grpIlaclar = new System.Windows.Forms.GroupBox();
+            this.lstIlaclar = new System.Windows.Forms.ListBox();
+            this.grpIlaclar.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnHastaReceteGecmisi
@@ -84,29 +86,40 @@
             this.btnIlaclariGoruntule.UseVisualStyleBackColor = true;
             this.btnIlaclariGoruntule.Click += new System.EventHandler(this.BtnIlaclariGoruntule_Click);
             // 
-            // lsvIlaclar
+            // btnTemizle
             // 
-            this.lsvIlaclar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader});
-            this.lsvIlaclar.GridLines = true;
-            this.lsvIlaclar.Location = new System.Drawing.Point(25, 92);
-            this.lsvIlaclar.Name = "lsvIlaclar";
-            this.lsvIlaclar.Size = new System.Drawing.Size(319, 97);
-            this.lsvIlaclar.TabIndex = 15;
-            this.lsvIlaclar.UseCompatibleStateImageBehavior = false;
-            this.lsvIlaclar.View = System.Windows.Forms.View.Details;
+            this.btnTemizle.Location = new System.Drawing.Point(158, 69);
+            this.btnTemizle.Name = "btnTemizle";
+            this.btnTemizle.Size = new System.Drawing.Size(75, 23);
+            this.btnTemizle.TabIndex = 16;
+            this.btnTemizle.Text = "TEMİZLE";
+            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
-            // columnHeader
+            // grpIlaclar
             // 
-            this.columnHeader.Text = "Ilaclar";
-            this.columnHeader.Width = 313;
+            this.grpIlaclar.Controls.Add(this.lstIlaclar);
+            this.grpIlaclar.Location = new System.Drawing.Point(16, 100);
+            this.grpIlaclar.Name = "grpIlaclar";
+            this.grpIlaclar.Size = new System.Drawing.Size(328, 100);
+            this.grpIlaclar.TabIndex = 17;
+            this.grpIlaclar.TabStop = false;
+            // 
+            // lstIlaclar
+            // 
+            this.lstIlaclar.FormattingEnabled = true;
+            this.lstIlaclar.Location = new System.Drawing.Point(6, 9);
+            this.lstIlaclar.Name = "lstIlaclar";
+            this.lstIlaclar.Size = new System.Drawing.Size(316, 82);
+            this.lstIlaclar.TabIndex = 0;
             // 
             // EczaciReceteBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 275);
-            this.Controls.Add(this.lsvIlaclar);
+            this.Controls.Add(this.grpIlaclar);
+            this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnIlaclariGoruntule);
             this.Controls.Add(this.btnHastaReceteGecmisi);
             this.Controls.Add(this.btnIlacTeslimEdildi);
@@ -115,6 +128,7 @@
             this.Name = "EczaciReceteBilgileri";
             this.Text = "EczacıReceteBilgileri";
             this.Load += new System.EventHandler(this.EczaciReceteBilgileri_Load);
+            this.grpIlaclar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +141,8 @@
         private System.Windows.Forms.TextBox txtReceteNumarasi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnIlaclariGoruntule;
-        private System.Windows.Forms.ListView lsvIlaclar;
-        private System.Windows.Forms.ColumnHeader columnHeader;
+        private System.Windows.Forms.Button btnTemizle;
+        private System.Windows.Forms.GroupBox grpIlaclar;
+        private System.Windows.Forms.ListBox lstIlaclar;
     }
 }

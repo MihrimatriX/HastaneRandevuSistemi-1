@@ -42,6 +42,7 @@ namespace HastaKayitSistemi.UI
                 else if (item is MaskedTextBox) ((MaskedTextBox)item).ResetText();
                 else if (item is ListBox) ((ListBox)item).DataSource = null;
                 else if (item is Label && item.Name.StartsWith("lbl")) item.Text = "";
+                
             }
 
         }
