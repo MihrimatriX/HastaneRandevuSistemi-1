@@ -138,6 +138,7 @@
             this.cmbDoktor.Name = "cmbDoktor";
             this.cmbDoktor.Size = new System.Drawing.Size(235, 28);
             this.cmbDoktor.TabIndex = 8;
+            this.cmbDoktor.SelectedIndexChanged += new System.EventHandler(this.cmbDoktor_SelectedIndexChanged);
             // 
             // label5
             // 
