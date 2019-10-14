@@ -57,6 +57,7 @@
             this.btnIlacTeslimEdildi.TabIndex = 12;
             this.btnIlacTeslimEdildi.Text = "HASTAYA İLAÇLAR TESLİM EDİLDİ";
             this.btnIlacTeslimEdildi.UseVisualStyleBackColor = true;
+            this.btnIlacTeslimEdildi.Click += new System.EventHandler(this.btnIlacTeslimEdildi_Click);
             // 
             // txtReceteNumarasi
             // 

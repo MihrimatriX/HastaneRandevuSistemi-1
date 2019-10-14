@@ -47,5 +47,10 @@ namespace HastaKayitSistemi.UI
             lstIlaclar.Items.Clear();
 
         }
+
+        private void btnIlacTeslimEdildi_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("İlaçlarınızı düzenli kullanmayı unutmayınız :)");
+        }
     }
 }

@@ -40,8 +40,14 @@ namespace HastaKayitSistemi.UI
         private void txtHastaNumarasi_TextChanged(object sender, EventArgs e)
         {
             int girilenNumara = Convert.ToInt32(txtHastaNumarasi.Text);
-            var ReceteNumarası = (from k in db.Receteler where k.HastaID == girilenNumara select k.Ilaclar).FirstOrDefault();
-            lviKullandigiIlaclar.Items.Add(ReceteNumarası);
+            var receteNumarasi = (from k in db.Receteler where k.HastaID == girilenNumara select k.Ilaclar).ToList();
+            List<DATA.Recete> receteler = db.Receteler.Where(x => x.HastaID == girilenNumara).ToList();
+            foreach (DATA.Recete item in receteler)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.Text = item.ReceteID.ToString();
+            }
+        //    label2.Text = ReceteNumarası.ToString() ;
         }
     }
 }
