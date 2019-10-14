@@ -52,6 +52,7 @@
             // 
             this.txtDoktorSifre.Location = new System.Drawing.Point(116, 83);
             this.txtDoktorSifre.Name = "txtDoktorSifre";
+            this.txtDoktorSifre.PasswordChar = '*';
             this.txtDoktorSifre.Size = new System.Drawing.Size(144, 20);
             this.txtDoktorSifre.TabIndex = 7;
             // 
@@ -104,6 +105,7 @@
             this.Controls.Add(this.grpDoktor);
             this.Name = "Doktor";
             this.Text = "Doktor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Doktor_FormClosed);
             this.Load += new System.EventHandler(this.Doktor_Load);
             this.grpDoktor.ResumeLayout(false);
             this.grpDoktor.PerformLayout();

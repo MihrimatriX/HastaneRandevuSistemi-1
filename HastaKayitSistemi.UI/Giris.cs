@@ -34,10 +34,8 @@ namespace HastaKayitSistemi.UI
 
         private void BtnDoktor_Click(object sender, EventArgs e)
         {
-            Doktor doktor = new Doktor();
-
+            Doktor doktor = new Doktor(this);
             this.Hide();
-
             doktor.Show();
         }
 

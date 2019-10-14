@@ -13,6 +13,7 @@ namespace HastaKayitSistemi.UI
 {
     public partial class RandevuEkrani : Form
     {
+        
         public RandevuEkrani()
         {
             InitializeComponent();
@@ -123,8 +124,8 @@ namespace HastaKayitSistemi.UI
 
         private void BtnMevcutRandevularim_Click(object sender, EventArgs e)
         {
-            Randevular randevular = new Randevular();
-            this.Close();
+            Randevular randevular = new Randevular(this);
+            this.Hide();
             randevular.Show();
         }
         public string HangiSaatSecili(Panel pnl)
@@ -240,6 +241,10 @@ namespace HastaKayitSistemi.UI
             // Departman
             //int DepartmanID = db.Doktorlar.Where(o => o.DoktorID == (int)cmbDoktor.SelectedValue).Select(x => x.DepartmanID).FirstOrDefault();
             //cmbDepartman.SelectedValue = DepartmanID;
+        }
+
+        private void RandevuEkrani_FormClosed(object sender, FormClosedEventArgs e)
+        {
         }
     }
 }

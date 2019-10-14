@@ -28,20 +28,19 @@ namespace HastaKayitSistemi.UI
 
         private void BtnGiris_Click(object sender, EventArgs e)
         {
-            if (db.Hastalar.FirstOrDefault(x => x.Email == txtEmail.Text && x.Sifre == txtSifre.Text) != null)
+            if (db.Hastalar.FirstOrDefault(x => x.Email == txtKullaniciAdi.Text && x.Sifre == txtSifre.Text) != null)
             {
-                txtEmail.Text = txtSifre.Text = "";
+                txtKullaniciAdi.Text = txtSifre.Text = "";
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
-                this.Hide();
                 randevuEkrani.Show();
             }
             else if (Metotlar.BosAlanVarMi(grpHasta))
             {
-                MessageBox.Show("boş alanları doldurunuz...");
+                MessageBox.Show("Lütfen Boş Alanları Doldurunuz!");
             }
             else
             {
-                MessageBox.Show("Girdiğiniz Kullanıcı Adı veya Şifre Hatalı! Lütfen Üye Değilseniz Üye Olunuz.");
+                MessageBox.Show("Girdiğiniz Olduğunuz Bilgiler Sisteme Kayıtlı Değil! \nLütfen Üye Olduğunuzdan Emin Olunuz.");
             }
 
         }

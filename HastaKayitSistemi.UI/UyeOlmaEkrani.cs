@@ -21,13 +21,6 @@ namespace HastaKayitSistemi.UI
             InitializeComponent();
         }
         Context db;
-
-
-        private void UyeOlmaEkrani_Load(object sender, EventArgs e)
-        {
-        }
-
-
         private void btnOnayla_Click(object sender, EventArgs e)
         {
             db = new Context();
@@ -36,13 +29,14 @@ namespace HastaKayitSistemi.UI
                 MessageBox.Show("Lütfen tüm alanları doldurunuz!");
             else
             {
+                //sürekli bu hataya düşüyor.Düzeltilmei lazım
                 DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email == txtEmail.Text);
-                MessageBox.Show("Lütfen TcNo veya Emaili tekrar giriniz ...");
+                MessageBox.Show("Girdiğiniz TC Kimlik Numarası Veya E-Mail Adresi Başka Bir Kullanıcıya Aittir.\nLütfen Doğru Bilgileri Girdiğinizden Emin Olunuz!");
 
                 if (hastalar == null)
                 {
 
-                    if (txtSifre.Text.Length < 9)
+                    if (txtSifre.Text.Length >= 8 || txtSifre.Text.Length <= 16)
                     {
                         hastalar = new DATA.Hasta
                         {
@@ -66,7 +60,7 @@ namespace HastaKayitSistemi.UI
                     }
                     else
                     {
-                        MessageBox.Show("şifreniz 8 karakterden fazla girilmiştir");
+                        MessageBox.Show("Seçmiş Olduğunuz Şifre 8 Karakterden Az Olamaz!");
                     }
                 }
             }
@@ -75,6 +69,15 @@ namespace HastaKayitSistemi.UI
         private void UyeOlmaEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
             hastaFormu.Show();
+        }
+
+        private void txtTcNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
     }
 }

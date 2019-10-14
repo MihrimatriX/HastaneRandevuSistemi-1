@@ -228,6 +228,7 @@
             this.Controls.Add(this.lblHastaAdiSoyadi);
             this.Name = "RandevuEkrani";
             this.Text = "RandevuEkrani";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RandevuEkrani_FormClosed);
             this.Load += new System.EventHandler(this.RandevuEkrani_Load);
             this.grpRandevu.ResumeLayout(false);
             this.grpRandevu.PerformLayout();

@@ -14,8 +14,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class MuayeneEkrani : Form
     {
-        public MuayeneEkrani()
+        DoktorRandevuları doktorRandevuları;
+        public MuayeneEkrani(DoktorRandevuları dktr)
         {
+            doktorRandevuları = dktr;
             InitializeComponent();
         }
 
@@ -45,8 +47,8 @@ namespace HastaKayitSistemi.UI
 
         private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)
         {
+            doktorRandevuları.Show();
             this.Close();
-
         }
 
         private void chkTeshisKonulamadı_CheckedChanged(object sender, EventArgs e)
@@ -56,7 +58,6 @@ namespace HastaKayitSistemi.UI
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
                 randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
                 randevuEkrani.btnRandevuAl.Enabled = false;
-                this.Hide();
                 randevuEkrani.Show();
             }
         }
