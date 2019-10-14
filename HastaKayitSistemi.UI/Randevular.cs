@@ -1,4 +1,4 @@
-ï»¿using HastaKayitSistemi.DAL;
+using HastaKayitSistemi.DAL;
 using HastaKayitSistemi.DATA;
 
 using System;
@@ -16,9 +16,11 @@ namespace HastaKayitSistemi.UI
     public partial class Randevular : Form
     {
         RandevuEkrani randevuEkrani;
+
         public Randevular(RandevuEkrani rndv)
         {
             randevuEkrani = rndv;
+
             InitializeComponent();
         }
         Context db;
@@ -26,22 +28,27 @@ namespace HastaKayitSistemi.UI
         private void CmsSil_Click(object sender, EventArgs e)
         {
 
-            //silmek istediÄŸinizden emin misiniz ?
+            //silmek istediðinizden emin misiniz ?
         }
 
         private void Randevular_Load(object sender, EventArgs e)
         {
-           db= new Context();
+            db = new Context();
             foreach (var item in db.Randevular)
             {
-                dgvRandevuListesi.Rows.Add(item.DoktorID,item.RandevuTarihi);
-                    //doktor randevutaihi veseansÄ±
+                if (item.HastaID == 1 && item.RandevuIptalMi == 1)
+                {
+                    dgvRandevuListesi.Rows.Add(item.Hastane.HastaneAdi, item.Departman.DepartmanAdi, item.Doktor.DoktorAdiSoyadi, item.RandevuTarihi);
+
+                }
+                //doktor randevutaihi veseansý
             }
 
         }
 
         private void Randevular_FormClosed(object sender, FormClosedEventArgs e)
         {
+
             randevuEkrani.Show();
         }
     }
