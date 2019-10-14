@@ -41,7 +41,7 @@ namespace HastaKayitSistemi.UI
 
         private void BtnEczaci_Click(object sender, EventArgs e)
         {
-            Eczaci eczaci = new Eczaci();
+            Eczaci eczaci = new Eczaci(this);
             this.Hide();
             eczaci.Show();
         }

@@ -47,7 +47,7 @@
             this.btnHastaReceteGecmisi.TabIndex = 13;
             this.btnHastaReceteGecmisi.Text = "HASTA REÇETE GEÇMİŞİ";
             this.btnHastaReceteGecmisi.UseVisualStyleBackColor = true;
-            this.btnHastaReceteGecmisi.Click += new System.EventHandler(this.Button2_Click);
+            this.btnHastaReceteGecmisi.Click += new System.EventHandler(this.btnHastaReceteGecmisi_Click);
             // 
             // btnIlacTeslimEdildi
             // 
@@ -128,6 +128,7 @@
             this.Controls.Add(this.label3);
             this.Name = "EczaciReceteBilgileri";
             this.Text = "EczacıReceteBilgileri";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EczaciReceteBilgileri_FormClosed);
             this.Load += new System.EventHandler(this.EczaciReceteBilgileri_Load);
             this.grpIlaclar.ResumeLayout(false);
             this.ResumeLayout(false);

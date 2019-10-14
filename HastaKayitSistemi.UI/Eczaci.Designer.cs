@@ -107,6 +107,7 @@
             this.Controls.Add(this.grpEczaci);
             this.Name = "Eczaci";
             this.Text = "Eczacı";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Eczaci_FormClosed);
             this.Load += new System.EventHandler(this.Eczaci_Load);
             this.grpEczaci.ResumeLayout(false);
             this.grpEczaci.PerformLayout();

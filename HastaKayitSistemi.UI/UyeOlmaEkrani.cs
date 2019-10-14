@@ -31,11 +31,9 @@ namespace HastaKayitSistemi.UI
             {
                 //sürekli bu hataya düşüyor.Düzeltilmei lazım
                 DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email == txtEmail.Text);
-                MessageBox.Show("Girdiğiniz TC Kimlik Numarası Veya E-Mail Adresi Başka Bir Kullanıcıya Aittir.\nLütfen Doğru Bilgileri Girdiğinizden Emin Olunuz!");
 
                 if (hastalar == null)
                 {
-
                     if (txtSifre.Text.Length >= 8 || txtSifre.Text.Length <= 16)
                     {
                         hastalar = new DATA.Hasta
@@ -55,13 +53,17 @@ namespace HastaKayitSistemi.UI
                         db.SaveChanges();
 
                         MessageBox.Show("Kaydınız gerçekleşmiştir...");
-                        this.Hide();
                        hastaFormu.Show();
+                        Close();
                     }
                     else
                     {
-                        MessageBox.Show("Seçmiş Olduğunuz Şifre 8 Karakterden Az Olamaz!");
+                        MessageBox.Show("Seçmiş Olduğunuz Şifre 8 Karakterden Az, 16 karakterden fazla Olamaz!");
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Girdiğiniz TC Kimlik Numarası Veya E-Mail Adresi Başka Bir Kullanıcıya Aittir.\nLütfen Doğru Bilgileri Girdiğinizden Emin Olunuz!");
                 }
             }
         }

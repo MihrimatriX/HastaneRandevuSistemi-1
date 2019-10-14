@@ -13,8 +13,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class Eczaci : Form
     {
-        public Eczaci()
+        Giris girisFormu;
+        public Eczaci(Giris giris)
         {
+            girisFormu = giris;
             InitializeComponent();
         }
         Context db = new Context();
@@ -29,8 +31,8 @@ namespace HastaKayitSistemi.UI
             if (db.Eczacilar.FirstOrDefault(x => x.KullaniciAdi == txtEczaciAdi.Text && x.Sifre == txtEczaciSifre.Text) != null)
             {
                 txtEczaciAdi.Text = txtEczaciSifre.Text = "";
-                EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
-                this.Close();
+                EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri(girisFormu);
+                Hide();
                 eczaciReceteBilgileri.Show();
 
             }
@@ -46,6 +48,10 @@ namespace HastaKayitSistemi.UI
 
         }
 
+        private void Eczaci_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            girisFormu.Show();
+        }
     }
 
 }
