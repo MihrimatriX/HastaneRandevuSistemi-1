@@ -28,6 +28,7 @@ namespace HastaKayitSistemi.UI
 
             teshisler.Add(txtTeshis.Text);
             ilaclar.Add(txtIlac.Text);
+            
 
         }
 

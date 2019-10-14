@@ -30,10 +30,11 @@
         {
             this.btnHastaReceteGecmisi = new System.Windows.Forms.Button();
             this.btnIlacTeslimEdildi = new System.Windows.Forms.Button();
-            this.grpIlac = new System.Windows.Forms.GroupBox();
             this.txtReceteNumarasi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnIlaclariGoruntule = new System.Windows.Forms.Button();
+            this.lsvIlaclar = new System.Windows.Forms.ListView();
+            this.columnHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnHastaReceteGecmisi
@@ -54,16 +55,6 @@
             this.btnIlacTeslimEdildi.TabIndex = 12;
             this.btnIlacTeslimEdildi.Text = "HASTAYA İLAÇLAR TESLİM EDİLDİ";
             this.btnIlacTeslimEdildi.UseVisualStyleBackColor = true;
-            // 
-            // grpIlac
-            // 
-            this.grpIlac.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpIlac.Location = new System.Drawing.Point(12, 68);
-            this.grpIlac.Name = "grpIlac";
-            this.grpIlac.Size = new System.Drawing.Size(332, 136);
-            this.grpIlac.TabIndex = 11;
-            this.grpIlac.TabStop = false;
-            this.grpIlac.Text = "İlaçlar";
             // 
             // txtReceteNumarasi
             // 
@@ -93,15 +84,32 @@
             this.btnIlaclariGoruntule.UseVisualStyleBackColor = true;
             this.btnIlaclariGoruntule.Click += new System.EventHandler(this.BtnIlaclariGoruntule_Click);
             // 
+            // lsvIlaclar
+            // 
+            this.lsvIlaclar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader});
+            this.lsvIlaclar.GridLines = true;
+            this.lsvIlaclar.Location = new System.Drawing.Point(25, 92);
+            this.lsvIlaclar.Name = "lsvIlaclar";
+            this.lsvIlaclar.Size = new System.Drawing.Size(319, 97);
+            this.lsvIlaclar.TabIndex = 15;
+            this.lsvIlaclar.UseCompatibleStateImageBehavior = false;
+            this.lsvIlaclar.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader
+            // 
+            this.columnHeader.Text = "Ilaclar";
+            this.columnHeader.Width = 313;
+            // 
             // EczaciReceteBilgileri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 275);
+            this.Controls.Add(this.lsvIlaclar);
             this.Controls.Add(this.btnIlaclariGoruntule);
             this.Controls.Add(this.btnHastaReceteGecmisi);
             this.Controls.Add(this.btnIlacTeslimEdildi);
-            this.Controls.Add(this.grpIlac);
             this.Controls.Add(this.txtReceteNumarasi);
             this.Controls.Add(this.label3);
             this.Name = "EczaciReceteBilgileri";
@@ -116,9 +124,10 @@
 
         private System.Windows.Forms.Button btnHastaReceteGecmisi;
         private System.Windows.Forms.Button btnIlacTeslimEdildi;
-        private System.Windows.Forms.GroupBox grpIlac;
         private System.Windows.Forms.TextBox txtReceteNumarasi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnIlaclariGoruntule;
+        private System.Windows.Forms.ListView lsvIlaclar;
+        private System.Windows.Forms.ColumnHeader columnHeader;
     }
 }

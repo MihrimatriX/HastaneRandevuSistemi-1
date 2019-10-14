@@ -1,4 +1,6 @@
 ﻿using HastaKayitSistemi.DAL;
+using HastaKayitSistemi.DATA;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +30,11 @@ namespace HastaKayitSistemi.UI
 
         private void Randevular_Load(object sender, EventArgs e)
         {
+            foreach (var item in db.Randevular)
+            {
+                dgvRandevuListesi.Rows.Add(item.DoktorID,item.RandevuTarihi);
+                    //doktor randevutaihi veseansı
+            }
 
         }
 

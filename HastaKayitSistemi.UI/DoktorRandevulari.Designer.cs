@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.clndrCalismaGunu = new System.Windows.Forms.MonthCalendar();
             this.grpRandevular = new System.Windows.Forms.GroupBox();
             this.dgvRandevular = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMuayene = new System.Windows.Forms.Button();
+            this.dtCalismaGunu = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpRandevular.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).BeginInit();
             this.SuspendLayout();
@@ -49,19 +50,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Çalışma Günü :";
             // 
-            // clndrCalismaGunu
-            // 
-            this.clndrCalismaGunu.Location = new System.Drawing.Point(142, 13);
-            this.clndrCalismaGunu.Name = "clndrCalismaGunu";
-            this.clndrCalismaGunu.TabIndex = 1;
-            // 
             // grpRandevular
             // 
             this.grpRandevular.Controls.Add(this.dgvRandevular);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpRandevular.Location = new System.Drawing.Point(17, 187);
             this.grpRandevular.Name = "grpRandevular";
-            this.grpRandevular.Size = new System.Drawing.Size(359, 171);
+            this.grpRandevular.Size = new System.Drawing.Size(335, 171);
             this.grpRandevular.TabIndex = 2;
             this.grpRandevular.TabStop = false;
             this.grpRandevular.Text = "Randevular";
@@ -75,7 +70,7 @@
             this.dgvRandevular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRandevular.Location = new System.Drawing.Point(3, 22);
             this.dgvRandevular.Name = "dgvRandevular";
-            this.dgvRandevular.Size = new System.Drawing.Size(353, 146);
+            this.dgvRandevular.Size = new System.Drawing.Size(329, 146);
             this.dgvRandevular.TabIndex = 0;
             // 
             // Column1
@@ -101,17 +96,36 @@
             this.btnMuayene.UseVisualStyleBackColor = true;
             this.btnMuayene.Click += new System.EventHandler(this.BtnMuayene_Click);
             // 
+            // dtCalismaGunu
+            // 
+            this.dtCalismaGunu.Location = new System.Drawing.Point(136, 13);
+            this.dtCalismaGunu.Name = "dtCalismaGunu";
+            this.dtCalismaGunu.Size = new System.Drawing.Size(200, 20);
+            this.dtCalismaGunu.TabIndex = 4;
+            this.dtCalismaGunu.ValueChanged += new System.EventHandler(this.dtCalısmaGunu_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(300, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "label2";
+            // 
             // DoktorRandevuları
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 421);
+            this.ClientSize = new System.Drawing.Size(654, 421);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtCalismaGunu);
             this.Controls.Add(this.btnMuayene);
             this.Controls.Add(this.grpRandevular);
-            this.Controls.Add(this.clndrCalismaGunu);
             this.Controls.Add(this.label1);
             this.Name = "DoktorRandevuları";
             this.Text = "DoktorRandevuları";
+            this.Load += new System.EventHandler(this.DoktorRandevuları_Load);
             this.grpRandevular.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).EndInit();
             this.ResumeLayout(false);
@@ -122,11 +136,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.MonthCalendar clndrCalismaGunu;
         private System.Windows.Forms.GroupBox grpRandevular;
         private System.Windows.Forms.DataGridView dgvRandevular;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button btnMuayene;
+        private System.Windows.Forms.DateTimePicker dtCalismaGunu;
+        private System.Windows.Forms.Label label2;
     }
 }

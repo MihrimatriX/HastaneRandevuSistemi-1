@@ -22,6 +22,9 @@ namespace HastaKayitSistemi.UI
         private void HastaReceteGecmisi_Load(object sender, EventArgs e)
         {
             db = new Context();
+            
+            var kullanilanIlaclar = (from k in db.Receteler where k.Ilaclar != null select k.Ilaclar).FirstOrDefault();
+            lviKullandigiIlaclar.Items.Add(kullanilanIlaclar);
 
         }
 
