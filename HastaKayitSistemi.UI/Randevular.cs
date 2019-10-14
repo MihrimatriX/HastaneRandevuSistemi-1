@@ -29,11 +29,15 @@ namespace HastaKayitSistemi.UI
 
         private void Randevular_Load(object sender, EventArgs e)
         {
-           db= new Context();
+            db = new Context();
             foreach (var item in db.Randevular)
             {
-                dgvRandevuListesi.Rows.Add(item.DoktorID,item.RandevuTarihi);
-                    //doktor randevutaihi veseansı
+                if (item.HastaID == 1 && item.RandevuIptalMi == 1)
+                {
+                    dgvRandevuListesi.Rows.Add(item.Hastane.HastaneAdi, item.Departman.DepartmanAdi, item.Doktor.DoktorAdiSoyadi, item.RandevuTarihi);
+
+                }
+                //doktor randevutaihi veseansı
             }
 
         }
@@ -41,7 +45,7 @@ namespace HastaKayitSistemi.UI
         private void Randevular_FormClosed(object sender, FormClosedEventArgs e)
         {
             RandevuEkrani randevuEkrani = new RandevuEkrani();
-            
+
             randevuEkrani.Show();
         }
     }

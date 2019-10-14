@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.grpRandevular = new System.Windows.Forms.GroupBox();
             this.dgvRandevuListesi = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ContextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsSil = new System.Windows.Forms.ToolStripMenuItem();
+            this.HastaneAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DepartmanAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpRandevular.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevuListesi)).BeginInit();
             this.ContextMenuStrip1.SuspendLayout();
@@ -43,11 +44,14 @@
             // 
             // grpRandevular
             // 
+            this.grpRandevular.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpRandevular.Controls.Add(this.dgvRandevuListesi);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpRandevular.Location = new System.Drawing.Point(49, 27);
+            this.grpRandevular.Location = new System.Drawing.Point(12, 12);
             this.grpRandevular.Name = "grpRandevular";
-            this.grpRandevular.Size = new System.Drawing.Size(478, 331);
+            this.grpRandevular.Size = new System.Drawing.Size(588, 409);
             this.grpRandevular.TabIndex = 1;
             this.grpRandevular.TabStop = false;
             this.grpRandevular.Text = "Alınan Randevuların Listesi :";
@@ -55,32 +59,19 @@
             // dgvRandevuListesi
             // 
             this.dgvRandevuListesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRandevuListesi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvRandevuListesi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvRandevuListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRandevuListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HastaneAdi,
+            this.DepartmanAdi,
             this.Column1,
-            this.Column2,
-            this.Column3});
+            this.Column2});
             this.dgvRandevuListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRandevuListesi.Location = new System.Drawing.Point(3, 22);
             this.dgvRandevuListesi.Name = "dgvRandevuListesi";
-            this.dgvRandevuListesi.Size = new System.Drawing.Size(472, 306);
+            this.dgvRandevuListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRandevuListesi.Size = new System.Drawing.Size(582, 384);
             this.dgvRandevuListesi.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Doktor";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Randevu Tarihi";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Randevu Seansı";
-            this.Column3.Name = "Column3";
             // 
             // ContextMenuStrip1
             // 
@@ -95,6 +86,26 @@
             this.cmsSil.Size = new System.Drawing.Size(89, 22);
             this.cmsSil.Text = "SİL";
             this.cmsSil.Click += new System.EventHandler(this.CmsSil_Click);
+            // 
+            // HastaneAdi
+            // 
+            this.HastaneAdi.HeaderText = "Hastane Adı";
+            this.HastaneAdi.Name = "HastaneAdi";
+            // 
+            // DepartmanAdi
+            // 
+            this.DepartmanAdi.HeaderText = "Departman";
+            this.DepartmanAdi.Name = "DepartmanAdi";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Doktor";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Randevu Tarihi";
+            this.Column2.Name = "Column2";
             // 
             // Randevular
             // 
@@ -117,10 +128,11 @@
 
         private System.Windows.Forms.GroupBox grpRandevular;
         private System.Windows.Forms.DataGridView dgvRandevuListesi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.ContextMenuStrip ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmsSil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HastaneAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DepartmanAdi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }
