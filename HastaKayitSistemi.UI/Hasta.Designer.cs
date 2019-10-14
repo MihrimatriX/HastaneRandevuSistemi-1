@@ -31,7 +31,7 @@
             this.btnUyeOl = new System.Windows.Forms.Button();
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtKullaniciAdi = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grpHasta = new System.Windows.Forms.GroupBox();
@@ -41,7 +41,7 @@
             // btnUyeOl
             // 
             this.btnUyeOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUyeOl.Location = new System.Drawing.Point(90, 148);
+            this.btnUyeOl.Location = new System.Drawing.Point(128, 148);
             this.btnUyeOl.Name = "btnUyeOl";
             this.btnUyeOl.Size = new System.Drawing.Size(115, 29);
             this.btnUyeOl.TabIndex = 10;
@@ -52,7 +52,7 @@
             // btnGirisYap
             // 
             this.btnGirisYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGirisYap.Location = new System.Drawing.Point(72, 113);
+            this.btnGirisYap.Location = new System.Drawing.Point(113, 113);
             this.btnGirisYap.Name = "btnGirisYap";
             this.btnGirisYap.Size = new System.Drawing.Size(144, 29);
             this.btnGirisYap.TabIndex = 9;
@@ -62,23 +62,23 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(72, 77);
+            this.txtSifre.Location = new System.Drawing.Point(113, 75);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(144, 20);
             this.txtSifre.TabIndex = 8;
             // 
-            // txtEmail
+            // txtKullaniciAdi
             // 
-            this.txtEmail.Location = new System.Drawing.Point(72, 36);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(144, 20);
-            this.txtEmail.TabIndex = 7;
+            this.txtKullaniciAdi.Location = new System.Drawing.Point(113, 36);
+            this.txtKullaniciAdi.Name = "txtKullaniciAdi";
+            this.txtKullaniciAdi.Size = new System.Drawing.Size(144, 20);
+            this.txtKullaniciAdi.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(13, 75);
+            this.label2.Location = new System.Drawing.Point(57, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 20);
             this.label2.TabIndex = 5;
@@ -90,9 +90,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(6, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(101, 20);
             this.label1.TabIndex = 6;
-            this.label1.Text = "E-mail:";
+            this.label1.Text = "Kullanıcı Adı :";
             // 
             // grpHasta
             // 
@@ -100,7 +100,7 @@
             this.grpHasta.Controls.Add(this.btnUyeOl);
             this.grpHasta.Controls.Add(this.label2);
             this.grpHasta.Controls.Add(this.btnGirisYap);
-            this.grpHasta.Controls.Add(this.txtEmail);
+            this.grpHasta.Controls.Add(this.txtKullaniciAdi);
             this.grpHasta.Controls.Add(this.txtSifre);
             this.grpHasta.Location = new System.Drawing.Point(12, 12);
             this.grpHasta.Name = "grpHasta";
@@ -130,7 +130,7 @@
         private System.Windows.Forms.Button btnUyeOl;
         private System.Windows.Forms.Button btnGirisYap;
         private System.Windows.Forms.TextBox txtSifre;
-        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtKullaniciAdi;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpHasta;

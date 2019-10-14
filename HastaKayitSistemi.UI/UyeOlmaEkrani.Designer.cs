@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.btnOnayla = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,11 +54,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(57, 267);
+            this.label1.Location = new System.Drawing.Point(62, 267);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "E-mail:";
+            this.label1.Text = "E-Mail :";
             // 
             // txtEmail
             // 
@@ -71,17 +70,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(132, 251);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(108, 237);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 13);
+            this.label2.Size = new System.Drawing.Size(227, 18);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Kullanıcı adı mail adresi olmalı.";
+            this.label2.Text = "Kullanıcı Adı E-Mail Adresi Olmalı.";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(64, 322);
+            this.label3.Location = new System.Drawing.Point(77, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 20);
             this.label3.TabIndex = 3;
@@ -89,7 +89,8 @@
             // 
             // txtSifre
             // 
-            this.txtSifre.Location = new System.Drawing.Point(135, 324);
+            this.txtSifre.Location = new System.Drawing.Point(135, 307);
+            this.txtSifre.MaxLength = 16;
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(200, 20);
             this.txtSifre.TabIndex = 8;
@@ -97,22 +98,13 @@
             // btnOnayla
             // 
             this.btnOnayla.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnOnayla.Location = new System.Drawing.Point(132, 367);
+            this.btnOnayla.Location = new System.Drawing.Point(135, 344);
             this.btnOnayla.Name = "btnOnayla";
             this.btnOnayla.Size = new System.Drawing.Size(203, 29);
             this.btnOnayla.TabIndex = 9;
             this.btnOnayla.Text = "ONAYLA";
             this.btnOnayla.UseVisualStyleBackColor = true;
             this.btnOnayla.Click += new System.EventHandler(this.btnOnayla_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(132, 308);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(234, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Şİfre en az 8 karakter en çok 16 karakter olmalı.";
             // 
             // label5
             // 
@@ -191,9 +183,11 @@
             // txtTcNo
             // 
             this.txtTcNo.Location = new System.Drawing.Point(135, 102);
+            this.txtTcNo.MaxLength = 11;
             this.txtTcNo.Name = "txtTcNo";
             this.txtTcNo.Size = new System.Drawing.Size(200, 20);
             this.txtTcNo.TabIndex = 3;
+            this.txtTcNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTcNo_KeyPress);
             // 
             // mskTxtTelefon
             // 
@@ -232,7 +226,6 @@
             this.grpUyeOlmaEkrani.Controls.Add(this.label10);
             this.grpUyeOlmaEkrani.Controls.Add(this.txtAd);
             this.grpUyeOlmaEkrani.Controls.Add(this.label7);
-            this.grpUyeOlmaEkrani.Controls.Add(this.label4);
             this.grpUyeOlmaEkrani.Controls.Add(this.txtEmail);
             this.grpUyeOlmaEkrani.Controls.Add(this.btnOnayla);
             this.grpUyeOlmaEkrani.Controls.Add(this.label2);
@@ -240,7 +233,7 @@
             this.grpUyeOlmaEkrani.Controls.Add(this.label3);
             this.grpUyeOlmaEkrani.Location = new System.Drawing.Point(47, 12);
             this.grpUyeOlmaEkrani.Name = "grpUyeOlmaEkrani";
-            this.grpUyeOlmaEkrani.Size = new System.Drawing.Size(432, 427);
+            this.grpUyeOlmaEkrani.Size = new System.Drawing.Size(432, 402);
             this.grpUyeOlmaEkrani.TabIndex = 10;
             this.grpUyeOlmaEkrani.TabStop = false;
             // 
@@ -253,7 +246,6 @@
             this.Name = "UyeOlmaEkrani";
             this.Text = "UyeOlmaEkranı";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UyeOlmaEkrani_FormClosed);
-            this.Load += new System.EventHandler(this.UyeOlmaEkrani_Load);
             this.grpUyeOlmaEkrani.ResumeLayout(false);
             this.grpUyeOlmaEkrani.PerformLayout();
             this.ResumeLayout(false);
@@ -268,7 +260,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSifre;
         private System.Windows.Forms.Button btnOnayla;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
