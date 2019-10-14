@@ -30,9 +30,12 @@ namespace HastaKayitSistemi.UI
         {
             if (db.Hastalar.FirstOrDefault(x => x.Email == txtKullaniciAdi.Text && x.Sifre == txtSifre.Text) != null)
             {
-                txtKullaniciAdi.Text = txtSifre.Text = "";
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
+                DATA.Hasta hasta = new DATA.Hasta();
+                hasta = db.Hastalar.FirstOrDefault(x => x.Email == txtKullaniciAdi.Text && x.Sifre == txtSifre.Text);
+                randevuEkrani.hasta = hasta;
                 randevuEkrani.Show();
+                txtKullaniciAdi.Text = txtSifre.Text = "";
             }
             else if (Metotlar.BosAlanVarMi(grpHasta))
             {

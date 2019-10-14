@@ -81,7 +81,7 @@ namespace HastaKayitSistemi.UI
                 {
                     
                     item.Ilaclar = verilenIlaclar;
-                    lblSonuc.Text = item.Ilaclar;
+                    //lblSonuc.Text = item.Ilaclar;
                     //burada db ye ılacı ekleyip label da eklenen ilacı görüntülücez .görüntülenmiyorr
 
                     //    db.Receteler.Add(int.Parse(item.Ilaclar));

@@ -20,6 +20,7 @@ namespace HastaKayitSistemi.UI
         }
         Context db;
 
+        public DATA.Hasta hasta;
 
         private void RandevuEkrani_Load(object sender, EventArgs e)
         {
@@ -28,6 +29,7 @@ namespace HastaKayitSistemi.UI
             dtRandevuTarihi.MaxDate = DateTime.Today.AddDays(30);
             dtRandevuTarihi.MaxSelectionCount = 1;
             db = new Context();
+            lblHastaAdiSoyadi.Text = hasta.HastaID.ToString() + "-" + hasta.Ad + " " + hasta.Soyad;
 
             cmbHastane.SelectedIndexChanged -= cmbHastane_SelectedIndexChanged;
             cmbDoktor.SelectedIndexChanged -= cmbDoktor_SelectedIndexChanged;
@@ -155,7 +157,7 @@ namespace HastaKayitSistemi.UI
                 DateTime tarih = (DateTime)dtRandevuTarihi.SelectionStart;
                 string randevuTarihi = tarih.ToString("yyyy-MM-dd") + " " + HangiSaatSecili(panelRandevu).ToString();
                 DATA.Randevu randevu = new DATA.Randevu();
-                randevu.HastaID = 1;
+                randevu.HastaID = hasta.HastaID;
                 randevu.HastaneID = (int)cmbHastane.SelectedValue;
                 randevu.DepartmanID = (int)cmbDepartman.SelectedValue;
                 randevu.DoktorID = (int)cmbDoktor.SelectedValue;
