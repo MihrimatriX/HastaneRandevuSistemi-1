@@ -71,11 +71,11 @@ namespace HastaKayitSistemi.UI
         {
             if (chkTeshisKonulamadı.Checked == true)
             {
-                RandevuEkrani randevuEkrani = new RandevuEkrani();
-                randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
-                randevuEkrani.btnRandevuAl.Enabled = false;
+               // RandevuEkrani randevuEkrani = new RandevuEkrani();
+                //randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
+                //randevuEkrani.btnRandevuAl.Enabled = false;
                 this.Hide();
-                randevuEkrani.Show();
+              //  randevuEkrani.Show();
             }
         }
     }

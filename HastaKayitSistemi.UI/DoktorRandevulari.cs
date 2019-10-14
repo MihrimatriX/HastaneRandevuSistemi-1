@@ -14,8 +14,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class DoktorRandevuları : Form
     {
-        public DoktorRandevuları()
+        Doktor doktorFormu;
+        public DoktorRandevuları(Doktor doktor)
         {
+            doktorFormu = doktor;
             InitializeComponent();
         }
         Context db;
@@ -54,6 +56,11 @@ namespace HastaKayitSistemi.UI
 
 
 
+        }
+
+        private void DoktorRandevuları_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            doktorFormu.Show();
         }
     }
 }
