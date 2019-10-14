@@ -15,8 +15,12 @@ namespace HastaKayitSistemi.UI
 {
     public partial class Randevular : Form
     {
-        public Randevular()
+        RandevuEkrani randevuEkrani;
+
+        public Randevular(RandevuEkrani rndv)
         {
+            randevuEkrani = rndv;
+
             InitializeComponent();
         }
         Context db;
@@ -44,7 +48,6 @@ namespace HastaKayitSistemi.UI
 
         private void Randevular_FormClosed(object sender, FormClosedEventArgs e)
         {
-            RandevuEkrani randevuEkrani = new RandevuEkrani();
 
             randevuEkrani.Show();
         }
