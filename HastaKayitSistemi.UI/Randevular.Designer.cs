@@ -69,6 +69,7 @@
             this.dgvRandevuListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRandevuListesi.Location = new System.Drawing.Point(3, 22);
             this.dgvRandevuListesi.Name = "dgvRandevuListesi";
+            this.dgvRandevuListesi.ReadOnly = true;
             this.dgvRandevuListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRandevuListesi.Size = new System.Drawing.Size(582, 384);
             this.dgvRandevuListesi.TabIndex = 0;
