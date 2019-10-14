@@ -13,10 +13,9 @@ namespace HastaKayitSistemi.UI
 {
     public partial class RandevuEkrani : Form
     {
-        Giris girisFormu;
-        public RandevuEkrani(Giris giris)
+        
+        public RandevuEkrani()
         {
-            girisFormu = giris;
             InitializeComponent();
         }
         Context db;
@@ -246,7 +245,6 @@ namespace HastaKayitSistemi.UI
 
         private void RandevuEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
-            girisFormu.Show();
         }
     }
 }

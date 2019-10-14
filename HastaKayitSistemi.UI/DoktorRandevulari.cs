@@ -23,7 +23,7 @@ namespace HastaKayitSistemi.UI
         Context db;
         private void BtnMuayene_Click(object sender, EventArgs e)
         {
-            MuayeneEkrani muayeneEkrani = new MuayeneEkrani();
+            MuayeneEkrani muayeneEkrani = new MuayeneEkrani(this);
             this.Hide();
             muayeneEkrani.Show();
 
