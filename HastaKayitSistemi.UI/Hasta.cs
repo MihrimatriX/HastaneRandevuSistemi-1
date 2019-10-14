@@ -31,7 +31,7 @@ namespace HastaKayitSistemi.UI
             if (db.Hastalar.FirstOrDefault(x => x.Email == txtEmail.Text && x.Sifre == txtSifre.Text) != null)
             {
                 txtEmail.Text = txtSifre.Text = "";
-                RandevuEkrani randevuEkrani = new RandevuEkrani();
+                RandevuEkrani randevuEkrani = new RandevuEkrani(mainForm);
                 this.Hide();
                 randevuEkrani.Show();
             }

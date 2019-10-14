@@ -13,8 +13,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class Doktor : Form
     {
-        public Doktor()
+        Giris girisFormu;
+        public Doktor(Giris giris)
         {
+            girisFormu = giris;
             InitializeComponent();
         }
         Context db;
@@ -30,9 +32,9 @@ namespace HastaKayitSistemi.UI
             if (db.Doktorlar.FirstOrDefault(x => x.KullaniciAdi == txtDoktorAdi.Text && x.Sifre == txtDoktorSifre.Text) != null)
             {
                 txtDoktorAdi.Text = txtDoktorSifre.Text = "";
-                DoktorRandevuları doktorRandevuları = new DoktorRandevuları();
-                this.Hide();
+                DoktorRandevuları doktorRandevuları = new DoktorRandevuları(this);
                 doktorRandevuları.Show();
+                this.Hide();
             }
 
             else if (Metotlar.BosAlanVarMi(grpDoktor))
@@ -43,6 +45,11 @@ namespace HastaKayitSistemi.UI
             {
                 MessageBox.Show("Girdiğiniz Kullanıcı Adı veya Şifre Hatalı! Doğru Bilgileri Girdiğinizden Emin Olunuz.");
             }
+        }
+
+        private void Doktor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            girisFormu.Show();
         }
     }
 }

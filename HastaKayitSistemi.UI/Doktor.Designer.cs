@@ -104,6 +104,7 @@
             this.Controls.Add(this.grpDoktor);
             this.Name = "Doktor";
             this.Text = "Doktor";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Doktor_FormClosed);
             this.Load += new System.EventHandler(this.Doktor_Load);
             this.grpDoktor.ResumeLayout(false);
             this.grpDoktor.PerformLayout();

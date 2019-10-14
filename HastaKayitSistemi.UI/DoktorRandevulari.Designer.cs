@@ -114,6 +114,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DoktorRandevuları";
             this.Text = "DoktorRandevuları";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoktorRandevuları_FormClosed);
             this.Load += new System.EventHandler(this.DoktorRandevuları_Load);
             this.grpRandevular.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).EndInit();
