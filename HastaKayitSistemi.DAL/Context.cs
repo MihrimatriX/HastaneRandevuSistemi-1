@@ -24,6 +24,7 @@ namespace HastaKayitSistemi.DAL
         public DbSet<Randevu> Randevular { get; set; }
         public DbSet<Recete> Receteler { get; set; }
         public DbSet<Departman> Departmanlar { get; set; }
+        public DbSet<HastaneDepartman> HastaneDepartman { get; set; }
 
 
 
