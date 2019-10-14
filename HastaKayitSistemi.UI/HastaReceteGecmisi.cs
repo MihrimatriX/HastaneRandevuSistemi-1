@@ -24,11 +24,6 @@ namespace HastaKayitSistemi.UI
         {
             db = new Context();
 
-            //var kullanilanIlaclar = (from k in db.Receteler where k.Ilaclar != null select k.Ilaclar).FirstOrDefault();
-            //lviKullandigiIlaclar.Items.Add(kullanilanIlaclar);
-            
-            
-
         }
 
         private void BtnIlacKontrol_Click(object sender, EventArgs e)
@@ -41,7 +36,6 @@ namespace HastaKayitSistemi.UI
         private void txtHastaNumarasi_TextChanged(object sender, EventArgs e)
         {
             int girilenNumara = Convert.ToInt32(txtHastaNumarasi.Text);
-          //  var receteNumarasi = (from k in db.Receteler where k.HastaID == girilenNumara select k.Ilaclar).ToList();
             List<Recete> receteler = db.Receteler.Where(x => x.HastaID == girilenNumara).ToList();
             foreach (Recete item in receteler)
             {

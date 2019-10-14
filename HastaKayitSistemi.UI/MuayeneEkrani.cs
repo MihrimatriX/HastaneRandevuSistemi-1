@@ -21,35 +21,17 @@ namespace HastaKayitSistemi.UI
 
         Context db;
         List<string> teshisler = new List<string>();
-        List<string> ilaclar = new List<string>();
+        List<Recete> ilaclar = new List<Recete>();
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
             db = new Context();;
             //teshisler.Add(txtTeshis.Text);
-            //ilaclar.Add(txtIlac.Text);
 
-            
         }
 
-    
-
         private void txtReceteNumarası_TextChanged(object sender, EventArgs e)
-        {
-            int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
-
-            var ÖncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
-
-            if (ÖncedenVarMi != null)
-            {
-                MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
-            }
-            else
-            {
-
-            }
-
-
-            //var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+        {           
+           
 
         }
 
@@ -77,6 +59,42 @@ namespace HastaKayitSistemi.UI
                 this.Hide();
                 randevuEkrani.Show();
             }
+        }
+
+        private void btnEkle_Click(object sender, EventArgs e)
+        {
+            var verilenIlaclar = txtIlac.Text;
+
+            int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
+
+            var öncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+
+            if (öncedenVarMi != null)
+            {
+                MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
+            }
+            else
+                
+            {
+                foreach ( Recete item in db.Receteler)
+                {
+                    
+                    item.Ilaclar = verilenIlaclar;
+                    lblSonuc.Text = item.Ilaclar;
+                    //burada db ye ılacı ekleyip label da eklenen ilacı görüntülücez .görüntülenmiyorr
+
+                    //    db.Receteler.Add(int.Parse(item.Ilaclar));
+                    //       dgvListe.DataSource = db.Receteler.Add(verilenIlaclar);
+
+                }
+              //  db.Receteler.Add(lblSonuc.Text);
+
+              //////  lblSonuc.Text = db.Receteler.Add(receteIlac).ToString();
+             //////   ilaclar.Add(receteIlac.ToString());
+             //////////   lbxIlaclar.Items.Add(ilaclar);
+
+            }
+
         }
     }
 }
