@@ -37,8 +37,9 @@ namespace HastaKayitSistemi.UI
         {
 
             int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
-            var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+            var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara  select k.Ilaclar).FirstOrDefault();
             lstIlaclar.Items.Add(ReceteNumarası);
+            //girilen numara database de yoksa hata alıyor databasede kayıtsızsa seklinde olusturulumalı
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
