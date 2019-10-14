@@ -23,13 +23,13 @@ namespace HastaKayitSistemi.UI
 
         private void CmsSil_Click(object sender, EventArgs e)
         {
-           db= new Context();
 
             //silmek istediğinizden emin misiniz ?
         }
 
         private void Randevular_Load(object sender, EventArgs e)
         {
+           db= new Context();
             foreach (var item in db.Randevular)
             {
                 dgvRandevuListesi.Rows.Add(item.DoktorID,item.RandevuTarihi);
