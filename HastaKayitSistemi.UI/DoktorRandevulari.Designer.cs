@@ -35,7 +35,6 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMuayene = new System.Windows.Forms.Button();
             this.dtCalismaGunu = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.grpRandevular.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +43,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(28, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 20);
             this.label1.TabIndex = 0;
@@ -54,7 +53,7 @@
             // 
             this.grpRandevular.Controls.Add(this.dgvRandevular);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpRandevular.Location = new System.Drawing.Point(17, 187);
+            this.grpRandevular.Location = new System.Drawing.Point(28, 101);
             this.grpRandevular.Name = "grpRandevular";
             this.grpRandevular.Size = new System.Drawing.Size(335, 171);
             this.grpRandevular.TabIndex = 2;
@@ -88,7 +87,7 @@
             // btnMuayene
             // 
             this.btnMuayene.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMuayene.Location = new System.Drawing.Point(104, 364);
+            this.btnMuayene.Location = new System.Drawing.Point(115, 278);
             this.btnMuayene.Name = "btnMuayene";
             this.btnMuayene.Size = new System.Drawing.Size(187, 34);
             this.btnMuayene.TabIndex = 3;
@@ -98,27 +97,17 @@
             // 
             // dtCalismaGunu
             // 
-            this.dtCalismaGunu.Location = new System.Drawing.Point(136, 13);
+            this.dtCalismaGunu.Location = new System.Drawing.Point(151, 53);
             this.dtCalismaGunu.Name = "dtCalismaGunu";
             this.dtCalismaGunu.Size = new System.Drawing.Size(200, 20);
             this.dtCalismaGunu.TabIndex = 4;
             this.dtCalismaGunu.ValueChanged += new System.EventHandler(this.dtCalısmaGunu_ValueChanged);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(300, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
-            // 
             // DoktorRandevuları
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 421);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(417, 413);
             this.Controls.Add(this.dtCalismaGunu);
             this.Controls.Add(this.btnMuayene);
             this.Controls.Add(this.grpRandevular);
@@ -142,6 +131,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button btnMuayene;
         private System.Windows.Forms.DateTimePicker dtCalismaGunu;
-        private System.Windows.Forms.Label label2;
     }
 }
