@@ -252,6 +252,7 @@
             this.Controls.Add(this.grpUyeOlmaEkrani);
             this.Name = "UyeOlmaEkrani";
             this.Text = "UyeOlmaEkranı";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UyeOlmaEkrani_FormClosed);
             this.Load += new System.EventHandler(this.UyeOlmaEkrani_Load);
             this.grpUyeOlmaEkrani.ResumeLayout(false);
             this.grpUyeOlmaEkrani.PerformLayout();

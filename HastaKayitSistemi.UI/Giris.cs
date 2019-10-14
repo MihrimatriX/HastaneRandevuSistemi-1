@@ -27,9 +27,8 @@ namespace HastaKayitSistemi.UI
 
         private void BtnHasta_Click(object sender, EventArgs e)
         {
-            Hasta hasta = new Hasta();
+            Hasta hasta = new Hasta(this);
             this.Hide();
-
             hasta.Show();
         }
 

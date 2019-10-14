@@ -117,6 +117,7 @@
             this.Controls.Add(this.grpHasta);
             this.Name = "Hasta";
             this.Text = "Hasta";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Hasta_FormClosed);
             this.Load += new System.EventHandler(this.Hasta_Load);
             this.grpHasta.ResumeLayout(false);
             this.grpHasta.PerformLayout();

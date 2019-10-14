@@ -14,9 +14,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class UyeOlmaEkrani : Form
     {
-
-        public UyeOlmaEkrani()
+        Hasta hastaFormu;
+        public UyeOlmaEkrani(Hasta hasta)
         {
+            hastaFormu = hasta;
             InitializeComponent();
         }
         Context db;
@@ -61,19 +62,19 @@ namespace HastaKayitSistemi.UI
 
                         MessageBox.Show("Kaydınız gerçekleşmiştir...");
                         this.Hide();
-                        Hasta hasta = new Hasta();
-                        hasta.Show();
+                       hastaFormu.Show();
                     }
                     else
                     {
                         MessageBox.Show("şifreniz 8 karakterden fazla girilmiştir");
                     }
-
                 }
-
-
             }
+        }
 
+        private void UyeOlmaEkrani_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            hastaFormu.Show();
         }
     }
 }

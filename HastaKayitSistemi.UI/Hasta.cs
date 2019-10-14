@@ -13,8 +13,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class Hasta : Form
     {
-        public Hasta()
+        Giris mainForm;
+        public Hasta(Giris giris)
         {
+            mainForm = giris;
             InitializeComponent();
         }
         Context db;
@@ -22,7 +24,6 @@ namespace HastaKayitSistemi.UI
         {
             db = new Context();
             
-
         }
 
         private void BtnGiris_Click(object sender, EventArgs e)
@@ -47,10 +48,15 @@ namespace HastaKayitSistemi.UI
 
         private void BtnUyeOl_Click(object sender, EventArgs e)
         {
-            UyeOlmaEkrani uyeOlmaEkranı = new UyeOlmaEkrani();
+            UyeOlmaEkrani uyeOlmaEkranı = new UyeOlmaEkrani(this);
             this.Hide();
             uyeOlmaEkranı.Show();
 
+        }
+
+        private void Hasta_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainForm.Show();
         }
     }
 }
