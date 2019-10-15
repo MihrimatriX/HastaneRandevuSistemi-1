@@ -29,13 +29,12 @@ namespace HastaKayitSistemi.UI
             dtRandevuTarihi.MaxDate = DateTime.Today.AddDays(30);
             dtRandevuTarihi.MaxSelectionCount = 1;
             db = new Context();
-            lblHastaAdiSoyadi.Text =hasta.Ad + " " + hasta.Soyad;
+            lblHastaAdiSoyadi.Text = hasta.HastaID.ToString() + "-" + hasta.Ad + " " + hasta.Soyad;
 
             cmbHastane.SelectedIndexChanged -= cmbHastane_SelectedIndexChanged;
             cmbDoktor.SelectedIndexChanged -= cmbDoktor_SelectedIndexChanged;
             cmbPoliklinik.SelectedIndexChanged -= cmbPoliklinik_SelectedIndexChanged;
             cmbDepartman.SelectedIndexChanged -= CmbDepartman_SelectedIndexChanged;
-            //cmbPoliklinik.SelectedIndexChanged -= CmbPoliklinik_SelectedIndexChanged;
 
             btnDoktorOnayliRandevu.Enabled = !btnDoktorOnayliRandevu.Enabled;
             cmbHastane.DataSource = db.Hastaneler.ToList();
