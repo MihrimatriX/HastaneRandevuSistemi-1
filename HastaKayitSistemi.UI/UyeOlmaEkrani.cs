@@ -29,7 +29,6 @@ namespace HastaKayitSistemi.UI
                 MessageBox.Show("Lütfen tüm alanları doldurunuz!");
             else
             {
-                //sürekli bu hataya düşüyor.Düzeltilmei lazım
                 DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email == txtEmail.Text);
 
                 if (hastalar == null)
