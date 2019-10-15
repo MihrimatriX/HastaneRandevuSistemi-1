@@ -23,26 +23,17 @@ namespace HastaKayitSistemi.UI
 
         Context db;
         List<string> teshisler = new List<string>();
-        List<Recete> ilaclar = new List<Recete>();
+      //  List<Recete> ilaclar = new List<Recete>();
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
             db = new Context();;
-            //teshisler.Add(txtTeshis.Text);
 
         }
-
-        private void txtReceteNumarası_TextChanged(object sender, EventArgs e)
-        {           
-           
-
-        }
-
-       
 
         private void btnMuayeneTamamlandi_Click(object sender, EventArgs e)
         {
 
-
+            MessageBox.Show("işlem tamamlanmıştır");
         }
 
         private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)
@@ -58,13 +49,14 @@ namespace HastaKayitSistemi.UI
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
                 randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
                 randevuEkrani.btnRandevuAl.Enabled = false;
+                this.Close();
                 randevuEkrani.Show();
             }
         }
 
-        private void btnEkle_Click(object sender, EventArgs e)
+        private void btnIlacEkle_Click(object sender, EventArgs e)
         {
-            var verilenIlaclar = txtIlac.Text;
+            string verilenIlaclar = txtIlac.Text;
 
             int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
 
@@ -75,27 +67,20 @@ namespace HastaKayitSistemi.UI
                 MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
             }
             else
-                
+
             {
-                foreach ( Recete item in db.Receteler)
-                {
-                    
-                    item.Ilaclar = verilenIlaclar;
-                    //lblSonuc.Text = item.Ilaclar;
-                    //burada db ye ılacı ekleyip label da eklenen ilacı görüntülücez .görüntülenmiyorr
-
-                    //    db.Receteler.Add(int.Parse(item.Ilaclar));
-                    //       dgvListe.DataSource = db.Receteler.Add(verilenIlaclar);
-
-                }
-              //  db.Receteler.Add(lblSonuc.Text);
-
-              //////  lblSonuc.Text = db.Receteler.Add(receteIlac).ToString();
-             //////   ilaclar.Add(receteIlac.ToString());
-             //////////   lbxIlaclar.Items.Add(ilaclar);
-
+                Recete recete = new Recete();
+                recete.Ilaclar += verilenIlaclar;
+                dgvIlaclar.Rows.Add(recete.Ilaclar);
+     
             }
+          
+            
+        }
 
+        private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
+        {
+          //  this.Close();
         }
     }
 }
