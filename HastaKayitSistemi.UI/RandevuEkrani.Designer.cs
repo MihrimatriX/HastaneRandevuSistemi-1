@@ -31,7 +31,6 @@
             this.lblHastaAdiSoyadi = new System.Windows.Forms.Label();
             this.panelRandevu = new System.Windows.Forms.Panel();
             this.grpRandevu = new System.Windows.Forms.GroupBox();
-            this.btnSaatleriGoruntule = new System.Windows.Forms.Button();
             this.btnMevcutRandevularim = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,7 +66,6 @@
             // 
             // grpRandevu
             // 
-            this.grpRandevu.Controls.Add(this.btnSaatleriGoruntule);
             this.grpRandevu.Controls.Add(this.btnMevcutRandevularim);
             this.grpRandevu.Controls.Add(this.label1);
             this.grpRandevu.Controls.Add(this.label2);
@@ -83,21 +81,10 @@
             this.grpRandevu.Controls.Add(this.label4);
             this.grpRandevu.Location = new System.Drawing.Point(12, 37);
             this.grpRandevu.Name = "grpRandevu";
-            this.grpRandevu.Size = new System.Drawing.Size(402, 496);
+            this.grpRandevu.Size = new System.Drawing.Size(402, 480);
             this.grpRandevu.TabIndex = 18;
             this.grpRandevu.TabStop = false;
             this.grpRandevu.Text = "Randevu Bilgileri";
-            // 
-            // btnSaatleriGoruntule
-            // 
-            this.btnSaatleriGoruntule.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSaatleriGoruntule.Location = new System.Drawing.Point(131, 397);
-            this.btnSaatleriGoruntule.Name = "btnSaatleriGoruntule";
-            this.btnSaatleriGoruntule.Size = new System.Drawing.Size(235, 23);
-            this.btnSaatleriGoruntule.TabIndex = 15;
-            this.btnSaatleriGoruntule.Text = "Saatleri Görüntüle ↺";
-            this.btnSaatleriGoruntule.UseVisualStyleBackColor = true;
-            this.btnSaatleriGoruntule.Click += new System.EventHandler(this.btnSaatleriGoruntule_Click);
             // 
             // btnMevcutRandevularim
             // 
@@ -154,7 +141,7 @@
             // btnDoktorOnayliRandevu
             // 
             this.btnDoktorOnayliRandevu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDoktorOnayliRandevu.Location = new System.Drawing.Point(177, 426);
+            this.btnDoktorOnayliRandevu.Location = new System.Drawing.Point(177, 406);
             this.btnDoktorOnayliRandevu.Name = "btnDoktorOnayliRandevu";
             this.btnDoktorOnayliRandevu.Size = new System.Drawing.Size(189, 54);
             this.btnDoktorOnayliRandevu.TabIndex = 14;
@@ -164,7 +151,7 @@
             // btnRandevuAl
             // 
             this.btnRandevuAl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnRandevuAl.Location = new System.Drawing.Point(14, 426);
+            this.btnRandevuAl.Location = new System.Drawing.Point(14, 406);
             this.btnRandevuAl.Name = "btnRandevuAl";
             this.btnRandevuAl.Size = new System.Drawing.Size(157, 54);
             this.btnRandevuAl.TabIndex = 13;
@@ -235,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 545);
+            this.ClientSize = new System.Drawing.Size(795, 530);
             this.Controls.Add(this.grpRandevu);
             this.Controls.Add(this.panelRandevu);
             this.Controls.Add(this.lblHastaAdiSoyadi);
@@ -267,6 +254,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbDoktor;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnSaatleriGoruntule;
     }
 }
