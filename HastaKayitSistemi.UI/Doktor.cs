@@ -31,9 +31,13 @@ namespace HastaKayitSistemi.UI
         {
             if (db.Doktorlar.FirstOrDefault(x => x.KullaniciAdi == txtDoktorAdi.Text && x.Sifre == txtDoktorSifre.Text) != null)
             {
+                DoktorRandevulari doktorRandevulari = new DoktorRandevulari(this);
+                DATA.Doktor doktor = new DATA.Doktor();
+                doktor= db.Doktorlar.FirstOrDefault(x => x.KullaniciAdi == txtDoktorAdi.Text && x.Sifre == txtDoktorSifre.Text);
+                doktorRandevulari.doktor = doktor;
+
                 txtDoktorAdi.Text = txtDoktorSifre.Text = "";
-                DoktorRandevuları doktorRandevuları = new DoktorRandevuları(this);
-                doktorRandevuları.Show();
+                doktorRandevulari.Show();
                 this.Hide();
             }
 

@@ -14,10 +14,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class MuayeneEkrani : Form
     {
-        DoktorRandevuları doktorRandevuları;
-        public MuayeneEkrani(DoktorRandevuları dktr)
+        DoktorRandevulari doktorRandevulari;
+        public MuayeneEkrani(DoktorRandevulari dktr)
         {
-            doktorRandevuları = dktr;
+            doktorRandevulari = dktr;
             InitializeComponent();
         }
 
@@ -38,7 +38,7 @@ namespace HastaKayitSistemi.UI
 
         private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)
         {
-            doktorRandevuları.Show();
+            doktorRandevulari.Show();
             this.Close();
         }
 

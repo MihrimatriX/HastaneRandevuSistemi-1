@@ -1,6 +1,6 @@
 ﻿namespace HastaKayitSistemi.UI
 {
-    partial class DoktorRandevuları
+    partial class DoktorRandevulari
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpRandevular = new System.Windows.Forms.GroupBox();
             this.dgvRandevular = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnMuayene = new System.Windows.Forms.Button();
             this.dtCalismaGunu = new System.Windows.Forms.DateTimePicker();
+            this.RandevuID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HastaTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HastaAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpRandevular.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRandevular)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +45,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(28, 53);
+            this.label1.Location = new System.Drawing.Point(12, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 20);
             this.label1.TabIndex = 0;
@@ -53,41 +55,32 @@
             // 
             this.grpRandevular.Controls.Add(this.dgvRandevular);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.grpRandevular.Location = new System.Drawing.Point(28, 101);
+            this.grpRandevular.Location = new System.Drawing.Point(12, 44);
             this.grpRandevular.Name = "grpRandevular";
-            this.grpRandevular.Size = new System.Drawing.Size(335, 171);
+            this.grpRandevular.Size = new System.Drawing.Size(846, 336);
             this.grpRandevular.TabIndex = 2;
             this.grpRandevular.TabStop = false;
             this.grpRandevular.Text = "Randevular";
             // 
             // dgvRandevular
             // 
+            this.dgvRandevular.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRandevular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRandevular.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
+            this.RandevuID,
+            this.HastaTC,
+            this.HastaAd,
+            this.Tarih});
             this.dgvRandevular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRandevular.Location = new System.Drawing.Point(3, 22);
             this.dgvRandevular.Name = "dgvRandevular";
-            this.dgvRandevular.Size = new System.Drawing.Size(329, 146);
+            this.dgvRandevular.Size = new System.Drawing.Size(840, 311);
             this.dgvRandevular.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Hasta Kimliği";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 155;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Seanslar";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 152;
             // 
             // btnMuayene
             // 
             this.btnMuayene.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMuayene.Location = new System.Drawing.Point(115, 278);
+            this.btnMuayene.Location = new System.Drawing.Point(80, 397);
             this.btnMuayene.Name = "btnMuayene";
             this.btnMuayene.Size = new System.Drawing.Size(187, 34);
             this.btnMuayene.TabIndex = 3;
@@ -97,17 +90,37 @@
             // 
             // dtCalismaGunu
             // 
-            this.dtCalismaGunu.Location = new System.Drawing.Point(151, 53);
+            this.dtCalismaGunu.Location = new System.Drawing.Point(135, 18);
             this.dtCalismaGunu.Name = "dtCalismaGunu";
             this.dtCalismaGunu.Size = new System.Drawing.Size(200, 20);
             this.dtCalismaGunu.TabIndex = 4;
             this.dtCalismaGunu.ValueChanged += new System.EventHandler(this.dtCalısmaGunu_ValueChanged);
             // 
+            // RandevuID
+            // 
+            this.RandevuID.HeaderText = "RandevuID";
+            this.RandevuID.Name = "RandevuID";
+            // 
+            // HastaTC
+            // 
+            this.HastaTC.HeaderText = "Hasta TC";
+            this.HastaTC.Name = "HastaTC";
+            // 
+            // HastaAd
+            // 
+            this.HastaAd.HeaderText = "Hasta Ad Soyad";
+            this.HastaAd.Name = "HastaAd";
+            // 
+            // Tarih
+            // 
+            this.Tarih.HeaderText = "Tarih";
+            this.Tarih.Name = "Tarih";
+            // 
             // DoktorRandevuları
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 413);
+            this.ClientSize = new System.Drawing.Size(870, 475);
             this.Controls.Add(this.dtCalismaGunu);
             this.Controls.Add(this.btnMuayene);
             this.Controls.Add(this.grpRandevular);
@@ -128,9 +141,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox grpRandevular;
         private System.Windows.Forms.DataGridView dgvRandevular;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.Button btnMuayene;
         private System.Windows.Forms.DateTimePicker dtCalismaGunu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RandevuID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HastaTC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HastaAd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tarih;
     }
 }
