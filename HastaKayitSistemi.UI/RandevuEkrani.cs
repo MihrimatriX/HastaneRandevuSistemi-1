@@ -1,4 +1,5 @@
 ﻿using HastaKayitSistemi.DAL;
+using HastaKayitSistemi.DATA;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,10 +22,11 @@ namespace HastaKayitSistemi.UI
         Context db;
 
         public DATA.Hasta hasta;
+        List<Randevu> alinanRandevu;
 
         private void RandevuEkrani_Load(object sender, EventArgs e)
         {
-
+            btnRandevuAl.Enabled = false;
             dtRandevuTarihi.MinDate = DateTime.Today.AddDays(1);
             dtRandevuTarihi.MaxDate = DateTime.Today.AddDays(30);
             dtRandevuTarihi.MaxSelectionCount = 1;
@@ -35,7 +37,6 @@ namespace HastaKayitSistemi.UI
             cmbDoktor.SelectedIndexChanged -= cmbDoktor_SelectedIndexChanged;
             cmbPoliklinik.SelectedIndexChanged -= cmbPoliklinik_SelectedIndexChanged;
             cmbDepartman.SelectedIndexChanged -= CmbDepartman_SelectedIndexChanged;
-            //cmbPoliklinik.SelectedIndexChanged -= CmbPoliklinik_SelectedIndexChanged;
 
             btnDoktorOnayliRandevu.Enabled = !btnDoktorOnayliRandevu.Enabled;
             cmbHastane.DataSource = db.Hastaneler.ToList();
@@ -63,6 +64,13 @@ namespace HastaKayitSistemi.UI
             cmbDoktor.Enabled = false;
 
             panelRandevu.BorderStyle = BorderStyle.Fixed3D;
+            SaatleriDoldur();
+            EvenetEkler();
+        }
+
+        private void SaatleriDoldur()
+        {
+            panelRandevu.Controls.Clear();
             int sayac = 30;
             int saat = 09;
             sbyte sira_sayac = 0;
@@ -112,8 +120,8 @@ namespace HastaKayitSistemi.UI
                     }
                 }
             }
-            EvenetEkler();
         }
+
         void EvenetEkler()
         {
 
@@ -175,6 +183,8 @@ namespace HastaKayitSistemi.UI
                     db.Randevular.Add(randevu);
                     db.SaveChanges();
                     MessageBox.Show("Randevu Kaydınız Alındı!");
+                    btnSaatleriGoruntule.PerformClick();
+                    btnRandevuAl.Enabled = false;
                 }
                 else
                 {
@@ -214,10 +224,17 @@ namespace HastaKayitSistemi.UI
                 MessageBox.Show("Hafta Sonunu Seçemezsiniz!");
                 dtRandevuTarihi.SelectionStart = DateTime.Today.AddDays(1);
             }
+            btnRandevuAl.Enabled = false;
+
         }
 
         private void CmbDepartman_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btnRandevuAl.Enabled = false;
+
+            alinanRandevu = db.Randevular.Where(x => x.DepartmanID == (int)cmbDepartman.SelectedValue).ToList();
+            //MessageBox.Show(alinanRandevu.Count().ToString());
+
             cmbDoktor.DataSource = db.Doktorlar.Where(x => x.DepartmanID == (int)cmbDepartman.SelectedValue).ToList();
 
             List<int> hastaneIdler = db.HastaneDepartman.Where(x => x.DepartmanID == (int)cmbDepartman.SelectedValue).Select(x => x.HastaneID).ToList();
@@ -234,6 +251,7 @@ namespace HastaKayitSistemi.UI
         }
         private void cmbHastane_SelectedIndexChanged(object sender, EventArgs e)
         {
+            btnRandevuAl.Enabled = false;
             cmbPoliklinik.DataSource = db.Poliklinik.Where(x => x.HastaneID == (int)cmbHastane.SelectedValue).ToList();
             if (cmbPoliklinik.Text == "" || cmbPoliklinik.Text == "Poliklinik Yok")
             {
@@ -256,6 +274,7 @@ namespace HastaKayitSistemi.UI
 
             //int HastaneID = (from k in db.Doktorlar where k.DoktorID == (int)cmbDoktor.SelectedValue select k.HastaneID).FirstOrDefault();
             //cmbHastane.SelectedValue = HastaneID;
+            btnRandevuAl.Enabled = false;
 
 
             // Poliklinik
@@ -278,5 +297,48 @@ namespace HastaKayitSistemi.UI
         private void RandevuEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
         }
+
+        private void btnSaatleriGoruntule_Click(object sender, EventArgs e)
+        {
+
+            if (Metotlar.BosAlanVarMi(grpRandevu) && cmbPoliklinik.Enabled == true)
+            {
+                MessageBox.Show("Boş Alanları Doldurunuz!");
+            }
+            else if (cmbDepartman.SelectedIndex >= 0 && cmbDoktor.SelectedIndex >= 0 && cmbHastane.SelectedIndex >= 0)
+            {
+                SaatleriDoldur();
+                alinanRandevu = db.Randevular.Where(x => x.DepartmanID == (int)cmbDepartman.SelectedValue &&
+                x.HastaneID == (int)cmbHastane.SelectedValue && x.DoktorID == (int)cmbDoktor.SelectedValue &&
+                x.PoliklinikID == (int)cmbPoliklinik.SelectedValue && x.RandevuIptalMi == 1
+                ).ToList();
+                DateTime tarih = (DateTime)dtRandevuTarihi.SelectionStart;
+                string randevuTarihi = tarih.ToString("yyyy-MM-dd");
+                foreach (DATA.Randevu item in alinanRandevu)
+                {
+                    //MessageBox.Show(item.RandevuTarihi.ToString() + "---" + randevuTarihi);
+                    string db_randevuTarihi = item.RandevuTarihi.ToString("yyyy-MM-dd");
+                    if (db_randevuTarihi.Contains(randevuTarihi))
+                    {
+
+                        foreach (RadioButton radio in panelRandevu.Controls)
+                        {
+                            if (item.RandevuTarihi.ToString().Contains(radio.Text))
+                            {
+                                (radio as RadioButton).Enabled = false;
+                                (radio as RadioButton).BackColor = Color.Red;
+                            }
+                        }
+                    }
+                }
+                //MessageBox.Show(alinanRandevu.Count().ToString());
+                btnRandevuAl.Enabled = true;
+            }
+
+
+
+        }
+
+
     }
 }
