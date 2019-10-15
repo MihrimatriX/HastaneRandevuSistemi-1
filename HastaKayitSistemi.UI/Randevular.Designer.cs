@@ -33,6 +33,7 @@
             this.dgvRandevuListesi = new System.Windows.Forms.DataGridView();
             this.ContextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsSil = new System.Windows.Forms.ToolStripMenuItem();
+            this.RandevuID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HastaneAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DepartmanAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +48,7 @@
             this.grpRandevular.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpRandevular.ContextMenuStrip = this.ContextMenuStrip1;
             this.grpRandevular.Controls.Add(this.dgvRandevuListesi);
             this.grpRandevular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.grpRandevular.Location = new System.Drawing.Point(12, 12);
@@ -62,12 +64,14 @@
             this.dgvRandevuListesi.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvRandevuListesi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRandevuListesi.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.RandevuID,
             this.HastaneAdi,
             this.DepartmanAdi,
             this.Column1,
             this.Column2});
             this.dgvRandevuListesi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRandevuListesi.Location = new System.Drawing.Point(3, 22);
+            this.dgvRandevuListesi.MultiSelect = false;
             this.dgvRandevuListesi.Name = "dgvRandevuListesi";
             this.dgvRandevuListesi.ReadOnly = true;
             this.dgvRandevuListesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -88,25 +92,40 @@
             this.cmsSil.Text = "SİL";
             this.cmsSil.Click += new System.EventHandler(this.CmsSil_Click);
             // 
+            // RandevuID
+            // 
+            this.RandevuID.FillWeight = 126.9035F;
+            this.RandevuID.HeaderText = "RandevuID";
+            this.RandevuID.Name = "RandevuID";
+            this.RandevuID.ReadOnly = true;
+            // 
             // HastaneAdi
             // 
+            this.HastaneAdi.FillWeight = 93.27412F;
             this.HastaneAdi.HeaderText = "Hastane Adı";
             this.HastaneAdi.Name = "HastaneAdi";
+            this.HastaneAdi.ReadOnly = true;
             // 
             // DepartmanAdi
             // 
+            this.DepartmanAdi.FillWeight = 93.27412F;
             this.DepartmanAdi.HeaderText = "Departman";
             this.DepartmanAdi.Name = "DepartmanAdi";
+            this.DepartmanAdi.ReadOnly = true;
             // 
             // Column1
             // 
+            this.Column1.FillWeight = 93.27412F;
             this.Column1.HeaderText = "Doktor";
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
+            this.Column2.FillWeight = 93.27412F;
             this.Column2.HeaderText = "Randevu Tarihi";
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Randevular
             // 
@@ -131,6 +150,7 @@
         private System.Windows.Forms.DataGridView dgvRandevuListesi;
         private System.Windows.Forms.ContextMenuStrip ContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cmsSil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RandevuID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HastaneAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DepartmanAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

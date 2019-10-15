@@ -13,7 +13,7 @@ namespace HastaKayitSistemi.UI
 {
     public partial class RandevuEkrani : Form
     {
-        
+
         public RandevuEkrani()
         {
             InitializeComponent();
@@ -112,9 +112,9 @@ namespace HastaKayitSistemi.UI
                     }
                 }
             }
-            Deneme();
+            EvenetEkler();
         }
-        void Deneme()
+        void EvenetEkler()
         {
 
             cmbDepartman.SelectedIndexChanged += CmbDepartman_SelectedIndexChanged;
@@ -127,6 +127,7 @@ namespace HastaKayitSistemi.UI
         private void BtnMevcutRandevularim_Click(object sender, EventArgs e)
         {
             Randevular randevular = new Randevular(this);
+            randevular.randevular_hasta = hasta;
             this.Hide();
             randevular.Show();
         }
@@ -146,6 +147,7 @@ namespace HastaKayitSistemi.UI
             }
             return saat;
         }
+
         private void btnRandevuAl_Click(object sender, EventArgs e)
         {
             if (Metotlar.BosAlanVarMi(grpRandevu) && cmbPoliklinik.Enabled == true)
@@ -154,27 +156,55 @@ namespace HastaKayitSistemi.UI
             }
             else if (cmbDepartman.SelectedIndex >= 0 && cmbDoktor.SelectedIndex >= 0 && cmbHastane.SelectedIndex >= 0)
             {
-                DateTime tarih = (DateTime)dtRandevuTarihi.SelectionStart;
-                string randevuTarihi = tarih.ToString("yyyy-MM-dd") + " " + HangiSaatSecili(panelRandevu).ToString();
-                DATA.Randevu randevu = new DATA.Randevu();
-                randevu.HastaID = hasta.HastaID;
-                randevu.HastaneID = (int)cmbHastane.SelectedValue;
-                randevu.DepartmanID = (int)cmbDepartman.SelectedValue;
-                randevu.DoktorID = (int)cmbDoktor.SelectedValue;
-                randevu.RandevuIptalMi = 1;
-                if (cmbPoliklinik.Enabled)
-                    randevu.PoliklinikID = (int)cmbPoliklinik.SelectedValue;
+                if (PanelSaatKontrol(panelRandevu))
+                {
+
+                    DateTime tarih = (DateTime)dtRandevuTarihi.SelectionStart;
+                    string randevuTarihi = tarih.ToString("yyyy-MM-dd") + " " + HangiSaatSecili(panelRandevu).ToString();
+                    DATA.Randevu randevu = new DATA.Randevu();
+                    randevu.HastaID = hasta.HastaID;
+                    randevu.HastaneID = (int)cmbHastane.SelectedValue;
+                    randevu.DepartmanID = (int)cmbDepartman.SelectedValue;
+                    randevu.DoktorID = (int)cmbDoktor.SelectedValue;
+                    randevu.RandevuIptalMi = 1;
+                    if (cmbPoliklinik.Enabled)
+                        randevu.PoliklinikID = (int)cmbPoliklinik.SelectedValue;
+                    else
+                        randevu.PoliklinikID = 1;
+                    randevu.RandevuTarihi = Convert.ToDateTime(randevuTarihi);
+                    db.Randevular.Add(randevu);
+                    db.SaveChanges();
+                    MessageBox.Show("Randevu Kaydınız Alındı!");
+                }
                 else
-                    randevu.PoliklinikID = 1;
-                randevu.RandevuTarihi = Convert.ToDateTime(randevuTarihi);
-                db.Randevular.Add(randevu);
-                db.SaveChanges();
-                MessageBox.Show("Randevu Kaydınız Alındı!");
+                {
+                    MessageBox.Show("Lütfen Saat Seçiniz!");
+                }
+
+
             }
             else
             {
                 MessageBox.Show("Lütfen Gerekli Yerleri Seçiniz!");
             }
+        }
+
+        private bool PanelSaatKontrol(Panel pnl)
+        {
+            bool bos = false;
+
+            foreach (Control item in pnl.Controls)
+            {
+                if (item is RadioButton)
+                {
+                    if ((item as RadioButton).Checked)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return bos;
         }
 
         private void dtRandevuTarihi_DateChanged(object sender, DateRangeEventArgs e)
