@@ -14,8 +14,10 @@ namespace HastaKayitSistemi.UI
 {
     public partial class HastaReceteGecmisi : Form
     {
-        public HastaReceteGecmisi()
+        EczaciReceteBilgileri eczaciReceteBilgileri;
+        public HastaReceteGecmisi(EczaciReceteBilgileri receteBilgileri)
         {
+            eczaciReceteBilgileri = receteBilgileri;
             InitializeComponent();
         }
         Context db;
@@ -28,9 +30,8 @@ namespace HastaKayitSistemi.UI
 
         private void BtnIlacKontrol_Click(object sender, EventArgs e)
         {
-            EczaciReceteBilgileri eczaciReceteBilgileri = new EczaciReceteBilgileri();
-            this.Close();
             eczaciReceteBilgileri.Show();
+            Close();
         }
 
         private void txtHastaNumarasi_TextChanged(object sender, EventArgs e)
@@ -43,6 +44,11 @@ namespace HastaKayitSistemi.UI
                //ListViewItem lvi = new ListViewItem();
                // lvi.Text = item.ReceteID.ToString();
             }
+        }
+
+        private void HastaReceteGecmisi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            eczaciReceteBilgileri.Show();
         }
     }
 }

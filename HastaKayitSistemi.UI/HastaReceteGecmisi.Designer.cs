@@ -93,6 +93,7 @@
             this.Controls.Add(this.label1);
             this.Name = "HastaReceteGecmisi";
             this.Text = "HastaReceteGecmisi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HastaReceteGecmisi_FormClosed);
             this.Load += new System.EventHandler(this.HastaReceteGecmisi_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

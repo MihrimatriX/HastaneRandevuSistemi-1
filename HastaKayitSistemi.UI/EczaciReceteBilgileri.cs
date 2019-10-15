@@ -13,17 +13,18 @@ namespace HastaKayitSistemi.UI
 {
     public partial class EczaciReceteBilgileri : Form
     {
-        public EczaciReceteBilgileri()
+        Giris girisFormu;
+        public EczaciReceteBilgileri(Giris giris)
         {
+            girisFormu = giris;
             InitializeComponent();
         }
         Context db;
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void btnHastaReceteGecmisi_Click(object sender, EventArgs e)
         {
-
-            this.Close();
-            HastaReceteGecmisi hastaReceteGecmisi = new HastaReceteGecmisi();
+            HastaReceteGecmisi hastaReceteGecmisi = new HastaReceteGecmisi(this);
+            Hide();
             hastaReceteGecmisi.Show();
         }
 
@@ -53,5 +54,10 @@ namespace HastaKayitSistemi.UI
         {
             MessageBox.Show("İlaçlarınızı düzenli kullanmayı unutmayınız :)");
         }
+        private void EczaciReceteBilgileri_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            girisFormu.Show();
+        }
+
     }
 }
