@@ -50,6 +50,8 @@ select * from Poliklinik
 select * from Randevu
 
 
+
+
 select Ilaclar from Recete where HastaID=(select HastaID from Hasta where Ad='Adem')
 
 insert into Recete values(1,4,'Aspirin')
