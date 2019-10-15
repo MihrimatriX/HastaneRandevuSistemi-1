@@ -29,12 +29,12 @@ namespace HastaKayitSistemi.UI
                 MessageBox.Show("Lütfen tüm alanları doldurunuz!");
             else
             {
-                //sürekli bu hataya düşüyor.Düzeltilmei lazım
-                DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo == txtTcNo.Text || x.Email == txtEmail.Text);
+                DATA.Hasta hastalar = db.Hastalar.FirstOrDefault(x => x.TcNo.ToLower() == txtTcNo.Text.ToLower()
+                || x.Email.ToLower() == txtEmail.Text.ToLower());
 
                 if (hastalar == null)
                 {
-                    if (txtSifre.Text.Length >= 8 || txtSifre.Text.Length <= 16)
+                    if (txtSifre.Text.Length >= 8 && txtSifre.Text.Length <= 16 && txtTcNo.TextLength == 11)
                     {
                         hastalar = new DATA.Hasta
                         {
@@ -53,12 +53,14 @@ namespace HastaKayitSistemi.UI
                         db.SaveChanges();
 
                         MessageBox.Show("Kaydınız gerçekleşmiştir...");
-                       hastaFormu.Show();
+                        hastaFormu.Show();
                         Close();
                     }
                     else
                     {
-                        MessageBox.Show("Seçmiş Olduğunuz Şifre 8 Karakterden Az, 16 karakterden fazla Olamaz!");
+                        MessageBox.Show("Seçmiş Olduğunuz Şifre 8 Karakterden Az, 16 karakterden fazla Olamaz!\n " +
+                            "Veya Girilen TC Kimlik Numarası 11 Haneli Değil!");
+
                     }
                 }
                 else
@@ -71,6 +73,7 @@ namespace HastaKayitSistemi.UI
         private void UyeOlmaEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
             hastaFormu.Show();
+
         }
 
         private void txtTcNo_KeyPress(object sender, KeyPressEventArgs e)
@@ -80,6 +83,11 @@ namespace HastaKayitSistemi.UI
             {
                 e.Handled = true;
             }
+        }
+
+        private void UyeOlmaEkrani_Load(object sender, EventArgs e)
+        {
+            dtDogumTarihi.MaxDate = DateTime.Today;
         }
     }
 }

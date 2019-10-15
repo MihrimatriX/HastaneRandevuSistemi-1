@@ -34,6 +34,9 @@ namespace HastaKayitSistemi.UI
         {
 
             MessageBox.Show("işlem tamamlanmıştır");
+            doktorRandevulari.Show();
+            Close();
+
         }
 
         private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)
@@ -42,17 +45,7 @@ namespace HastaKayitSistemi.UI
             this.Close();
         }
 
-        private void chkTeshisKonulamadı_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkTeshisKonulamadı.Checked == true)
-            {
-                RandevuEkrani randevuEkrani = new RandevuEkrani();
-                randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
-                randevuEkrani.btnRandevuAl.Enabled = false;
-                this.Close();
-                randevuEkrani.Show();
-            }
-        }
+        
 
         private void btnIlacEkle_Click(object sender, EventArgs e)
         {
@@ -60,11 +53,11 @@ namespace HastaKayitSistemi.UI
 
             int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
 
-            var öncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+            var oncedenVarmi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
 
             if (girilenNumara == 0)
                 MessageBox.Show("Lütfen bir reçete numarası giriniz!");
-            else if (öncedenVarMi != null)
+            else if (oncedenVarmi != null)
             {
                 MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
             }
@@ -77,7 +70,6 @@ namespace HastaKayitSistemi.UI
                 recete.DoktorID = girilenNumara;
                 dgvIlaclar.Rows.Add(recete.Ilaclar);
                 db.Receteler.Add(recete);
-                MessageBox.Show("Randevu Kaydınız Alındı!");
 
 
             }
@@ -85,9 +77,6 @@ namespace HastaKayitSistemi.UI
 
         }
 
-        private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Close();
-        }
+
     }
 }

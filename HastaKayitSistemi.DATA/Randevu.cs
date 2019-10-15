@@ -16,11 +16,11 @@ namespace HastaKayitSistemi.DATA
         public int HastaID { get; set; }
         public int RandevuIptalMi { get; set; }
 
-        public DateTime RandevuTarihi { get; set; }
-        public virtual Doktor Doktor { get; set; }
-        public virtual Hasta Hasta{ get; set; }
-        public virtual Departman Departman{ get; set; }
-        public virtual Hastane Hastane{ get; set; }
+        public DateTime RandevuTarihi { get; set; }                 
+        public virtual Doktor Doktor { get; set; }                 // Bire-Çok
+        public virtual Hasta Hasta{ get; set; }                    // Bire-Çok
+        public virtual Departman Departman{ get; set; }            // Bire-Çok
+        public virtual Hastane Hastane{ get; set; }                // Bire-Çok
 
 
 

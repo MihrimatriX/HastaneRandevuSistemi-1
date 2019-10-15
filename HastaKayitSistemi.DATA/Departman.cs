@@ -13,7 +13,7 @@ namespace HastaKayitSistemi.DATA
 
         public virtual List<Doktor> Doktorlar { get; set; }
         public virtual List<HastaneDepartman>HastaneDepartmanlari { get; set; }
-        public virtual List<Randevu> Randevular { get; set; }
+        public virtual List<Randevu> Randevular { get; set; }    
 
 
     }

@@ -28,45 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnMuayeneTamamlandi = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtTeshis = new System.Windows.Forms.TextBox();
             this.txtIlac = new System.Windows.Forms.TextBox();
             this.txtReceteNumarasi = new System.Windows.Forms.TextBox();
             this.chkMuayeneyeGelmedi = new System.Windows.Forms.CheckBox();
-            this.chkTeshisKonulamadı = new System.Windows.Forms.CheckBox();
             this.dgvIlaclar = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnIlacEkle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIlaclar)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(59, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 13);
-            this.label1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(31, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Teşhis :";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(36, 119);
+            this.label3.Location = new System.Drawing.Point(36, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 20);
             this.label3.TabIndex = 4;
@@ -86,29 +64,22 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(36, 165);
+            this.label4.Location = new System.Drawing.Point(36, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "İlaçlar :";
             // 
-            // txtTeshis
-            // 
-            this.txtTeshis.Location = new System.Drawing.Point(105, 52);
-            this.txtTeshis.Name = "txtTeshis";
-            this.txtTeshis.Size = new System.Drawing.Size(215, 20);
-            this.txtTeshis.TabIndex = 11;
-            // 
             // txtIlac
             // 
-            this.txtIlac.Location = new System.Drawing.Point(105, 165);
+            this.txtIlac.Location = new System.Drawing.Point(105, 90);
             this.txtIlac.Name = "txtIlac";
             this.txtIlac.Size = new System.Drawing.Size(215, 20);
             this.txtIlac.TabIndex = 12;
             // 
             // txtReceteNumarasi
             // 
-            this.txtReceteNumarasi.Location = new System.Drawing.Point(182, 121);
+            this.txtReceteNumarasi.Location = new System.Drawing.Point(182, 52);
             this.txtReceteNumarasi.Name = "txtReceteNumarasi";
             this.txtReceteNumarasi.Size = new System.Drawing.Size(138, 20);
             this.txtReceteNumarasi.TabIndex = 13;
@@ -123,17 +94,6 @@
             this.chkMuayeneyeGelmedi.Text = "Hasta Muayeneye Gelmedi";
             this.chkMuayeneyeGelmedi.UseVisualStyleBackColor = true;
             this.chkMuayeneyeGelmedi.CheckedChanged += new System.EventHandler(this.chkMuayeneyeGelmedi_CheckedChanged);
-            // 
-            // chkTeshisKonulamadı
-            // 
-            this.chkTeshisKonulamadı.AutoSize = true;
-            this.chkTeshisKonulamadı.Location = new System.Drawing.Point(40, 89);
-            this.chkTeshisKonulamadı.Name = "chkTeshisKonulamadı";
-            this.chkTeshisKonulamadı.Size = new System.Drawing.Size(185, 17);
-            this.chkTeshisKonulamadı.TabIndex = 15;
-            this.chkTeshisKonulamadı.Text = "Teşhis Konulamadı Tahlil İsteniyor";
-            this.chkTeshisKonulamadı.UseVisualStyleBackColor = true;
-            this.chkTeshisKonulamadı.CheckedChanged += new System.EventHandler(this.chkTeshisKonulamadı_CheckedChanged);
             // 
             // dgvIlaclar
             // 
@@ -170,19 +130,14 @@
             this.ClientSize = new System.Drawing.Size(363, 416);
             this.Controls.Add(this.btnIlacEkle);
             this.Controls.Add(this.dgvIlaclar);
-            this.Controls.Add(this.chkTeshisKonulamadı);
             this.Controls.Add(this.chkMuayeneyeGelmedi);
             this.Controls.Add(this.txtReceteNumarasi);
             this.Controls.Add(this.txtIlac);
-            this.Controls.Add(this.txtTeshis);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnMuayeneTamamlandi);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "MuayeneEkrani";
             this.Text = "MuayeneEkrani";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MuayeneEkrani_FormClosed);
             this.Load += new System.EventHandler(this.MuayeneEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIlaclar)).EndInit();
             this.ResumeLayout(false);
@@ -191,17 +146,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnMuayeneTamamlandi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtTeshis;
         private System.Windows.Forms.TextBox txtIlac;
         private System.Windows.Forms.TextBox txtReceteNumarasi;
         private System.Windows.Forms.CheckBox chkMuayeneyeGelmedi;
-        private System.Windows.Forms.CheckBox chkTeshisKonulamadı;
         private System.Windows.Forms.DataGridView dgvIlaclar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Button btnIlacEkle;
