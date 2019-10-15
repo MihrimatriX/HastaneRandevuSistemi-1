@@ -23,10 +23,10 @@ namespace HastaKayitSistemi.UI
 
         Context db;
         List<string> teshisler = new List<string>();
-      //  List<Recete> ilaclar = new List<Recete>();
+        //  List<Recete> ilaclar = new List<Recete>();
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
-            db = new Context();;
+            db = new Context(); ;
 
         }
 
@@ -62,7 +62,9 @@ namespace HastaKayitSistemi.UI
 
             var öncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
 
-            if (öncedenVarMi != null)
+            if (girilenNumara == 0)
+                MessageBox.Show("Lütfen bir reçete numarası giriniz!");
+            else if (öncedenVarMi != null)
             {
                 MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
             }
@@ -79,13 +81,13 @@ namespace HastaKayitSistemi.UI
 
 
             }
-             
+
 
         }
 
         private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
-           this.Close();
+            this.Close();
         }
     }
 }

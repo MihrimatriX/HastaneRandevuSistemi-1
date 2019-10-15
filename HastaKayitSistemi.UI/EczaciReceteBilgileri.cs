@@ -36,20 +36,22 @@ namespace HastaKayitSistemi.UI
 
         private void BtnIlaclariGoruntule_Click(object sender, EventArgs e)
         {
-
-            int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
-            var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
-
-            if (ReceteNumarası==null)
-            {
-                MessageBox.Show("Recete numarası yoktur tekrar deneyiniz");
-            }
+            if (txtReceteNumarasi.Text == "") MessageBox.Show("Lütfen bir reçete numarası giriniz!");
             else
             {
-            lstIlaclar.Items.Add(ReceteNumarası);
+                int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
+                var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+                if (ReceteNumarası == null)
+                {
+                    MessageBox.Show("Recete numarası yoktur tekrar deneyiniz");
+                }
+                else
+                {
+                    lstIlaclar.Items.Add(ReceteNumarası);
 
+                }
+                //girilen numara database de yoksa hata alıyor databasede kayıtsızsa seklinde olusturulumalı
             }
-            //girilen numara database de yoksa hata alıyor databasede kayıtsızsa seklinde olusturulumalı
         }
 
         private void btnTemizle_Click(object sender, EventArgs e)
