@@ -27,13 +27,13 @@ namespace HastaKayitSistemi.UI
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
             db = new Context();;
-
         }
 
         private void btnMuayeneTamamlandi_Click(object sender, EventArgs e)
         {
-
             MessageBox.Show("işlem tamamlanmıştır");
+            doktorRandevuları.Show();
+            Close();
         }
 
         private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)

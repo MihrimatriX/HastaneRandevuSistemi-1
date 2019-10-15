@@ -34,7 +34,7 @@ namespace HastaKayitSistemi.UI
 
                 if (hastalar == null)
                 {
-                    if (txtSifre.Text.Length >= 8 || txtSifre.Text.Length <= 16)
+                    if (txtSifre.Text.Length >= 8 && txtSifre.Text.Length <= 16)
                     {
                         hastalar = new DATA.Hasta
                         {
