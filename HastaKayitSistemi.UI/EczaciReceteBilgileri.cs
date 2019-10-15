@@ -38,8 +38,17 @@ namespace HastaKayitSistemi.UI
         {
 
             int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
-            var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara  select k.Ilaclar).FirstOrDefault();
+            var ReceteNumarası = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+
+            if (ReceteNumarası==null)
+            {
+                MessageBox.Show("Recete numarası yoktur tekrar deneyiniz");
+            }
+            else
+            {
             lstIlaclar.Items.Add(ReceteNumarası);
+
+            }
             //girilen numara database de yoksa hata alıyor databasede kayıtsızsa seklinde olusturulumalı
         }
 

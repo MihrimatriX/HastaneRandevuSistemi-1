@@ -34,21 +34,27 @@ namespace HastaKayitSistemi.UI
             Close();
         }
 
-        private void txtHastaNumarasi_TextChanged(object sender, EventArgs e)
+        private void HastaReceteGecmisi_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            eczaciReceteBilgileri.Show();
+        }
+
+        private void btnListele_Click(object sender, EventArgs e)
         {
             int girilenNumara = Convert.ToInt32(txtHastaNumarasi.Text);
             List<Recete> receteler = db.Receteler.Where(x => x.HastaID == girilenNumara).ToList();
             foreach (Recete item in receteler)
             {
-                lblIlaclar.Text += item.Ilaclar.ToString()+"\n";
-               //ListViewItem lvi = new ListViewItem();
-               // lvi.Text = item.ReceteID.ToString();
+                lblIlaclar.Text += item.Ilaclar.ToString() + "\n";
+                //ListViewItem lvi = new ListViewItem();
+                // lvi.Text = item.ReceteID.ToString();
             }
+
         }
 
-        private void HastaReceteGecmisi_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnTemizle_Click(object sender, EventArgs e)
         {
-            eczaciReceteBilgileri.Show();
+            lblIlaclar.Text = "";
         }
     }
 }
