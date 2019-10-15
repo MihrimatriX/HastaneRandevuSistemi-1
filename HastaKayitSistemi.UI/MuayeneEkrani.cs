@@ -49,8 +49,8 @@ namespace HastaKayitSistemi.UI
                 RandevuEkrani randevuEkrani = new RandevuEkrani();
                 randevuEkrani.btnDoktorOnayliRandevu.Enabled = false;
                 randevuEkrani.btnRandevuAl.Enabled = false;
-                this.Close();
                 randevuEkrani.Show();
+                this.Close();
             }
         }
 
@@ -80,7 +80,7 @@ namespace HastaKayitSistemi.UI
 
         private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
-          //  this.Close();
+            doktorRandevuları.Show();
         }
     }
 }
