@@ -57,25 +57,25 @@ namespace HastaKayitSistemi.UI
         private void btnIlacEkle_Click(object sender, EventArgs e)
         {
             string verilenIlaclar = txtIlac.Text;
-
-            int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
-
-            var öncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
-
-            if (öncedenVarMi != null)
-            {
-                MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
-            }
+            if (txtReceteNumarasi.Text == "")
+                MessageBox.Show("Lütfen bir reçete numarası giriniz!");
             else
-
             {
-                Recete recete = new Recete();
-                recete.Ilaclar += verilenIlaclar;
-                dgvIlaclar.Rows.Add(recete.Ilaclar);
-     
+                int girilenNumara = Convert.ToInt32(txtReceteNumarasi.Text);
+
+                var öncedenVarMi = (from k in db.Receteler where k.ReceteID == girilenNumara select k.Ilaclar).FirstOrDefault();
+
+                if (öncedenVarMi != null)
+                {
+                    MessageBox.Show("Recete Numarası başka bir hastaya aittir.Lütfen farklı bir reçete numarası giriniz...");
+                }
+                else
+                {
+                    Recete recete = new Recete();
+                    recete.Ilaclar += verilenIlaclar;
+                    dgvIlaclar.Rows.Add(recete.Ilaclar);
+                }
             }
-          
-            
         }
 
         private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
