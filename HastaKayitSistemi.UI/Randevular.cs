@@ -59,6 +59,7 @@ namespace HastaKayitSistemi.UI
         private void Randevular_Guncelle()
         {
             dgvRandevuListesi.Rows.Clear();
+            dgvRandevuListesi.Refresh();
             foreach (var item in db.Randevular)
             {
                 if (item.HastaID == randevular_hasta.HastaID && item.RandevuIptalMi == 1)
