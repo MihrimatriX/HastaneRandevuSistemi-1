@@ -33,6 +33,7 @@
             this.dgvRandevular = new System.Windows.Forms.DataGridView();
             this.btnMuayene = new System.Windows.Forms.Button();
             this.dtCalismaGunu = new System.Windows.Forms.DateTimePicker();
+            this.HastaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RandevuID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HastaTC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HastaAd = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,13 +68,17 @@
             this.dgvRandevular.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRandevular.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRandevular.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.HastaID,
             this.RandevuID,
             this.HastaTC,
             this.HastaAd,
             this.Tarih});
             this.dgvRandevular.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRandevular.Location = new System.Drawing.Point(3, 22);
+            this.dgvRandevular.MultiSelect = false;
             this.dgvRandevular.Name = "dgvRandevular";
+            this.dgvRandevular.ReadOnly = true;
+            this.dgvRandevular.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRandevular.Size = new System.Drawing.Size(840, 311);
             this.dgvRandevular.TabIndex = 0;
             // 
@@ -96,27 +101,37 @@
             this.dtCalismaGunu.TabIndex = 4;
             this.dtCalismaGunu.ValueChanged += new System.EventHandler(this.dtCalısmaGunu_ValueChanged);
             // 
+            // HastaID
+            // 
+            this.HastaID.HeaderText = "HastaID";
+            this.HastaID.Name = "HastaID";
+            this.HastaID.ReadOnly = true;
+            // 
             // RandevuID
             // 
             this.RandevuID.HeaderText = "RandevuID";
             this.RandevuID.Name = "RandevuID";
+            this.RandevuID.ReadOnly = true;
             // 
             // HastaTC
             // 
             this.HastaTC.HeaderText = "Hasta TC";
             this.HastaTC.Name = "HastaTC";
+            this.HastaTC.ReadOnly = true;
             // 
             // HastaAd
             // 
             this.HastaAd.HeaderText = "Hasta Ad Soyad";
             this.HastaAd.Name = "HastaAd";
+            this.HastaAd.ReadOnly = true;
             // 
             // Tarih
             // 
             this.Tarih.HeaderText = "Tarih";
             this.Tarih.Name = "Tarih";
+            this.Tarih.ReadOnly = true;
             // 
-            // DoktorRandevuları
+            // DoktorRandevulari
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -125,7 +140,7 @@
             this.Controls.Add(this.btnMuayene);
             this.Controls.Add(this.grpRandevular);
             this.Controls.Add(this.label1);
-            this.Name = "DoktorRandevuları";
+            this.Name = "DoktorRandevulari";
             this.Text = "DoktorRandevuları";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DoktorRandevuları_FormClosed);
             this.Load += new System.EventHandler(this.DoktorRandevuları_Load);
@@ -143,6 +158,7 @@
         private System.Windows.Forms.DataGridView dgvRandevular;
         private System.Windows.Forms.Button btnMuayene;
         private System.Windows.Forms.DateTimePicker dtCalismaGunu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HastaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn RandevuID;
         private System.Windows.Forms.DataGridViewTextBoxColumn HastaTC;
         private System.Windows.Forms.DataGridViewTextBoxColumn HastaAd;

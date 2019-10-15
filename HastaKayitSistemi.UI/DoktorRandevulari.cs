@@ -24,9 +24,19 @@ namespace HastaKayitSistemi.UI
         public DATA.Doktor doktor;
         private void BtnMuayene_Click(object sender, EventArgs e)
         {
-            MuayeneEkrani muayeneEkrani = new MuayeneEkrani(this);
-            this.Hide();
-            muayeneEkrani.Show();
+            if ((int)dgvRandevular.Rows[dgvRandevular.CurrentRow.Index].Cells[0].Value > 0)
+            {
+                //(int)dgvRandevular.Rows[dgvRandevular.CurrentRow.Index].Cells[0]
+                MuayeneEkrani muayeneEkrani = new MuayeneEkrani(this);
+                this.Hide();
+                muayeneEkrani.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Hasta seçmeden hasta için randevu oluşturamazsınız!");
+            }
+
 
         }
         private void HastalarGuncelle()
@@ -36,7 +46,7 @@ namespace HastaKayitSistemi.UI
             {
                 if (item.DoktorID == doktor.DoktorID && item.RandevuIptalMi == 1)
                 {
-                    dgvRandevular.Rows.Add(item.RandevuID, item.Hasta.TcNo, item.Hasta.Ad + item.Hasta.Soyad, item.RandevuTarihi);
+                    dgvRandevular.Rows.Add(item.Hasta.HastaID, item.RandevuID, item.Hasta.TcNo, item.Hasta.Ad + item.Hasta.Soyad, item.RandevuTarihi);
 
                 }
                 //doktor randevutaihi veseansý
