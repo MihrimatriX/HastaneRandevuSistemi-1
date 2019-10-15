@@ -71,16 +71,21 @@ namespace HastaKayitSistemi.UI
             {
                 Recete recete = new Recete();
                 recete.Ilaclar += verilenIlaclar;
+                recete.HastaID = girilenNumara;
+                recete.DoktorID = girilenNumara;
                 dgvIlaclar.Rows.Add(recete.Ilaclar);
-     
+                db.Receteler.Add(recete);
+                MessageBox.Show("Randevu Kaydınız Alındı!");
+
+
             }
-          
-            
+
+
         }
 
         private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
         {
-          //  this.Close();
+           this.Close();
         }
     }
 }

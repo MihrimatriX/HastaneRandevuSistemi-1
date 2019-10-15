@@ -74,7 +74,7 @@
             // 
             // btnMuayeneTamamlandi
             // 
-            this.btnMuayeneTamamlandi.Location = new System.Drawing.Point(35, 349);
+            this.btnMuayeneTamamlandi.Location = new System.Drawing.Point(40, 351);
             this.btnMuayeneTamamlandi.Name = "btnMuayeneTamamlandi";
             this.btnMuayeneTamamlandi.Size = new System.Drawing.Size(215, 35);
             this.btnMuayeneTamamlandi.TabIndex = 7;
@@ -86,7 +86,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(26, 165);
+            this.label4.Location = new System.Drawing.Point(36, 165);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 20);
             this.label4.TabIndex = 8;
@@ -155,7 +155,7 @@
             // 
             // btnIlacEkle
             // 
-            this.btnIlacEkle.Location = new System.Drawing.Point(30, 206);
+            this.btnIlacEkle.Location = new System.Drawing.Point(40, 216);
             this.btnIlacEkle.Name = "btnIlacEkle";
             this.btnIlacEkle.Size = new System.Drawing.Size(75, 23);
             this.btnIlacEkle.TabIndex = 17;
