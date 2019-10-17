@@ -13,7 +13,7 @@ namespace HastaKayitSistemi.DAL
     {
         public Context()
         {
-            Database.Connection.ConnectionString = "server = .; database = REFFDb; uid=sa; pwd=123";
+            Database.Connection.ConnectionString = "server = .; database = REFFDb; trusted_connection=yes";
         }
         public DbSet<Hasta> Hastalar { get; set; }
         public DbSet<Doktor> Doktorlar { get; set; }
@@ -36,7 +36,15 @@ namespace HastaKayitSistemi.DAL
             modelBuilder.Configurations.Add(new PoliklinikMapping());
             modelBuilder.Configurations.Add(new RandevuMapping());
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //Db'de  bütün tabloalara eklenen "s" takısını ortadan kaldırır ve tablo isimlerini sınıf adları olarak
+            //adlandırılmasını sağlar
+
+
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            // Bir uyarıyı geçebilmek için bire çok bir tasarımsa OneToManyCascadeDeleteConvention  sınıfını, 
+            // çoklu tasarımsa ManyToManyCascadeDeleteConvention sınıfını Context sınıfımız içerisinde OnModelCreating 
+            // metotumuzda kullanıyoruz.
+
 
             base.OnModelCreating(modelBuilder);
         }

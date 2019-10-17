@@ -49,7 +49,9 @@ select * from HastaneDepartman
 select * from Poliklinik
 select * from Randevu
 
-
+insert into Recete values(1,5,'İlaç')
+insert into Recete values(1,6,'Minoset')
+insert into Recete values(1,5,'İğne')
 
 
 select Ilaclar from Recete where HastaID=(select HastaID from Hasta where Ad='Adem')

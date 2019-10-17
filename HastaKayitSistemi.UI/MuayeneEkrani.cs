@@ -22,8 +22,6 @@ namespace HastaKayitSistemi.UI
         }
 
         Context db;
-        List<string> teshisler = new List<string>();
-        //  List<Recete> ilaclar = new List<Recete>();
         private void MuayeneEkrani_Load(object sender, EventArgs e)
         {
             db = new Context(); ;
@@ -41,11 +39,11 @@ namespace HastaKayitSistemi.UI
 
         private void chkMuayeneyeGelmedi_CheckedChanged(object sender, EventArgs e)
         {
-            doktorRandevulari.Show();
             this.Close();
+            doktorRandevulari.Show();
         }
 
-        
+
 
         private void btnIlacEkle_Click(object sender, EventArgs e)
         {
@@ -77,6 +75,9 @@ namespace HastaKayitSistemi.UI
 
         }
 
-
+        private void MuayeneEkrani_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            doktorRandevulari.Show();
+        }
     }
 }

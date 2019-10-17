@@ -138,6 +138,7 @@
             this.Controls.Add(this.label3);
             this.Name = "MuayeneEkrani";
             this.Text = "MuayeneEkrani";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MuayeneEkrani_FormClosed);
             this.Load += new System.EventHandler(this.MuayeneEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvIlaclar)).EndInit();
             this.ResumeLayout(false);

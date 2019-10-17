@@ -66,6 +66,7 @@
             this.txtReceteNumarasi.Name = "txtReceteNumarasi";
             this.txtReceteNumarasi.Size = new System.Drawing.Size(186, 26);
             this.txtReceteNumarasi.TabIndex = 10;
+            this.txtReceteNumarasi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReceteNumarasi_KeyPress);
             // 
             // label3
             // 

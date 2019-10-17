@@ -24,24 +24,14 @@ namespace HastaKayitSistemi.UI
         public DATA.Doktor doktor;
         private void BtnMuayene_Click(object sender, EventArgs e)
         {
-            if ((int)dgvRandevular.Rows[dgvRandevular.CurrentRow.Index].Cells[0].Value > 0)
-            {
-                //(int)dgvRandevular.Rows[dgvRandevular.CurrentRow.Index].Cells[0]
-                MuayeneEkrani muayeneEkrani = new MuayeneEkrani(this);
-                this.Hide();
-                muayeneEkrani.Show();
 
-            }
-            else
-            {
-                MessageBox.Show("Hasta seçmeden hasta için randevu oluşturamazsınız!");
-            }
-
+            MuayeneEkrani muayeneEkrani = new MuayeneEkrani(this);
+            this.Hide();
+            muayeneEkrani.Show();
 
         }
         private void HastalarGuncelle()
         {
-            dgvRandevular.Rows.Clear();
             foreach (var item in db.Randevular)
             {
                 if (item.DoktorID == doktor.DoktorID && item.RandevuIptalMi == 1)
@@ -61,9 +51,9 @@ namespace HastaKayitSistemi.UI
 
             // String tarih= String.Format("{0:D}", dtSecilenTarih);
 
-            Randevu randevu = new Randevu();
-            randevu.RandevuTarihi = dtSecilenTarih;
+
             HastalarGuncelle();
+            dgvRandevular.ClearSelection();
         }
 
 
@@ -76,7 +66,7 @@ namespace HastaKayitSistemi.UI
 
 
             dgvRandevular.Rows.Clear();
-
+            dgvRandevular.Refresh();
 
             foreach (var item in db.Randevular)
             {
@@ -85,8 +75,7 @@ namespace HastaKayitSistemi.UI
                 string randevuTarihiFormatli = randevuTarihi2.ToString("yyyy-MM-dd");
                 if (item.DoktorID == doktor.DoktorID && item.RandevuIptalMi == 1 && randevuTarihiFormatli.Contains(randevuTarihi))
                 {
-                    dgvRandevular.Rows.Add(item.RandevuID, item.Hasta.TcNo, item.Hasta.Ad + item.Hasta.Soyad, item.RandevuTarihi);
-
+                    dgvRandevular.Rows.Add(item.Hasta.HastaID, item.RandevuID, item.Hasta.TcNo, item.Hasta.Ad + item.Hasta.Soyad, item.RandevuTarihi);
                 }
                 //doktor randevutaihi veseansý
             }
@@ -96,6 +85,7 @@ namespace HastaKayitSistemi.UI
 
         private void DoktorRandevuları_FormClosed(object sender, FormClosedEventArgs e)
         {
+           
             doktorFormu.Show();
         }
     }

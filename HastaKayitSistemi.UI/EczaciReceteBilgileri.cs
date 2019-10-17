@@ -56,7 +56,7 @@ namespace HastaKayitSistemi.UI
 
         private void btnTemizle_Click(object sender, EventArgs e)
         {
-            
+
             lstIlaclar.Items.Clear();
 
         }
@@ -69,6 +69,15 @@ namespace HastaKayitSistemi.UI
         {
             girisFormu.Show();
         }
+
+        private void txtReceteNumarasi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
 
     }
 }

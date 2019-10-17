@@ -14,7 +14,7 @@ namespace HastaKayitSistemi.DATA
         public int DoktorID { get; set; }
         public string Ilaclar { get; set; }
 
-        public virtual Hasta Hasta { get; set; }
+        public virtual Hasta Hasta { get; set; }      
         public virtual Doktor Doktor{ get; set; }
 
     }

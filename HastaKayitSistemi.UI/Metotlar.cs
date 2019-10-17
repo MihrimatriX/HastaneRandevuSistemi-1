@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace HastaKayitSistemi.UI
 {
-   public static class Metotlar
+    public static class Metotlar
     {
         public static bool BosAlanVarMi(GroupBox grp)
         {
@@ -26,6 +26,11 @@ namespace HastaKayitSistemi.UI
                     if (((DateTimePicker)item).Value.Date == DateTime.Now.Date)
                         return true;
                 }
+                else if (item is MaskedTextBox)
+                {
+                    if ((item as MaskedTextBox).Text == "(   )    -")
+                        return true;
+                }
             }
             return false;
         }
@@ -41,7 +46,7 @@ namespace HastaKayitSistemi.UI
                 else if (item is MaskedTextBox) ((MaskedTextBox)item).ResetText();
                 else if (item is ListBox) ((ListBox)item).DataSource = null;
                 else if (item is Label && item.Name.StartsWith("lbl")) item.Text = "";
-                
+
             }
 
         }
